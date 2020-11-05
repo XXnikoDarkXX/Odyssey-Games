@@ -1,0 +1,21 @@
+
+<resources>
+
+
+
+    <string name="pregunta">Pregunta</string>
+
+    <string name="boton1">Respuesta 1</string>
+    <string name="boton2">Respuesta 2</string>
+    <string name="boton3">Respuesta 3</string>
+    <string name="boton4">Respuesta 4</string>
+
+    <string name="descripcion_foto">Fotografía de la pantalla</string>
+    <string name="descripcion_pregunta">Fotografía de la pregunta</string>
+
+
+
+
+
+
+</resources>
