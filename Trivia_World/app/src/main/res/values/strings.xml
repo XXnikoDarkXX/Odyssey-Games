@@ -6,9 +6,11 @@
 
 
 
-
-<<<<<<< HEAD
-
+    <!-- NICO PantallaPrincipal-->
+    <string name="Bjugar">JUGAR</string>
+    <string name="Bperfil">PERFIL</string>
+    <string name="Bsociales">Redes      Sociales</string>
+    <string name="Iajustes">ajustes</string>
 
 
 
@@ -41,6 +43,4 @@
 
 
 
-=======
->>>>>>> f3e4b178198ae62ef0ecb7d5473f42260819a018
 </resources>
