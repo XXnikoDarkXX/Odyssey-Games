@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sky">
+
+
+
+    <ImageView
+        android:id="@+id/logo_redes"
+        android:contentDescription="@string/descripcion_logo_redes"
+        android:layout_width="292dp"
+        android:layout_height="145dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logoredes" />
+
+    <ImageView
+        android:id="@+id/gui_redes"
+        android:contentDescription="@string/descripcion_gui_redes"
+        android:layout_width="275dp"
+        android:layout_height="425dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="98dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_redes"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/gui_redes" />
+
+    <ImageView
+        android:id="@+id/youtube_logo"
+        android:contentDescription="@string/descripcion_youtube_logo"
+        android:layout_width="122dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="55dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gui_redes"
+        app:srcCompat="@drawable/logo_youtube" />
+
+    <ImageView
+        android:id="@+id/twitter_logo"
+        android:contentDescription="@string/descripcion_twitter_logo"
+        android:layout_width="98dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/youtube_logo"
+        app:srcCompat="@drawable/logo_twitter" />
+
+    <ImageView
+        android:id="@+id/instagram_logo"
+        android:contentDescription="@string/descripcion_instagram_logo"
+        android:layout_width="91dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/twitter_logo"
+        app:srcCompat="@drawable/logo_instagram" />
+
+    <Button
+
+
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/boton_volver_redes"
+        android:background="@color/Naranja"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gui_redes" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

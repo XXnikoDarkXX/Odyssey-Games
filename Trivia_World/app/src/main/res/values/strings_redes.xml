@@ -1,0 +1,9 @@
+<resources>
+    <string name="descripcion_logo_redes">Logo de Redes Sociales</string>
+    <string name="descripcion_gui_redes">Interfaz Gui donde están las diferentes redes sociales.</string>
+    <string name="descripcion_youtube_logo">Logo de Youtube</string>
+    <string name="descripcion_twitter_logo">Logo de Twitter</string>
+    <string name="descripcion_instagram_logo">Logo de Instagram</string>
+    <string name="boton_volver_redes">VOLVER</string>
+
+</resources>
