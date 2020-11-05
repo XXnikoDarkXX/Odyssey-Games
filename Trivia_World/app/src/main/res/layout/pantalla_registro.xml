@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/amarillo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/tapiz"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/nombreIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:autofillHints=""
+                android:hint="@string/nombre"
+                android:layout_marginEnd="200dp"
+                android:layout_marginStart="25dp"
+                />
+
+            <EditText
+                android:id="@+id/apellidosIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:autofillHints=""
+                android:hint="@string/apellidos"
+                android:layout_marginEnd="200dp"
+                android:layout_marginStart="25dp"
+                />
+
+            <EditText
+                android:id="@+id/fechaNacimientoIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:autofillHints="@string/fechaNacimiento"
+                android:hint="@string/fechaNacimiento"
+                android:layout_marginEnd="200dp"
+                android:layout_marginStart="25dp"
+                />
+
+            <EditText
+                android:id="@+id/direccionIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/direccion"
+                android:inputType="textPostalAddress"
+                android:hint="@string/direccion"
+                android:layout_marginEnd="200dp"
+                android:layout_marginStart="25dp"
+                />
+
+            <EditText
+                android:id="@+id/ciudadIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:autofillHints="@string/ciudad"
+                android:hint="@string/ciudad"
+                android:layout_marginEnd="200dp"
+                android:layout_marginStart="25dp"
+                />
+
+            <EditText
+                android:id="@+id/paisIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:autofillHints="@string/pais"
+                android:hint="@string/pais"
+                android:layout_marginEnd="200dp"
+                android:layout_marginStart="25dp"
+                />
+
+            <EditText
+                android:id="@+id/telefonoIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:autofillHints="@string/telefono"
+                android:hint="@string/telefono"
+                android:layout_marginEnd="200dp"
+                android:layout_marginStart="25dp"
+                />
+
+            <EditText
+                android:id="@+id/usuario"
+                android:ems="10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:autofillHints="@string/usuario"
+                android:hint="@string/usuario"
+                android:layout_marginEnd="200dp"
+                android:layout_marginStart="25dp"
+                />
+
+            <EditText
+                android:id="@+id/contraseña"
+                android:ems="10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:autofillHints="@string/telefono"
+                android:hint="@string/contraseña"
+                android:layout_marginEnd="200dp"
+                android:layout_marginStart="25dp"
+                />
+
+            <EditText
+                android:id="@+id/contraseñaR"
+                android:ems="10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:autofillHints="@string/contraseña"
+                android:hint="@string/contraseña"
+                android:layout_marginEnd="200dp"
+                android:layout_marginStart="25dp"
+                />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="200dp"
+                android:layout_marginEnd="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/enviar"
+                android:background="#ff9000"
+
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
