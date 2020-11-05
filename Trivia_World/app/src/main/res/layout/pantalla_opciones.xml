@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/amarilooo"
+    >
+
+
+    <TextView
+        android:id="@+id/txtNivelSonido"
+        android:layout_width="160dp"
+        android:layout_height="33dp"
+        android:layout_constraintBottom_toTopOf="@+id/nivelSonido"
+        android:layout_constraintHorizontal_bias="0.171"
+        android:layout_constraintVertical_bias="1.0"
+        android:layout_constraintEnd_toEndOf="parent"
+        android:layout_constraintStart_toStartOf="parent"
+        android:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="82dp"
+        android:layout_marginEnd="222dp"
+        android:text="@string/nivelSonido"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/nivelMusica"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch2" />
+
+    <SeekBar
+        android:id="@+id/nivelMusica"
+        android:layout_width="348dp"
+        android:layout_height="41dp"
+
+        android:layout_constraintHorizontal_bias="0.672"
+        android:layout_constraintVertical_bias="0.0"
+        android:layout_constraintTop_toBottomOf="@+id/txtNivelMusica"
+        android:layout_constraintBottom_toBottomOf="parent"
+        android:layout_constraintEnd_toEndOf="parent"
+        android:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="26dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtNivelMusica"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNivelSonido" />
+
+    <TextView
+        android:id="@+id/txtNivelMusica"
+        android:layout_width="157dp"
+        android:layout_height="29dp"
+        android:layout_constraintHorizontal_bias="0.171"
+        android:layout_constraintVertical_bias="0.09"
+        android:layout_constraintTop_toBottomOf="@+id/nivelSonido"
+        android:layout_constraintBottom_toBottomOf="parent"
+        android:layout_constraintEnd_toEndOf="parent"
+        android:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="225dp"
+        android:text="@string/nivelMusica"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/nivelSonido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nivelMusica" />
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="131dp"
+        android:layout_height="48dp"
+        android:layout_constraintBottom_toTopOf="@+id/nivelSonido"
+        android:layout_constraintHorizontal_bias="0.139"
+        android:layout_constraintVertical_bias="1.0"
+        android:layout_constraintTop_toBottomOf="@+id/switch1"
+        android:layout_constraintEnd_toEndOf="parent"
+        android:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="245dp"
+        android:text="@string/musica"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch1" />
+
+    <SeekBar
+        android:id="@+id/nivelSonido"
+        android:layout_width="353dp"
+        android:layout_height="59dp"
+
+        android:layout_constraintHorizontal_bias="0.672"
+        android:layout_constraintVertical_bias="0.294"
+        android:layout_constraintBottom_toBottomOf="parent"
+        android:layout_constraintEnd_toEndOf="parent"
+        android:layout_constraintStart_toStartOf="parent"
+        android:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="21dp"
+        app:layout_constraintBottom_toTopOf="@+id/contenedorCambioContrasenia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="131dp"
+        android:layout_height="48dp"
+        android:layout_constraintBottom_toTopOf="@+id/nivelSonido"
+        android:layout_constraintHorizontal_bias="0.139"
+        android:layout_constraintVertical_bias="0.194"
+        android:layout_constraintEnd_toEndOf="parent"
+        android:layout_constraintStart_toStartOf="parent"
+        android:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:text="@string/sonido"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/switch2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAtras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_constraintHorizontal_bias="0.916"
+        android:layout_constraintVertical_bias="0.0"
+        android:layout_constraintBottom_toBottomOf="@+id/nivelMusica"
+        android:layout_constraintEnd_toEndOf="parent"
+        android:layout_constraintStart_toStartOf="parent"
+        android:layout_constraintTop_toTopOf="parent"
+
+        android:background="@color/Naranja"
+        android:backgroundTintMode="add"
+        android:text="@string/atras"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.038" />
+
+    <LinearLayout
+        android:id="@+id/contenedorCambioContrasenia"
+        android:layout_width="415dp"
+        android:layout_height="303dp"
+        android:layout_constraintHorizontal_bias="0.0"
+        android:layout_constraintVertical_bias="1.0"
+        android:layout_constraintTop_toBottomOf="@+id/nivelMusica"
+        android:layout_constraintBottom_toBottomOf="parent"
+        android:layout_constraintEnd_toEndOf="parent"
+        android:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="31dp"
+        android:background="@color/amarilooo"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nivelSonido"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/txtCambioPass"
+            android:layout_width="323dp"
+            android:layout_height="13dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="14dp"
+            android:layout_weight="1"
+            android:text="@string/cambioPass"
+
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+
+            android:id="@+id/cambioUsuario"
+            android:layout_width="195dp"
+            android:layout_height="23dp"
+
+
+            android:layout_gravity="center"
+            android:layout_marginEnd="80dp"
+            android:layout_weight="1"
+            android:autofillHints="usuario"
+            android:hint="@string/user"
+            android:inputType="text"
+            android:textSize="18sp" />
+
+        <EditText
+
+            android:id="@+id/passAntigua"
+            android:layout_width="192dp"
+            android:layout_height="wrap_content"
+
+
+            android:layout_gravity="center"
+            android:layout_marginEnd="80dp"
+            android:layout_weight="2"
+            android:autofillHints="antigua"
+            android:hint="@string/passAntigua"
+            android:inputType="textPassword"
+            android:textSize="18sp" />
+
+        <EditText
+
+            android:id="@+id/passNueva"
+            android:layout_width="186dp"
+            android:layout_height="wrap_content"
+
+
+            android:layout_gravity="center"
+            android:layout_marginEnd="80dp"
+            android:layout_weight="2"
+            android:autofillHints="nueva"
+            android:hint="@string/passNueva"
+            android:inputType="textPassword"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnCambiar"
+            android:layout_width="78dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="70dp"
+            android:layout_weight="1"
+            android:background="@color/Naranja"
+            android:text="@string/cambiar" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
