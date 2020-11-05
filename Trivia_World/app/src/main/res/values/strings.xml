@@ -6,11 +6,9 @@
 
 
 
-    <!-- NICO PantallaPrincipal-->
-    <string name="Bjugar">JUGAR</string>
-    <string name="Bperfil">PERFIL</string>
-    <string name="Bsociales">Redes      Sociales</string>
-    <string name="Iajustes">ajustes</string>
+
+
+
 
 
 
@@ -37,10 +35,6 @@
     <string name="puntuacion">Tu puntuacion es: </string>
     <string name="imagenDescripcion">Imagen de perfil</string>
     <string name="txtNombre">Nombre</string>
-
-
-
-
 
 
 </resources>
