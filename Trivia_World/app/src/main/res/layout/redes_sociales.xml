@@ -37,38 +37,46 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/gui_redes" />
 
-    <ImageView
-        android:id="@+id/youtube_logo"
-        android:contentDescription="@string/descripcion_youtube_logo"
-        android:layout_width="122dp"
-        android:layout_height="90dp"
-        android:layout_marginTop="55dp"
+    <LinearLayout
+        android:layout_width="222dp"
+        android:layout_height="364dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/gui_redes"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/gui_redes"
-        app:srcCompat="@drawable/logo_youtube" />
+        app:layout_constraintVertical_bias="0.491">
 
-    <ImageView
-        android:id="@+id/twitter_logo"
-        android:contentDescription="@string/descripcion_twitter_logo"
-        android:layout_width="98dp"
-        android:layout_height="78dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/youtube_logo"
-        app:srcCompat="@drawable/logo_twitter" />
+        <ImageView
+            android:id="@+id/imagen_youtube"
+            android:onClick="irEnlace"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/descripcion_youtube_logo"
+            app:srcCompat="@drawable/logo_youtube" />
 
-    <ImageView
-        android:id="@+id/instagram_logo"
-        android:contentDescription="@string/descripcion_instagram_logo"
-        android:layout_width="91dp"
-        android:layout_height="92dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/twitter_logo"
-        app:srcCompat="@drawable/logo_instagram" />
+        <ImageView
+            android:id="@+id/imagen_instagram"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/descripcion_instagram_logo"
+            app:srcCompat="@drawable/logo_instagram" />
+
+        <ImageView
+            android:id="@+id/imagen_twitter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/descripcion_twitter_logo"
+            app:srcCompat="@drawable/logo_twitter" />
+    </LinearLayout>
 
     <Button
 
@@ -77,8 +85,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/boton_volver_redes"
-        android:background="@color/Naranja"
+        android:backgroundTint="@color/Naranja"
         android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
