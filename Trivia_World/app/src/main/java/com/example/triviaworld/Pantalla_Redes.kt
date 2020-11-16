@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 
 class Pantalla_Redes: AppCompatActivity() {
@@ -13,7 +14,7 @@ class Pantalla_Redes: AppCompatActivity() {
         setContentView(R.layout.redes_sociales)
     }
 
-    fun irEnlace(view: View) {
+    fun irEnlaceYoutube(view: View) {
 
         val abrirURL = Intent(Intent.ACTION_VIEW, Uri.parse("http://google.es"))
         startActivity(abrirURL)
