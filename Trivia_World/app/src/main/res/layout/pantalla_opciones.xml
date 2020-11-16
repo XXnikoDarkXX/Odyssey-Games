@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/amarilooo"
+    android:background="@drawable/sky"
     >
 
 
@@ -22,6 +22,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/nivelMusica"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/switch2" />
 
@@ -43,18 +44,16 @@
         android:id="@+id/txtNivelMusica"
         android:layout_width="157dp"
 
+        android:layout_height="30dp"
         android:layout_marginStart="29dp"
-        android:layout_marginTop="26dp"
         android:layout_marginEnd="225dp"
         android:text="@string/nivelMusica"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/nivelSonido"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nivelMusica"
 
-        android:layout_height="30dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/switch2"
@@ -66,7 +65,7 @@
         android:textAlignment="center"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/switch1" />
+        tools:layout_editor_absoluteY="144dp" />
 
     <SeekBar
         android:id="@+id/nivelSonido"
@@ -105,13 +104,13 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.038" />
+        app:layout_constraintVertical_bias="0.133" />
 
     <LinearLayout
         android:id="@+id/contenedorCambioContrasenia"
-        android:layout_width="415dp"
-        android:layout_height="303dp"
-         android:background="@color/amarilooo"
+        android:layout_width="398dp"
+        android:layout_height="262dp"
+
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
