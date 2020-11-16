@@ -28,7 +28,7 @@
             android:layout_marginStart="20dp"
             android:layout_weight="1"
             android:gravity="bottom"
-            android:text="@string/correoElectronico" />
+            android:text="@string/correoElectronicoLogin" />
 
 
     </LinearLayout>
@@ -50,9 +50,9 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="170sp"
             android:layout_weight="1"
-            android:autofillHints="@string/email"
+            android:autofillHints="@string/emailLogin"
             android:ems="10"
-            android:hint="@string/email"
+            android:hint="@string/emailLogin"
             android:inputType="textEmailAddress" />
     </LinearLayout>
 
@@ -74,9 +74,9 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="170sp"
             android:layout_weight="1"
-            android:autofillHints="@string/contraseñaIn"
+            android:autofillHints="@string/contraseñaInLogin"
             android:ems="10"
-            android:hint="@string/contraseñaIn"
+            android:hint="@string/contraseñaInLogin"
             android:inputType="textPassword" />
     </LinearLayout>
 
@@ -97,7 +97,7 @@
             android:layout_marginStart="20dp"
             android:layout_weight="1"
             android:gravity="bottom"
-            android:text="@string/contraseña" />
+            android:text="@string/contraseñaInLogin" />
 
 
     </LinearLayout>
@@ -122,7 +122,7 @@
             android:layout_marginStart="20dp"
             android:layout_weight="1"
             android:gravity="bottom"
-            android:text="@string/olvidoContraseña" />
+            android:text="@string/olvidoContraseñaLogin" />
 
     </LinearLayout>
 
@@ -151,7 +151,7 @@
             android:layout_weight="1"
             android:background="#ff9000"
             android:onClick="enviar"
-            android:text="@string/enviar" />
+            android:text="@string/enviarLogin" />
     </LinearLayout>
 
 
