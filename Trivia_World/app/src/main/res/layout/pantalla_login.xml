@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/correoElectronico"
+            android:id="@+id/correoElectronicoLogin"
             android:layout_width="0dp"
             android:layout_height="50sp"
             android:layout_marginStart="20dp"
@@ -44,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/contenedor1">
 
         <EditText
-            android:id="@+id/mail"
+            android:id="@+id/mailLogin"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginStart="20dp"

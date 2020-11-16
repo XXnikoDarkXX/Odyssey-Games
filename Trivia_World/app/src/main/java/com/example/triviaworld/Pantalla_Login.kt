@@ -23,7 +23,7 @@ class Pantalla_Login: AppCompatActivity() {
 
         //Creacion de bundle y variables referenciadas correspondiente a los campos a introducir en el bundle
         var bundleEmailyContraseña:Bundle= Bundle()//Iniciamos la variable
-        var bundleEmail:EditText=findViewById(R.id.mail)//Referenciamos
+        var bundleEmail:EditText=findViewById(R.id.mailLogin)//Referenciamos
         var bundleContraseña:EditText=findViewById(R.id.contraseñaLogin)//Referenciamos
 
         try {
