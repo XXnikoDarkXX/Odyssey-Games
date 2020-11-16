@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout
+
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -11,9 +13,11 @@
     <LinearLayout
         android:id="@+id/contenedor1"
         android:layout_width="413dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="28dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/contenedor2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -23,6 +27,7 @@
             android:layout_height="50sp"
             android:layout_marginStart="20dp"
             android:layout_weight="1"
+            android:gravity="bottom"
             android:text="@string/correoElectronico" />
 
 
@@ -31,12 +36,12 @@
     <LinearLayout
         android:id="@+id/contenedor2"
         android:layout_width="410dp"
-        android:layout_height="80dp"
-        android:layout_marginBottom="568dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/contenedor3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contenedor1">
 
         <EditText
             android:id="@+id/mail"
@@ -54,15 +59,16 @@
     <LinearLayout
         android:id="@+id/contenedor4"
         android:layout_width="410dp"
-        android:layout_height="80dp"
-        android:layout_marginBottom="396dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/contenedor5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contenedor3">
 
         <EditText
-            android:id="@+id/contraseña"
+            android:id="@+id/contraseñaLogin"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginStart="20dp"
@@ -77,8 +83,8 @@
     <LinearLayout
         android:id="@+id/contenedor3"
         android:layout_width="413dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="40dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/contenedor4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,8 +96,8 @@
             android:layout_height="50sp"
             android:layout_marginStart="20dp"
             android:layout_weight="1"
-            android:text="@string/contraseña"
-            />
+            android:gravity="bottom"
+            android:text="@string/contraseña" />
 
 
     </LinearLayout>
@@ -99,16 +105,14 @@
     <LinearLayout
         android:id="@+id/contenedor5"
         android:layout_width="416dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="1dp"
+        android:layout_height="50dp"
         android:layout_weight="1"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/contenedor6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contenedor4"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/contenedor4">
 
 
         <TextView
@@ -117,6 +121,7 @@
             android:layout_height="50sp"
             android:layout_marginStart="20dp"
             android:layout_weight="1"
+            android:gravity="bottom"
             android:text="@string/olvidoContraseña" />
 
     </LinearLayout>
@@ -124,7 +129,9 @@
     <LinearLayout
         android:id="@+id/contenedor6"
         android:layout_width="413dp"
-        android:layout_height="109dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="300dp"
         android:layout_weight="1"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -143,6 +150,7 @@
             android:layout_marginEnd="50dp"
             android:layout_weight="1"
             android:background="#ff9000"
+            android:onClick="enviar"
             android:text="@string/enviar" />
     </LinearLayout>
 
