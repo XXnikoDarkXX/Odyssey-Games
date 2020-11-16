@@ -8,7 +8,7 @@ import android.view.View
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.pantalla_principal)
+        setContentView(R.layout.pantalla_login)
     }
 
     fun irARedes(view: View) {
