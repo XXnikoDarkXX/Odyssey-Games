@@ -56,14 +56,15 @@
 
         <ImageView
             android:id="@+id/imagen_youtube"
-            android:onClick="irEnlace"
+            android:onClick="irEnlaceYoutube"
             android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:contentDescription="@string/descripcion_youtube_logo"
-            app:srcCompat="@drawable/logo_youtube" />
+            app:srcCompat="@drawable/logo_youtube"
+            android:focusable="true" />
 
         <ImageView
             android:id="@+id/imagen_instagram"
