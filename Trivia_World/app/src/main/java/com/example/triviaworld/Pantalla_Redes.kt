@@ -20,4 +20,10 @@ class Pantalla_Redes: AppCompatActivity() {
         startActivity(openURL)
 
     }
+
+    fun volverInicio(view: View) {
+
+    val intent = Intent(this, MainActivity::class.java)
+    startActivity(intent)
+    }
 }
