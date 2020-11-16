@@ -5,16 +5,42 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/amarillo"
+    android:background="@drawable/sky"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+    <ImageView
+        android:id="@+id/logo_world_final"
+        android:layout_width="405dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        android:contentDescription="@string/descripcion_logo_redes"
+        app:layout_constraintBottom_toTopOf="@+id/contenedor1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/trivia_world_final" />
+
+    <ImageView
+        android:id="@+id/marcoAmarrillo"
+        android:layout_width="361dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp"
+        android:contentDescription="@string/descripcion_gui_redes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_world_final"
+        app:srcCompat="@drawable/gui_redes" />
 
     <LinearLayout
         android:id="@+id/contenedor1"
         android:layout_width="413dp"
         android:layout_height="50dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="100dp"
         app:layout_constraintBottom_toTopOf="@+id/contenedor2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -25,7 +51,7 @@
             android:id="@+id/correoElectronicoLogin"
             android:layout_width="0dp"
             android:layout_height="50sp"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="100dp"
             android:layout_weight="1"
             android:gravity="bottom"
             android:text="@string/correoElectronicoLogin" />
@@ -47,7 +73,7 @@
             android:id="@+id/mailLogin"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="100dp"
             android:layout_marginEnd="170sp"
             android:layout_weight="1"
             android:autofillHints="@string/emailLogin"
@@ -71,7 +97,7 @@
             android:id="@+id/contraseñaLogin"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="100dp"
             android:layout_marginEnd="170sp"
             android:layout_weight="1"
             android:autofillHints="@string/contraseñaInLogin"
@@ -94,10 +120,10 @@
             android:id="@+id/contraseñaIn"
             android:layout_width="0dp"
             android:layout_height="50sp"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="100dp"
             android:layout_weight="1"
             android:gravity="bottom"
-            android:text="@string/contraseñaInLogin" />
+            android:text="@string/contraseñaLogin" />
 
 
     </LinearLayout>
@@ -119,7 +145,8 @@
             android:id="@+id/olvidoContraseña"
             android:layout_width="0dp"
             android:layout_height="50sp"
-            android:layout_marginStart="20dp"
+            android:textSize="12sp"
+            android:layout_marginStart="100dp"
             android:layout_weight="1"
             android:gravity="bottom"
             android:text="@string/olvidoContraseñaLogin" />
@@ -130,8 +157,8 @@
         android:id="@+id/contenedor6"
         android:layout_width="413dp"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="300dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="100dp"
         android:layout_weight="1"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -145,9 +172,9 @@
         <Button
             android:id="@+id/button2"
             android:layout_width="0dp"
-            android:layout_height="50sp"
-            android:layout_marginStart="200dp"
-            android:layout_marginEnd="50dp"
+            android:layout_height="40sp"
+            android:layout_marginStart="150dp"
+            android:layout_marginEnd="150dp"
             android:layout_weight="1"
             android:background="#ff9000"
             android:onClick="enviar"
