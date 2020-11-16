@@ -5,10 +5,6 @@
     <string name="salir">Salir</string>
 
 
-
-
-
-
     <string name="Bperfil">PERFIL</string>
     <string name="Bsociales">REDES SOCIALES</string>
     <string name="bredes">REDES SOCIALES</string>
@@ -16,15 +12,8 @@
     <string name="Bjugar">JUGAR</string>
 
 
-
-
-
-
-
-
-
     <!-- NICO PantallaOpciones-->
- <string name="sonido">Sonido</string>
+    <string name="sonido">Sonido</string>
     <string name="musica">Musica</string>
     <string name="nivelSonido">Nivel de Sonido</string>
     <string name="nivelMusica">Nivel de Musica</string>
