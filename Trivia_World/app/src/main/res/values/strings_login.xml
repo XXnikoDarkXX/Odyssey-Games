@@ -1,6 +1,5 @@
 <resources>
 
-    <string name="app_name">pantallaLogin</string>
     <string name="emailLogin">Email</string>
     <string name="correoElectronicoLogin">Su dirección de correo electrónico</string>
     <string name="contraseñaLogin">Escriba su contraseña</string>

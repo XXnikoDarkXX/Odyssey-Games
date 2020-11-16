@@ -100,9 +100,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
                 android:layout_marginEnd="200dp"
-                android:autofillHints="@string/usuario"
+                android:autofillHints="@string/usuarioRegistro"
                 android:ems="10"
-                android:hint="@string/usuario"
+                android:hint="@string/usuarioRegistro"
                 android:inputType="phone" />
 
             <EditText
@@ -113,7 +113,7 @@
                 android:layout_marginEnd="200dp"
                 android:autofillHints="@string/telefono"
                 android:ems="10"
-                android:hint="@string/contraseña"
+                android:hint="@string/contraseñaRegistro"
                 android:inputType="textPassword" />
 
             <EditText
@@ -122,9 +122,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
                 android:layout_marginEnd="200dp"
-                android:autofillHints="@string/contraseña"
+                android:autofillHints="@string/contraseñaRegistro"
                 android:ems="10"
-                android:hint="@string/contraseña"
+                android:hint="@string/contraseñaRegistro"
                 android:inputType="textPassword" />
 
             <Button
@@ -135,7 +135,7 @@
                 android:layout_marginTop="50dp"
                 android:layout_marginEnd="50dp"
                 android:background="#ff9000"
-                android:text="@string/enviar"
+                android:text="@string/enviarRegistro"
 
                 />
 
