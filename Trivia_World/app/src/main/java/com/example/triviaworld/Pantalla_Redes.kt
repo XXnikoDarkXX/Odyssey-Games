@@ -15,9 +15,8 @@ class Pantalla_Redes: AppCompatActivity() {
 
     fun irEnlace(view: View) {
 
-        val openURL = Intent(android.content.Intent.ACTION_VIEW)
-        openURL.data = Uri.parse("https://www.google.es/")
-        startActivity(openURL)
+        val abrirURL = Intent(Intent.ACTION_VIEW, Uri.parse("http://google.es"))
+        startActivity(abrirURL)
 
     }
 
