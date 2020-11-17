@@ -10,14 +10,15 @@
 
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/marcoNaranajaPerfil"
         android:layout_width="374dp"
         android:layout_height="553dp"
+        android:contentDescription="@string/descripcion_gui_redes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_perfil"
         app:srcCompat="@drawable/gui_redes" />
 
     <TextView
@@ -25,16 +26,16 @@
         android:layout_width="138dp"
         android:layout_height="30dp"
         android:layout_marginStart="112dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="161dp"
-        android:layout_marginBottom="60dp"
         android:text="@string/txtNombre"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAtrasPerfil" />
 
     <TextView
         android:id="@+id/nick"
@@ -42,14 +43,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="142dp"
         android:layout_marginEnd="63dp"
+        android:layout_marginBottom="44dp"
         android:text="@string/nickName"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/nombre"
         app:layout_constraintEnd_toStartOf="@+id/btnAtrasPerfil"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.459">
+
+        app:layout_constraintTop_toTopOf="@+id/marcoNaranajaPerfil"
+        app:layout_constraintVertical_bias="1.0">
 
     </TextView>
 
@@ -57,14 +60,13 @@
         android:id="@+id/btnAtrasPerfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
+        android:layout_marginStart="40dp"
 
+        android:layout_marginTop="48dp"
         android:background="@color/Naranja"
         android:text="@string/atras"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/nick"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.177" />
+        app:layout_constraintTop_toTopOf="@+id/marcoNaranajaPerfil" />
 
     <TextView
         android:id="@+id/txtPuntuacion"
@@ -74,31 +76,60 @@
         android:textAlignment="textStart"
         android:textSize="24sp"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/marcoNaranajaPerfil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.779" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="124dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtPuntuacion"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toBottomOf="@+id/btnEnviarFoto"
+        app:layout_constraintVertical_bias="0.354" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btnEnviarFoto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:layout_marginTop="16dp"
         android:background="@color/naranja"
-        app:layout_constraintBottom_toTopOf="@+id/txtPuntuacion"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        android:text="@string/enviarLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subirFoto" />
+
+    <TextView
+        android:id="@+id/subirFoto"
+        android:layout_width="221dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/subirFoto"
+        android:textAlignment="center"
+        android:textSize="13sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/marcoNaranajaPerfil"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="@+id/marcoNaranajaPerfil"
+        app:layout_constraintTop_toBottomOf="@+id/avatar" />
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="184dp"
+        android:layout_height="162dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/avatarDescripcion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombre"
+        app:srcCompat="@drawable/avatar_perfil" />
+
+    <ImageView
+        android:id="@+id/logo_perfil"
+        android:layout_width="286dp"
+        android:contentDescription="@string/txtDescLogo"
+        android:layout_height="75dp"
+        app:layout_constraintBottom_toTopOf="@+id/marcoNaranajaPerfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/trivia_world_final" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
