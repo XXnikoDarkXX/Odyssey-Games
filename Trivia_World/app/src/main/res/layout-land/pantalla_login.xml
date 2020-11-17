@@ -145,6 +145,18 @@
             android:text="@string/olvidoContraseñaLogin"
             android:textSize="12sp" />
 
+        <TextView
+            android:id="@+id/enlaceOlvidoContraseñaLogin"
+            android:textColor="@color/azulEnlace"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="150dp"
+            android:layout_width="10sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/enlaceOlvidoContraseñaLogin"
+            />
+
+
     </LinearLayout>
 
     <LinearLayout
@@ -159,18 +171,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contenedor5">
 
+        <Button
+            android:id="@+id/btnRegistrarseLogin"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="40dp"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:text="@string/registrarse"
+            android:background="#ff9000"
+            />
 
         <Button
-            android:id="@+id/button2"
-
-            android:layout_width="0dp"
-            android:layout_height="40sp"
-            android:layout_marginStart="150dp"
-            android:layout_marginEnd="150dp"
+            android:id="@+id/btnEnviarLogin"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="60dp"
             android:layout_weight="1"
             android:background="#ff9000"
             android:onClick="enviar"
-            android:text="@string/enviarLogin" />
+            android:text="@string/enviarLogin"
+            />
     </LinearLayout>
 
 

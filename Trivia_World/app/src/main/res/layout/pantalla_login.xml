@@ -86,7 +86,7 @@
         android:id="@+id/contenedor4"
         android:layout_width="410dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@+id/contenedor5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -132,6 +132,7 @@
         android:id="@+id/contenedor5"
         android:layout_width="416dp"
         android:layout_height="50dp"
+        android:layout_marginTop="10dp"
         android:layout_weight="1"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/contenedor6"
@@ -145,21 +146,20 @@
             android:id="@+id/olvidoContraseña"
             android:layout_width="0dp"
             android:layout_height="50sp"
-            android:textSize="12sp"
             android:layout_marginStart="100dp"
             android:layout_weight="1"
-            android:text="@string/olvidoContraseñaLogin" />
+            android:text="@string/olvidoContraseñaLogin"
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/enlaceOlvidoContraseñaLogin"
-            android:textColor="@color/azulEnlace"
-            android:layout_marginTop="15sp"
-            android:layout_marginEnd="150dp"
             android:layout_width="10sp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:layout_marginEnd="150dp"
             android:layout_weight="1"
             android:text="@string/enlaceOlvidoContraseñaLogin"
-            />
+            android:textColor="@color/azulEnlace" />
 
     </LinearLayout>
 
@@ -167,7 +167,7 @@
         android:id="@+id/contenedor6"
         android:layout_width="413dp"
         android:layout_height="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:layout_marginBottom="100dp"
         android:layout_weight="1"
         android:orientation="horizontal"
@@ -180,27 +180,25 @@
 
 
         <Button
-            android:id="@+id/button6"
-            android:layout_marginStart="60dp"
+            android:id="@+id/btnRegistrarseLogin"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="90dp"
             android:layout_marginEnd="20dp"
-            android:layout_width="50dp"
-            android:layout_height="40sp"
             android:layout_weight="1"
-            android:text="@string/registrarse"
             android:background="#ff9000"
-            />
+            android:text="@string/registrarse" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnEnviarLogin"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="70dp"
-            android:layout_width="50dp"
-            android:layout_height="40sp"
+            android:layout_marginEnd="100dp"
             android:layout_weight="1"
             android:background="#ff9000"
             android:onClick="enviar"
-            android:text="@string/enviarLogin"
-            />
+            android:text="@string/enviarLogin" />
 
     </LinearLayout>
 
