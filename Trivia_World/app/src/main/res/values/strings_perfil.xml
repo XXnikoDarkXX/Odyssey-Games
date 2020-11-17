@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="avatarDescripcion">Es el avatar que sube el usuario</string>
+    <string name="subirFoto">Pulse el botón para subir una foto</string>
+    <string name="txtDescLogo">Es un logo de Trivia World en perfil</string>
+
+</resources>

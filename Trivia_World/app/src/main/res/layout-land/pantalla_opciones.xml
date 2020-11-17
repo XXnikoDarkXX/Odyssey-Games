@@ -6,59 +6,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/sky"
+
     >
 
 
     <ImageView
         android:id="@+id/marcoNaranjaOpciones"
+        android:layout_width="579dp"
+        android:layout_height="395dp"
         android:contentDescription="@string/descripcion_gui_redes"
-        android:layout_width="359dp"
-        android:layout_height="552dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="40dp"
+
+        android:layout_marginStart="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.557"
-        app:layout_constraintStart_toStartOf="parent"
-
-        app:srcCompat="@drawable/gui_redes" />
+        app:layout_constraintStart_toEndOf="@+id/logo_Opciones"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/marco_narana_horizontal" />
 
     <TextView
         android:id="@+id/txtNivelSonido"
         android:layout_width="160dp"
         android:layout_height="33dp"
 
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
         android:text="@string/nivelSonido"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/switch2" />
+        app:layout_constraintStart_toEndOf="@+id/switch1"
+        app:layout_constraintTop_toTopOf="@+id/marcoNaranjaOpciones" />
 
     <SeekBar
         android:id="@+id/nivelMusica"
-        android:layout_width="315dp"
-        android:layout_height="31dp"
+        android:layout_width="185dp"
+        android:layout_height="25dp"
 
 
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="1dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNivelSonido" />
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintStart_toEndOf="@+id/txtNivelMusica"
+        app:layout_constraintTop_toBottomOf="@+id/nivelSonido" />
 
     <TextView
         android:id="@+id/txtNivelMusica"
         android:layout_width="157dp"
 
         android:layout_height="30dp"
-        android:layout_marginStart="44dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="36dp"
         android:text="@string/nivelMusica"
+
         android:textSize="18sp"
         android:textStyle="bold"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nivelMusica" />
+        app:layout_constraintStart_toEndOf="@+id/switch2"
+        app:layout_constraintTop_toBottomOf="@+id/txtNivelSonido" />
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/switch2"
@@ -66,63 +67,62 @@
         android:layout_height="48dp"
 
 
-        android:layout_marginStart="12dp"
-
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="32dp"
         android:text="@string/musica"
         android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/marcoNaranjaOpciones"
-        app:layout_constraintTop_toBottomOf="@+id/switch1" />
+        app:layout_constraintBottom_toTopOf="@+id/contenedorCambioContrasenia"
+        app:layout_constraintStart_toStartOf="@+id/marcoNaranjaOpciones" />
 
     <SeekBar
         android:id="@+id/nivelSonido"
-        android:layout_width="320dp"
-        android:layout_height="30dp"
+        android:layout_width="185dp"
+        android:layout_height="25dp"
 
-        android:layout_marginStart="44dp"
-        app:layout_constraintBottom_toTopOf="@+id/contenedorCambioContrasenia"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNivelMusica"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@+id/txtNivelSonido"
+        app:layout_constraintTop_toTopOf="@+id/marcoNaranjaOpciones" />
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/switch1"
         android:layout_width="131dp"
         android:layout_height="48dp"
 
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/sonido"
         android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/marcoNaranjaOpciones"
-        app:layout_constraintTop_toTopOf="@+id/marcoNaranjaOpciones" />
+        app:layout_constraintBottom_toTopOf="@+id/switch2"
+        app:layout_constraintStart_toStartOf="@+id/marcoNaranjaOpciones" />
 
     <Button
         android:id="@+id/btnAtras"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="volverInicio"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="36dp"
         android:background="@color/Naranja"
         android:backgroundTintMode="add"
+        android:onClick="volverInicio"
         android:text="@string/atras"
+        app:layout_constraintBottom_toTopOf="@+id/btnCambiar"
         app:layout_constraintEnd_toEndOf="@+id/marcoNaranjaOpciones"
-        app:layout_constraintTop_toTopOf="@+id/marcoNaranjaOpciones" />
+        app:layout_constraintStart_toEndOf="@+id/contenedorCambioContrasenia" />
 
     <LinearLayout
         android:id="@+id/contenedorCambioContrasenia"
-        android:layout_width="396dp"
-        android:layout_height="192dp"
+        android:layout_width="372dp"
+        android:layout_height="196dp"
 
-        android:layout_marginBottom="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="28dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/btnCambiar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintBottom_toBottomOf="@+id/marcoNaranjaOpciones"
+        app:layout_constraintStart_toStartOf="@+id/marcoNaranjaOpciones"
+        app:layout_constraintTop_toBottomOf="@+id/txtNivelMusica"
+        app:layout_constraintVertical_bias="0.853">
 
         <TextView
             android:id="@+id/txtCambioPass"
@@ -140,12 +140,12 @@
         <EditText
 
             android:id="@+id/cambioUsuario"
-            android:layout_marginEnd="9dp"
             android:layout_width="314dp"
             android:layout_height="wrap_content"
-
-
             android:layout_gravity="center"
+
+
+            android:layout_marginEnd="9dp"
 
             android:layout_weight="1"
             android:autofillHints="usuario"
@@ -159,8 +159,8 @@
             android:layout_width="314dp"
             android:layout_height="wrap_content"
 
-            android:layout_marginEnd="9dp"
             android:layout_gravity="center"
+            android:layout_marginEnd="9dp"
 
             android:layout_weight="2"
             android:autofillHints="antigua"
@@ -186,31 +186,30 @@
 
     </LinearLayout>
 
-    <ImageView
-        android:layout_marginTop="15dp"
-        android:id="@+id/logo_Opciones"
-        android:layout_width="297dp"
-        android:layout_height="70dp"
-        android:contentDescription="@string/descripcion_logo_redes"
-        app:layout_constraintBottom_toTopOf="@+id/marcoNaranjaOpciones"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/trivia_world_final" />
-
     <Button
         android:id="@+id/btnCambiar"
-        android:layout_width="82dp"
-        android:layout_height="29dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="4dp"
+        android:layout_marginBottom="64dp"
         android:layout_weight="1"
         android:background="@color/Naranja"
         android:text="@string/cambiar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.723"
+        app:layout_constraintBottom_toBottomOf="@+id/marcoNaranjaOpciones"
+        app:layout_constraintEnd_toEndOf="@+id/marcoNaranjaOpciones"
+        app:layout_constraintStart_toEndOf="@+id/contenedorCambioContrasenia" />
+
+    <ImageView
+        android:id="@+id/logo_Opciones"
+        android:layout_width="57dp"
+        android:contentDescription="@string/descripcion_logo_redes"
+
+        android:layout_height="126dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/marcoNaranjaOpciones"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contenedorCambioContrasenia" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/trivia_world_final" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
