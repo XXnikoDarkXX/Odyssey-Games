@@ -56,15 +56,15 @@
 
         <ImageView
             android:id="@+id/imagen_youtube"
-            android:onClick="irEnlaceYoutube"
-            android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
+            android:clickable="true"
             android:contentDescription="@string/descripcion_youtube_logo"
-            app:srcCompat="@drawable/logo_youtube"
-            android:focusable="true" />
+            android:focusable="true"
+            android:onClick="irEnlaceYoutube"
+            app:srcCompat="@drawable/logo_youtube" />
 
         <ImageView
             android:id="@+id/imagen_instagram"
@@ -73,6 +73,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:contentDescription="@string/descripcion_instagram_logo"
+            android:onClick="irEnlaceInstagram"
             app:srcCompat="@drawable/logo_instagram" />
 
         <ImageView
@@ -82,6 +83,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:contentDescription="@string/descripcion_twitter_logo"
+            android:onClick="irEnlaceTwitter"
             app:srcCompat="@drawable/logo_twitter" />
     </LinearLayout>
 

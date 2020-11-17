@@ -16,7 +16,7 @@ class Pantalla_Redes: AppCompatActivity() {
 
     fun irEnlaceYoutube(view: View) {
 
-        val abrirURL = Intent(Intent.ACTION_VIEW, Uri.parse("http://google.es"))
+        val abrirURL = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/channel/UCck3TNv3wDRjeGxuN8gNtyQ"))
         startActivity(abrirURL)
 
     }
@@ -25,5 +25,19 @@ class Pantalla_Redes: AppCompatActivity() {
 
     val intent = Intent(this, MainActivity::class.java)
     startActivity(intent)
+    }
+
+    fun irEnlaceInstagram(view: View) {
+
+        val abrirURL = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/triviaworld_es/"))
+        startActivity(abrirURL)
+
+    }
+
+    fun irEnlaceTwitter(view: View) {
+
+        val abrirURL = Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/TriviaWorld_es\n"))
+        startActivity(abrirURL)
+
     }
 }

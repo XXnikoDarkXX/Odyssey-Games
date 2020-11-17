@@ -9,83 +9,88 @@
     >
 
     <ImageView
-        android:id="@+id/foto"
-        android:contentDescription="@string/descripcion_foto"
-        android:layout_width="238dp"
-        android:layout_height="290dp"
-        app:layout_constraintBottom_toTopOf="@+id/boton1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pregunta"
-        app:srcCompat="@drawable/casco" />
-
-    <ImageView
         android:id="@+id/pregunta"
+        android:layout_width="353dp"
+        android:layout_height="134dp"
         android:contentDescription="@string/descripcion_pregunta"
-        android:layout_width="416dp"
-        android:layout_height="160dp"
-        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/bocadillo_pregunta" />
 
-    <Button
-        android:id="@+id/boton1"
-        android:backgroundTint="@color/Naranja"
-        android:layout_width="381dp"
-        android:layout_height="66dp"
-        android:layout_marginTop="313dp"
-        android:text="@string/boton1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pregunta" />
-
-    <Button
-        android:id="@+id/boton2"
-        android:backgroundTint="@color/Naranja"
-        android:layout_width="381dp"
-        android:layout_height="66dp"
-        android:text="@string/boton2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/boton1" />
-
-    <Button
-        android:id="@+id/boton3"
-        android:backgroundTint="@color/Naranja"
-        android:layout_width="381dp"
-        android:layout_height="66dp"
-        android:text="@string/boton3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/boton2" />
-
-    <Button
-        android:id="@+id/boton4"
-        android:backgroundTint="@color/Naranja"
-        android:layout_width="381dp"
-        android:layout_height="66dp"
-        android:text="@string/boton4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/boton3" />
-
-
-
-
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:id="@+id/textoPregunta"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_width="243dp"
+        android:layout_height="65dp"
         android:text="@string/pregunta"
+        app:layout_constraintBottom_toBottomOf="@+id/pregunta"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="@+id/pregunta"
         app:layout_constraintTop_toTopOf="@+id/pregunta" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/boton1"
+            android:textStyle="bold"
+            android:layout_width="380dp"
+            android:layout_height="60dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/color_degradado"
+            android:text="@string/boton1" />
+
+        <Button
+            android:id="@+id/boton2"
+
+            android:textStyle="bold"
+            android:layout_width="380dp"
+            android:layout_height="60dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/color_degradado"
+            android:text="@string/boton2" />
+
+        <Button
+            android:id="@+id/boton3"
+            android:textStyle="bold"
+            android:layout_width="380dp"
+            android:layout_height="60dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/color_degradado"
+            android:text="@string/boton3" />
+
+        <Button
+            android:id="@+id/boton4"
+            android:textStyle="bold"
+            android:layout_width="380dp"
+            android:layout_height="60dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/color_degradado"
+            android:text="@string/boton4" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imagen_secundaria"
+        android:contentDescription="@string/descripcion_foto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pregunta"
+        app:srcCompat="@drawable/imagen_prueba" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
