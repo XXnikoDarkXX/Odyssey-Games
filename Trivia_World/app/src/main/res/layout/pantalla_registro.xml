@@ -17,11 +17,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/logo_world_final"
         app:srcCompat="@drawable/gui_redes" />
 
     <ScrollView
-        android:id="@+id/scrollView2"
+        android:id="@+id/scrollViewRegistro"
         android:layout_width="263dp"
         android:layout_height="451dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -157,7 +157,7 @@
     </ScrollView>
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/logo_world_final"
         android:layout_width="405dp"
         android:layout_height="63dp"
         android:layout_marginStart="3dp"
