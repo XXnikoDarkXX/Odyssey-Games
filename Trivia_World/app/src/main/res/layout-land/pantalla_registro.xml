@@ -10,12 +10,167 @@
 
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="646dp"
-        android:layout_height="369dp"
-        android:layout_marginEnd="4dp"
+        android:id="@+id/logo_world_final"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="30dp"
+        android:contentDescription="@string/descripcion_logo_redes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/marcoAmarrillo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/trivia_world_final" />
+
+    <ImageView
+        android:id="@+id/marcoAmarrillo"
+        android:layout_width="572dp"
+        android:layout_height="353dp"
+        android:contentDescription="@string/descripcion_gui_redes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/logo_world_final"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/marco_narana_horizontal" />
+
+    <ScrollView
+        android:layout_width="475dp"
+        android:layout_height="286dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintStart_toEndOf="@+id/logo_world_final"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.496">
+
+
+        <LinearLayout
+            android:id="@+id/tapiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/nombreIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="200dp"
+                android:autofillHints=""
+                android:hint="@string/nombre"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/apellidosIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="200dp"
+                android:autofillHints=""
+                android:hint="@string/apellidos"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/fechaNacimientoIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="200dp"
+                android:autofillHints="@string/fechaNacimiento"
+                android:hint="@string/fechaNacimiento"
+                android:inputType="date" />
+
+            <EditText
+                android:id="@+id/direccionIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="200dp"
+                android:autofillHints="@string/direccion"
+                android:hint="@string/direccion"
+                android:inputType="textPostalAddress" />
+
+            <EditText
+                android:id="@+id/ciudadIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="200dp"
+                android:autofillHints="@string/ciudad"
+                android:hint="@string/ciudad"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/paisIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="200dp"
+                android:autofillHints="@string/pais"
+                android:hint="@string/pais"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/telefonoIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="200dp"
+                android:autofillHints="@string/telefono"
+                android:hint="@string/telefono"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/usuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="200dp"
+                android:autofillHints="@string/usuarioRegistro"
+                android:ems="10"
+                android:hint="@string/usuarioRegistro"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/contraseña"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="200dp"
+                android:autofillHints="@string/telefono"
+                android:ems="10"
+                android:hint="@string/contraseñaRegistro"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/contraseñaR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="200dp"
+                android:autofillHints="@string/contraseñaRegistro"
+                android:ems="10"
+                android:hint="@string/contraseñaRegistro"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="50dp"
+                android:background="#ff9000"
+                android:text="@string/enviarRegistro"
+
+                />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
