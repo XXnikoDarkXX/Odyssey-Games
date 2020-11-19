@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     companion object val PERMISO_ALMACENAMIENTO=1000;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.pantalla_perfil)
+        setContentView(R.layout.pantalla_principal)
     }
 
     fun irARedes(view: View) {
