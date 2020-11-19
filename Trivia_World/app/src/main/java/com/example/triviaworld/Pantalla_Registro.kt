@@ -14,6 +14,9 @@ class Pantalla_Registro : AppCompatActivity() {
         setContentView(R.layout.pantalla_registro)
     }
 
+    /**
+     *Función para registrarse, comprueba que todos los datos estan rellenos
+     */
     fun enviarRegistro(view: View) {
 
         //Referencio las variables
@@ -42,8 +45,10 @@ class Pantalla_Registro : AppCompatActivity() {
         var contraseñaComprobacionRegi:String=contraseñaComprobacionRegistro.text.toString()
 
 
-
+        //Verificación de datos completados
         if (nombreRegi == "") {
+
+            //Dialogo de alerta que avisa de la acción
             AlertDialog.Builder(this).setTitle("Datos incompletos").setMessage("Falta: nombre").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which -> }).show()
 
         }else if (apellidosRegi == "") {
@@ -74,10 +79,12 @@ class Pantalla_Registro : AppCompatActivity() {
             AlertDialog.Builder(this).setTitle("Datos incompletos").setMessage("Falta: comprobación contraseña").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which -> }).show()
 
         }else{
+
+            //Dialogo de alerta que avisa de la acción
             AlertDialog.Builder(this).setTitle("Registrarse").setMessage("Ir a registrarse").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which ->}).show()
 
-            val intent = Intent(this, Pantalla_Registro::class.java)
-            startActivity(intent)
+            val intent = Intent(this, Pantalla_Registro::class.java)//Guardo en una variable el Intent
+            startActivity(intent)//Iniciamos la actividad
         }
 
     }
