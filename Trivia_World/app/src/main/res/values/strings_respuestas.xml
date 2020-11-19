@@ -16,9 +16,22 @@
 
 
 
-    <string name="respuesta1_ciencias">¿Qué año fueron las cruzadas?</string>
+    <string name="respuesta1_ciencias">300.000 m/s</string>
+    <string name="respuesta2_ciencias">300km/s</string>
+    <string name="respuesta3_ciencias">30.000km/s</string>
+    <string name="respuesta4_ciencias">300.000km/s</string>
+
+
     <string name="respuesta1_arte">¿Qué año fueron las cruzadas?</string>
-    <string name="respuesta1_entretenimiento">¿Qué año fueron las cruzadas?</string>
+    <string name="respuesta2_arte">¿Qué año fueron las cruzadas?</string>
+    <string name="respuesta3_arte">¿Qué año fueron las cruzadas?</string>
+    <string name="respuesta4_arte">¿Qué año fueron las cruzadas?</string>
+
+
+    <string name="respuesta1_entretenimiento">Vincent van Gogh</string>
+    <string name="respuesta2_entretenimiento">Pablo Picasso</string>
+    <string name="respuesta3_entretenimiento">Salvador Dalí</string>
+    <string name="respuesta4_entretenimiento">Leonardo da Vinci</string>
 
 
 

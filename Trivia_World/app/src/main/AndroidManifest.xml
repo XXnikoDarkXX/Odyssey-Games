@@ -24,6 +24,8 @@
         </activity>
         <activity android:name=".Pantalla_Redes" />
         <activity android:name=".Pantalla_Login" />
+        <activity android:name=".Pantalla_Opciones" />
+        <activity android:name=".Pantalla_Secundaria" />
     </application>
 
 </manifest>
