@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="respuesta1_historia">1189</string>
+    <string name="respuesta2_historia">1095</string>
+    <string name="respuesta3_historia">1075</string>
+    <string name="respuesta4_historia">1187</string>
+
+
+
+
+    <string name="respuesta1_geografia">Groenlandia</string>
+    <string name="respuesta2_geografia">Australia</string>
+    <string name="respuesta3_geografia">Madagascar</string>
+    <string name="respuesta4_geografia">Gran Bretaña</string>
+
+
+
+    <string name="respuesta1_ciencias">¿Qué año fueron las cruzadas?</string>
+    <string name="respuesta1_arte">¿Qué año fueron las cruzadas?</string>
+    <string name="respuesta1_entretenimiento">¿Qué año fueron las cruzadas?</string>
+
+
+
+
+
+
+
+</resources>

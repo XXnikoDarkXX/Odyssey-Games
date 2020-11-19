@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="pregunta1_historia">¿Qué año fueron las cruzadas?</string>
+    <string name="pregunta1_geografia">¿Cuál es la isla más grande del mundo?</string>
+    <string name="pregunta1_ciencias">La velocidad a la que viaja la luz es:</string>
+    <string name="pregunta1_arte">¿Quién pintó el Guernica?</string>
+    <string name="pregunta1_entretenimiento">¿En que año se estrenó Interestellar?</string>
+
+
+
+
+
+
+</resources>
