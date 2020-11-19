@@ -14,6 +14,16 @@ class Pantalla_Registro : AppCompatActivity() {
         setContentView(R.layout.pantalla_registro)
     }
 
+
+    /**
+     * Función para ir a la página de inicio pulsando el logo, mediante un intent
+     */
+    fun volverInicio(view: View) {
+
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+    }
+
     /**
      *Función para registrarse, comprueba que todos los datos estan rellenos
      */
