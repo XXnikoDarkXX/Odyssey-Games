@@ -12,6 +12,7 @@
 
     <ImageView
         android:id="@+id/logo_world_final"
+        android:onClick="volverInicio"
         android:layout_width="405dp"
         android:layout_height="63dp"
         android:layout_marginStart="3dp"

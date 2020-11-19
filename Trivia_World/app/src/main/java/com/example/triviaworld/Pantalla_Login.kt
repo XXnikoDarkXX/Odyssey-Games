@@ -17,6 +17,15 @@ class Pantalla_Login: AppCompatActivity() {
     }
 
     /**
+     * Función para ir a la página de inicio pulsando el logo, mediante un intent
+     */
+    fun volverInicio(view: View) {
+
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+    }
+
+    /**
      *Función para ir a la página de registro, mediante un intent
      */
     fun irARegistrase(view: View) {
