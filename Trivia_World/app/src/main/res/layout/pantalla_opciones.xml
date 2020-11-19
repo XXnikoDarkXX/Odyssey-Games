@@ -101,9 +101,10 @@
 
     <Button
         android:id="@+id/btnAtras"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="volverInicio"
+        android:onClick="irAInicio"
         android:layout_marginTop="68dp"
         android:layout_marginEnd="40dp"
         android:background="@color/Naranja"
@@ -202,6 +203,7 @@
         android:id="@+id/btnCambiar"
         android:layout_width="82dp"
         android:layout_height="29dp"
+        android:onClick="cambiaPass"
         android:layout_gravity="center"
         android:layout_marginTop="4dp"
         android:layout_weight="1"
