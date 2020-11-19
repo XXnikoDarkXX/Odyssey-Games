@@ -10,7 +10,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/marcoAmarrillo"
         android:layout_width="547dp"
         android:layout_height="300dp"
         android:layout_marginStart="90dp"
@@ -20,10 +20,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contenedor1"
-        app:srcCompat="@drawable/marco_narana_horizontal" />
+        app:srcCompat="@drawable/marco_narana_horizontal"
+        android:contentDescription="@string/descripcion_gui_redes"
+        />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/logo_world_final"
         android:layout_width="154dp"
         android:layout_height="63dp"
         android:layout_marginBottom="1dp"
@@ -31,17 +33,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/trivia_world_final" />
+        app:srcCompat="@drawable/trivia_world_final"
+        android:contentDescription="@drawable/trivia_world_final" />
 
     <LinearLayout
         android:id="@+id/contenedor1"
         android:layout_width="413dp"
         android:layout_height="50dp"
-
         app:layout_constraintBottom_toTopOf="@+id/contenedor2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2">
+        app:layout_constraintTop_toBottomOf="@+id/logo_world_final">
 
         <TextView
             android:id="@+id/correoElectronicoLogin"
@@ -137,8 +139,8 @@
 
         <TextView
             android:id="@+id/olvidoContraseña"
-            android:layout_marginTop="10dp"
-            android:layout_width="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="10dp"
             android:layout_height="50sp"
             android:layout_marginStart="100dp"
             android:layout_weight="1"
@@ -148,8 +150,7 @@
         <TextView
             android:id="@+id/enlaceOlvidoContraseñaLogin"
             android:textColor="@color/azulEnlace"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="150dp"
+            android:layout_marginTop="15dp"
             android:layout_width="10sp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -173,7 +174,7 @@
 
         <Button
             android:id="@+id/btnRegistrarseLogin"
-            android:layout_marginStart="80dp"
+            android:layout_marginStart="70dp"
             android:layout_marginEnd="40dp"
             android:layout_width="100dp"
             android:layout_height="35dp"

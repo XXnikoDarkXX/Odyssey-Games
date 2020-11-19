@@ -21,7 +21,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/trivia_world_final" />
+        app:srcCompat="@drawable/trivia_world_final"
+        />
 
     <ImageView
         android:id="@+id/marcoAmarrillo"
@@ -103,7 +104,8 @@
             android:autofillHints="@string/contraseñaInLogin"
             android:ems="10"
             android:hint="@string/contraseñaInLogin"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -181,6 +183,7 @@
 
         <Button
             android:id="@+id/btnRegistrarseLogin"
+            android:onClick="irARegistrase"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="90dp"
