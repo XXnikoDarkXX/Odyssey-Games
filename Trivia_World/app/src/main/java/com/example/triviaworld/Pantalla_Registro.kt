@@ -1,6 +1,7 @@
 package com.example.triviaworld
 
 import android.content.DialogInterface
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -13,6 +14,19 @@ class Pantalla_Registro : AppCompatActivity() {
         setContentView(R.layout.pantalla_registro)
     }
 
+
+    /**
+     * Función para ir a la página de inicio pulsando el logo, mediante un intent
+     */
+    fun volverInicio(view: View) {
+
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+    }
+
+    /**
+     *Función para registrarse, comprueba que todos los datos estan rellenos
+     */
     fun enviarRegistro(view: View) {
 
         //Referencio las variables
@@ -41,51 +55,46 @@ class Pantalla_Registro : AppCompatActivity() {
         var contraseñaComprobacionRegi:String=contraseñaComprobacionRegistro.text.toString()
 
 
-        AlertDialog.Builder(this).setTitle("Registrarse").setMessage("Ir a registrarse").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which ->}).show()
-
+        //Verificación de datos completados
         if (nombreRegi == "") {
-            AlertDialog.Builder(this).setTitle("Datos incompletos").setMessage("Falta: nombre").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which -> }).show()
-        }
 
-        if (apellidosRegi == "") {
+            //Dialogo de alerta que avisa de la acción
+            AlertDialog.Builder(this).setTitle("Datos incompletos").setMessage("Falta: nombre").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which -> }).show()
+
+        }else if (apellidosRegi == "") {
             AlertDialog.Builder(this).setTitle("Datos incompletos").setMessage("Falta: apellidos").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which -> }).show()
 
-        }
-
-        if (fechaNacimientoRegi == "") {
+        }else if (fechaNacimientoRegi == "") {
             AlertDialog.Builder(this).setTitle("Datos incompletos").setMessage("Falta: fecha de nacimiento").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which -> }).show()
-        }
 
-        if (direccionRegi == "") {
+        }else if (direccionRegi == "") {
             AlertDialog.Builder(this).setTitle("Datos incompletos").setMessage("Falta: dirección").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which -> }).show()
 
-        }
-
-        if (diudadRegi == "") {
+        }else if (diudadRegi == "") {
             AlertDialog.Builder(this).setTitle("Datos incompletos").setMessage("Falta: ciudad").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which -> }).show()
-        }
 
-        if (paisRegi == "") {
+        }else if (paisRegi == "") {
             AlertDialog.Builder(this).setTitle("Datos incompletos").setMessage("Falta: pais").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which -> }).show()
 
-        }
-
-        if (telefonoRegi == "") {
+        }else if (telefonoRegi == "") {
             AlertDialog.Builder(this).setTitle("Datos incompletos").setMessage("Falta: telefono").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which -> }).show()
-        }
 
-        if (usuarioRegi == "") {
+        }else if (usuarioRegi == "") {
             AlertDialog.Builder(this).setTitle("Datos incompletos").setMessage("Falta: usuario").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which -> }).show()
 
-        }
-
-        if (contraseñaRegi == "") {
+        }else if (contraseñaRegi == "") {
             AlertDialog.Builder(this).setTitle("Datos incompletos").setMessage("Falta: contraseña").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which -> }).show()
-        }
 
-        if (contraseñaComprobacionRegi == "") {
+        }else if (contraseñaComprobacionRegi == "") {
             AlertDialog.Builder(this).setTitle("Datos incompletos").setMessage("Falta: comprobación contraseña").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which -> }).show()
 
+        }else{
+
+            //Dialogo de alerta que avisa de la acción
+            AlertDialog.Builder(this).setTitle("Registrarse").setMessage("Ir a registrarse").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which ->}).show()
+
+            val intent = Intent(this, Pantalla_Registro::class.java)//Guardo en una variable el Intent
+            startActivity(intent)//Iniciamos la actividad
         }
 
     }

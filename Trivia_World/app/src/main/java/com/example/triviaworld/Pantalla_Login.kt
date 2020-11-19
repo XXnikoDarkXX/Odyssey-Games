@@ -16,12 +16,32 @@ class Pantalla_Login: AppCompatActivity() {
 
     }
 
+    /**
+     * Función para ir a la página de inicio pulsando el logo, mediante un intent
+     */
+    fun volverInicio(view: View) {
+
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+    }
+
+    /**
+     *Función para ir a la página de registro, mediante un intent
+     */
     fun irARegistrase(view: View) {
 
+        //Dialogo de alerta que avisa de la acción
         AlertDialog.Builder(this).setTitle("Registrarse").setMessage("Ir a registrarse").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which ->}).show()
+
+        val intent = Intent(this, Pantalla_Registro::class.java)//Guardo en una variable el Intent
+        startActivity(intent)//Iniciamos la actividad
+
 
     }
 
+    /**
+     *Función para enviar los datos de email y contraseña
+     */
     fun enviar(view: View) {
 
         //Referencio los campos que voy a utilizar
@@ -33,19 +53,26 @@ class Pantalla_Login: AppCompatActivity() {
         var email: String = entradaEmail.text.toString()
         var contraseña: String = entradaContraseña.text.toString()
 
-        AlertDialog.Builder(this).setTitle("Login").setMessage("Logeandose").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which ->}).show()
 
-
+        //Verificación de datos completados
         if (email == "") {
             AlertDialog.Builder(this).setTitle("Datos incompletos").setMessage("Falta: email").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which -> }).show()
-        }
 
-        if (contraseña == "") {
+        }else if (contraseña == "") {
             AlertDialog.Builder(this).setTitle("Datos incompletos").setMessage("Falta: contraseña").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which -> }).show()
 
+        }else{
+            AlertDialog.Builder(this).setTitle("Login").setMessage("Logeandose").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which ->}).show()
+
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
 
+
+
+
     }
+
 
 
 }

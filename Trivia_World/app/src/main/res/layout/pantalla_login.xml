@@ -12,6 +12,7 @@
 
     <ImageView
         android:id="@+id/logo_world_final"
+        android:onClick="volverInicio"
         android:layout_width="405dp"
         android:layout_height="63dp"
         android:layout_marginStart="3dp"
@@ -184,9 +185,9 @@
         <Button
             android:id="@+id/btnRegistrarseLogin"
             android:onClick="irARegistrase"
-            android:layout_width="40dp"
+            android:layout_width="70dp"
             android:layout_height="40dp"
-            android:layout_marginStart="90dp"
+            android:layout_marginStart="70dp"
             android:layout_marginEnd="20dp"
             android:layout_weight="1"
             android:background="#ff9000"
@@ -197,7 +198,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="100dp"
+            android:layout_marginEnd="80dp"
             android:layout_weight="1"
             android:background="#ff9000"
             android:onClick="enviar"

@@ -11,6 +11,7 @@
 
     <ImageView
         android:id="@+id/logo_world_final"
+        android:onClick="volverInicio"
         android:layout_width="80dp"
         android:layout_height="100dp"
         android:layout_marginStart="30dp"
@@ -157,6 +158,7 @@
 
             <Button
                 android:id="@+id/button"
+                android:onClick="enviarRegistro"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="200dp"

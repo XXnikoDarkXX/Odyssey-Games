@@ -26,6 +26,7 @@
 
     <ImageView
         android:id="@+id/logo_world_final"
+        android:onClick="volverInicio"
         android:layout_width="154dp"
         android:layout_height="63dp"
         android:layout_marginBottom="1dp"
@@ -180,6 +181,7 @@
             android:layout_height="35dp"
             android:layout_weight="1"
             android:text="@string/registrarse"
+            android:onClick="irARegistrase"
             android:background="#ff9000"
             />
 

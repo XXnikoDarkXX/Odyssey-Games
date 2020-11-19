@@ -10,6 +10,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.app.ActivityCompat.checkSelfPermission
 
@@ -27,12 +28,12 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    /*fun irAJugar(view: View) {
+    fun irAJugar(view: View) {
 
-        val intent = Intent(this, ::class.java)
+        val intent = Intent(this, Pantalla_Eleccion::class.java)
         startActivity(intent)
 
-    }*/
+    }
 
     fun irAPerfil(view: View) {
 
