@@ -61,7 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-
+        android:onClick="irAInicio"
         android:layout_marginTop="48dp"
         android:background="@color/Naranja"
         android:text="@string/atras"

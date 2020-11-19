@@ -1,6 +1,7 @@
 package com.example.triviaworld
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -51,6 +52,12 @@ class Pantalla_Perfil : AppCompatActivity() {
                 Toast.makeText(this,R.string.almacenamientoDenegado, Toast.LENGTH_LONG).show()
             }
         }
+
+    }
+
+    fun irAInicio(view: View) {
+        var intent: Intent = Intent(this, MainActivity::class.java)
+        this.startActivity(intent)
 
     }
 }

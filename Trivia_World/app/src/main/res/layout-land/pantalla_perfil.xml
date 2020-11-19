@@ -52,7 +52,7 @@
         android:id="@+id/btnAtrasPerfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+android:onClick="irAInicio"
         android:layout_marginEnd="156dp"
         android:layout_marginBottom="64dp"
         android:background="@color/Naranja"
