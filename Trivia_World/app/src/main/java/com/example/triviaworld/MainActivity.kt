@@ -28,12 +28,12 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    /*fun irAJugar(view: View) {
+    fun irAJugar(view: View) {
 
-        val intent = Intent(this, ::class.java)
+        val intent = Intent(this, Pantalla_Eleccion::class.java)
         startActivity(intent)
 
-    }*/
+    }
 
     fun irAPerfil(view: View) {
 
