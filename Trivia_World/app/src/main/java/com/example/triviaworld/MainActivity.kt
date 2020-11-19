@@ -18,6 +18,29 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    /*fun irAJugar(view: View) {
+
+        val intent = Intent(this, ::class.java)
+        startActivity(intent)
+
+    }*/
+
+    fun irAPerfil(view: View) {
+
+        val intent = Intent(this, Pantalla_Perfil::class.java)
+        startActivity(intent)
+
+    }
+
+    fun irAOpciones(view: View) {
+
+        val intent = Intent(this, Pantalla_Opciones::class.java)
+        startActivity(intent)
+
+    }
+
+
+
 
 
 

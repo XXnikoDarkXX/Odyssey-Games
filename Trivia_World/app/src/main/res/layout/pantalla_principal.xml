@@ -8,7 +8,8 @@
     android:background="@drawable/fondopanprincipal">
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/bJugar"
+        android:onClick="irAJugar"
         android:layout_width="238dp"
         android:layout_height="141dp"
         android:layout_marginStart="86dp"
@@ -44,6 +45,7 @@
 
     <Button
         android:id="@+id/bperfil"
+        android:onClick="irAPerfil"
         android:layout_width="168dp"
         android:layout_height="108dp"
         android:layout_marginStart="12dp"
@@ -58,7 +60,9 @@
         app:layout_constraintStart_toEndOf="@+id/bredes" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/botonOpciones"
+        android:clickable="true"
+        android:onClick="irAOpciones"
         android:layout_width="55dp"
         android:layout_height="64dp"
         android:layout_marginStart="351dp"
@@ -72,6 +76,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/boton_ajustes"
-        android:contentDescription="@string/Iajustes" />
+        android:contentDescription="@string/Iajustes"
+        android:focusable="true" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
