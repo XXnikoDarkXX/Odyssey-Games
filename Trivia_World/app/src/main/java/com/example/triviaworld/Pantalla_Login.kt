@@ -20,6 +20,10 @@ class Pantalla_Login: AppCompatActivity() {
 
         AlertDialog.Builder(this).setTitle("Registrarse").setMessage("Ir a registrarse").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which ->}).show()
 
+        val intent = Intent(this, Pantalla_Registro::class.java)
+        startActivity(intent)
+
+
     }
 
     fun enviar(view: View) {
@@ -33,19 +37,26 @@ class Pantalla_Login: AppCompatActivity() {
         var email: String = entradaEmail.text.toString()
         var contraseña: String = entradaContraseña.text.toString()
 
-        AlertDialog.Builder(this).setTitle("Login").setMessage("Logeandose").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which ->}).show()
 
 
         if (email == "") {
             AlertDialog.Builder(this).setTitle("Datos incompletos").setMessage("Falta: email").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which -> }).show()
-        }
 
-        if (contraseña == "") {
+        }else if (contraseña == "") {
             AlertDialog.Builder(this).setTitle("Datos incompletos").setMessage("Falta: contraseña").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which -> }).show()
 
+        }else{
+            AlertDialog.Builder(this).setTitle("Login").setMessage("Logeandose").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which ->}).show()
+
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
 
+
+
+
     }
+
 
 
 }

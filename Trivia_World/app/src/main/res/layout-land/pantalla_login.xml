@@ -180,6 +180,7 @@
             android:layout_height="35dp"
             android:layout_weight="1"
             android:text="@string/registrarse"
+            android:onClick="irARegistrase"
             android:background="#ff9000"
             />
 
