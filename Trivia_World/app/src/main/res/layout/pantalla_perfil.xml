@@ -35,7 +35,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAtrasPerfil" />
+        app:layout_constraintTop_toBottomOf="@+id/btnIrLogin" />
 
     <TextView
         android:id="@+id/nick"
@@ -48,7 +48,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/nombre"
-        app:layout_constraintEnd_toStartOf="@+id/btnAtrasPerfil"
+        app:layout_constraintEnd_toStartOf="@+id/btnIrLogin"
         app:layout_constraintStart_toStartOf="parent"
 
         app:layout_constraintTop_toTopOf="@+id/marcoNaranajaPerfil"
@@ -57,14 +57,14 @@
     </TextView>
 
     <Button
-        android:id="@+id/btnAtrasPerfil"
+        android:id="@+id/btnIrLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:onClick="irAInicio"
         android:layout_marginTop="48dp"
         android:background="@color/Naranja"
-        android:text="@string/atras"
+       android:onClick="irALogin"
+        android:text="@string/txtLogin"
         app:layout_constraintStart_toEndOf="@+id/nick"
         app:layout_constraintTop_toTopOf="@+id/marcoNaranajaPerfil" />
 
@@ -124,6 +124,7 @@
     <ImageView
         android:id="@+id/logo_perfil"
         android:layout_width="286dp"
+        android:onClick="irAInicio"
         android:contentDescription="@string/txtDescLogo"
         android:layout_height="75dp"
         app:layout_constraintBottom_toTopOf="@+id/marcoNaranajaPerfil"

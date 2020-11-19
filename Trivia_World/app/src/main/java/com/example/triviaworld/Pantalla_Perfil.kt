@@ -55,11 +55,23 @@ class Pantalla_Perfil : AppCompatActivity() {
 
     }
 
+    /**
+     * Funcion para ir a la actividad Principal
+     */
     fun irAInicio(view: View) {
 
         var intent: Intent = Intent(this, MainActivity::class.java)
         this.startActivity(intent)
-        
+
+    }
+
+    /**
+     * Funcion para ir a la actividad login
+     */
+    fun irALogin(view: View) {
+        var intent: Intent = Intent(this, Pantalla_Login::class.java)
+        this.startActivity(intent)
+
     }
 
 

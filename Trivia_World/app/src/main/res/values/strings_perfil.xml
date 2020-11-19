@@ -3,5 +3,5 @@
     <string name="avatarDescripcion">Es el avatar que sube el usuario</string>
     <string name="subirFoto">Pulse el botón para subir una foto</string>
     <string name="txtDescLogo">Es un logo de Trivia World en perfil</string>
-
+    <string name="txtLogin">Loguearse</string>
 </resources>
