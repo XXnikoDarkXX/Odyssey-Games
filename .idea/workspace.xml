@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="35633284-c8ad-4e58-9d52-10bbcfe83f67" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="4fed0d9d-5c82-43ed-b31e-a5917042ffa7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Trivia_World/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Trivia_World/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivia_World/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Trivia_World/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivia_World/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Trivia_World/app/src/main/res/values/themes.xml" afterDir="false" />
+    </list>
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,35 +21,65 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< Updated upstream
   <component name="ProjectId" id="1jqOxClIVlYcHtqZ90eHVpRWE4O" />
+=======
+  <component name="ProjectId" id="1jqM5b9rjJaTjrAMLptYphGZ0NI" />
+>>>>>>> Stashed changes
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+<<<<<<< Updated upstream
+=======
+    <property name="ResourceManagerPrefKey.ResourceType" value="STRING" />
+>>>>>>> Stashed changes
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Trivia_World" />
+<<<<<<< Updated upstream
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+=======
+>>>>>>> Stashed changes
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< Updated upstream
       <changelist id="35633284-c8ad-4e58-9d52-10bbcfe83f67" name="Default Changelist" comment="" />
       <created>1604528399898</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604528399898</updated>
+=======
+      <changelist id="4fed0d9d-5c82-43ed-b31e-a5917042ffa7" name="Default Changelist" comment="" />
+      <created>1604526985781</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604526985781</updated>
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
   <component name="WindowStateProjectService">
+<<<<<<< Updated upstream
     <state x="687" y="215" key="FileChooserDialogImpl" timestamp="1605464813300">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="687" y="215" key="FileChooserDialogImpl/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1605464813300" />
+=======
+    <state x="389" y="143" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604527414364">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="389" y="143" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604527414364" />
+    <state x="715" y="243" key="FileChooserDialogImpl" timestamp="1604561994652">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="715" y="243" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604561994652" />
+>>>>>>> Stashed changes
   </component>
 </project>

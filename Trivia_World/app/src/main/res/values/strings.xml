@@ -3,6 +3,7 @@
     <string name="opciones">Opciones</string>
     <string name="reanudar">Reanudar</string>
     <string name="salir">Salir</string>
+<<<<<<< Updated upstream
 
     <!-- JAVI PantallaPrincipal-->
     <string name="Bperfil">PERFIL</string>
@@ -29,4 +30,10 @@
     <string name="txtNombre">Nombre</string>
 
 
+=======
+    <string name="Bjugar">JUGAR</string>
+    <string name="Bperfil">PERFIL</string>
+    <string name="Bsociales">Redes      Sociales</string>
+    <string name="Iajustes">ajustes</string>
+>>>>>>> Stashed changes
 </resources>

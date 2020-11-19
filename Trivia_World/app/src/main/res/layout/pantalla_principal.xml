@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< Updated upstream
     android:background="@drawable/fondopanprincipal">
 
     <Button
@@ -69,14 +70,86 @@
         android:layout_marginTop="3dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="664dp"
+=======
+    android:background="@drawable/fondoooof">
+
+    <Button
+        android:id="@+id/redesSociales"
+        android:layout_width="152dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="150dp"
+        android:background="@color/naranja"
+        android:text="@string/Bsociales"
+        android:textFontWeight="700"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/perfil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jugar"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/jugar"
+        android:layout_width="199dp"
+        android:layout_height="131dp"
+        android:layout_marginStart="106dp"
+        android:layout_marginTop="230dp"
+        android:layout_marginEnd="106dp"
+        android:background="@color/naranja"
+        android:text="@string/Bjugar"
+        android:textFontWeight="700"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/perfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/perfil"
+        android:layout_width="152dp"
+        android:layout_height="85dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="83dp"
+        android:background="@color/naranja"
+        android:text="@string/Bperfil"
+        android:textFontWeight="700"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toEndOf="@+id/redesSociales"
+        app:layout_constraintTop_toBottomOf="@+id/jugar" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="67dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="328dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="649dp"
+        android:contentDescription="@string/Iajustes"
+>>>>>>> Stashed changes
         android:padding="1dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< Updated upstream
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/boton_ajustes"
         android:contentDescription="@string/Iajustes"
         android:focusable="true" />
 
+=======
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/boton_ajustes" />
+>>>>>>> Stashed changes
 </androidx.constraintlayout.widget.ConstraintLayout>
