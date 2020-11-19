@@ -81,6 +81,7 @@
         android:layout_marginTop="44dp"
         android:background="@color/naranja"
         android:text="@string/enviarLogin"
+        android:onClick="enviarFoto"
         app:layout_constraintEnd_toStartOf="@+id/btnAtrasPerfil"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/marcoNaranajaPerfil"

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-
-
-
+    <string name="almacenamientoDenegado">Me has denegado el almacenamiento</string>
+    <string name="PermisoDenegadoAlmacenamiento">Me has denegado el permiso de almacenamiento, puedes gestionarlo desde ajustes</string>
 </resources>
