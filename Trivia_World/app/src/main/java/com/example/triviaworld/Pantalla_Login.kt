@@ -16,10 +16,10 @@ class Pantalla_Login: AppCompatActivity() {
     }
 
 
-    fun enviar(view: View) {
+    fun enviarLogin(view: View) {
 
-        //Guardo la PantallaInicio en una variable como tipo Intent, para poder realizar la accion de enviar datos
-        //var enviarEmailyContraseña:Intent= Intent(this,PantallaInicio::class.java)
+        //Guardo la Pantalla ?  o en su caso se enviara a una base de datos, en una variable como tipo Intent, para poder realizar la accion de enviar datos
+        //var enviarEmailyContraseña:Intent= Intent(this,Pantalla ? ::class.java)
 
         //Creacion de bundle y variables referenciadas correspondiente a los campos a introducir en el bundle
         var bundleEmailyContraseña:Bundle= Bundle()//Iniciamos la variable

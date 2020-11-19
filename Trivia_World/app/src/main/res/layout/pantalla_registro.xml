@@ -38,7 +38,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/nombreIn"
+                android:id="@+id/nombreRegistro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -48,7 +48,7 @@
                 android:inputType="textPersonName" />
 
             <EditText
-                android:id="@+id/apellidosIn"
+                android:id="@+id/apellidosRegistro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -58,7 +58,7 @@
                 android:inputType="text" />
 
             <EditText
-                android:id="@+id/fechaNacimientoIn"
+                android:id="@+id/fechaNacimientoRegistro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -68,7 +68,7 @@
                 android:inputType="date" />
 
             <EditText
-                android:id="@+id/direccionIn"
+                android:id="@+id/direccionRegistro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -78,7 +78,7 @@
                 android:inputType="textPostalAddress" />
 
             <EditText
-                android:id="@+id/ciudadIn"
+                android:id="@+id/ciudadRegistro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -88,7 +88,7 @@
                 android:inputType="text" />
 
             <EditText
-                android:id="@+id/paisIn"
+                android:id="@+id/paisRegistro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -98,7 +98,7 @@
                 android:inputType="text" />
 
             <EditText
-                android:id="@+id/telefonoIn"
+                android:id="@+id/telefonoRegistro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -108,7 +108,7 @@
                 android:inputType="phone" />
 
             <EditText
-                android:id="@+id/usuario"
+                android:id="@+id/usuarioRegistro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -119,7 +119,7 @@
                 android:inputType="phone" />
 
             <EditText
-                android:id="@+id/contraseña"
+                android:id="@+id/contraseñaRegistro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -130,7 +130,7 @@
                 android:inputType="textPassword" />
 
             <EditText
-                android:id="@+id/contraseñaR"
+                android:id="@+id/contraseñaComprobacionRegistro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -141,7 +141,8 @@
                 android:inputType="textPassword" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/enviarRegistro"
+                android:onClick="enviarRegistro"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginStart="70dp"
