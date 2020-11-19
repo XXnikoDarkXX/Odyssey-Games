@@ -56,8 +56,11 @@ class Pantalla_Perfil : AppCompatActivity() {
     }
 
     fun irAInicio(view: View) {
+
         var intent: Intent = Intent(this, MainActivity::class.java)
         this.startActivity(intent)
-
+        
     }
+
+
 }
