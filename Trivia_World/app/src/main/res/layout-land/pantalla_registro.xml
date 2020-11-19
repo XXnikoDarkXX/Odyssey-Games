@@ -157,6 +157,7 @@
 
             <Button
                 android:id="@+id/button"
+                android:onClick="enviarRegistro"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="200dp"
