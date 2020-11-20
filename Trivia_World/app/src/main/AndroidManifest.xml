@@ -9,11 +9,12 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TriviaWorld"
-        android:requestLegacyExternalStorage="true">
-        <activity android:name=".Creador_Preguntas"></activity>
+        android:theme="@style/Theme.TriviaWorld">
+        <activity android:name=".Pantalla_eleccionJuego"></activity>
+        <activity android:name=".Creador_Preguntas" />
         <activity android:name=".Editor_Preguntas" />
         <activity android:name=".Pantalla_Eleccion" />
         <activity android:name=".Pantalla_Registro" />
