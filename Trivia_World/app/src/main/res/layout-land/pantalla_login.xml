@@ -183,7 +183,7 @@
             android:text="@string/registrarse"
             android:onClick="irARegistrase"
             android:background="#ff9000"
-            />
+            tools:ignore="ButtonStyle" />
 
         <Button
             android:id="@+id/btnEnviarLogin"
@@ -194,7 +194,7 @@
             android:background="#ff9000"
             android:onClick="enviar"
             android:text="@string/enviarLogin"
-            />
+            tools:ignore="ButtonStyle" />
     </LinearLayout>
 
 

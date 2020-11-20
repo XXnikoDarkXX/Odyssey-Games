@@ -184,14 +184,15 @@
 
         <Button
             android:id="@+id/btnRegistrarseLogin"
-            android:onClick="irARegistrase"
             android:layout_width="70dp"
             android:layout_height="40dp"
             android:layout_marginStart="70dp"
             android:layout_marginEnd="20dp"
             android:layout_weight="1"
             android:background="#ff9000"
-            android:text="@string/registrarse" />
+            android:onClick="irARegistrase"
+            android:text="@string/registrarse"
+            tools:ignore="ButtonStyle" />
 
         <Button
             android:id="@+id/btnEnviarLogin"
@@ -202,7 +203,8 @@
             android:layout_weight="1"
             android:background="#ff9000"
             android:onClick="enviar"
-            android:text="@string/enviarLogin" />
+            android:text="@string/enviarLogin"
+            tools:ignore="ButtonStyle" />
 
     </LinearLayout>
 
