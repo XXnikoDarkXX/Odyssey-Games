@@ -188,16 +188,16 @@
     </LinearLayout>
 
     <ImageView
-        android:layout_marginTop="15dp"
         android:id="@+id/logo_Opciones"
         android:layout_width="297dp"
         android:layout_height="70dp"
+        android:layout_marginTop="15dp"
         android:contentDescription="@string/descripcion_logo_redes"
         app:layout_constraintBottom_toTopOf="@+id/marcoNaranjaOpciones"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/trivia_world_final" />
+        app:srcCompat="@drawable/opciones" />
 
     <Button
         android:id="@+id/btnCambiar"
