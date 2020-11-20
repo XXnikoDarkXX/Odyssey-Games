@@ -9,14 +9,14 @@
 
     <Button
         android:id="@+id/bJugar"
-        android:onClick="irAJugar"
         android:layout_width="238dp"
         android:layout_height="141dp"
         android:layout_marginStart="86dp"
-        android:layout_marginTop="254dp"
+        android:layout_marginTop="280dp"
         android:layout_marginEnd="87dp"
         android:layout_marginBottom="50dp"
-        android:background="@color/Naranja"
+        android:backgroundTint="@color/Naranja"
+        android:onClick="irAJugar"
         android:text="@string/Bjugar"
         android:textFontWeight="700"
         android:textSize="40sp"
@@ -29,13 +29,13 @@
 
     <Button
         android:id="@+id/bredes"
-        android:onClick="irARedes"
         android:layout_width="168dp"
         android:layout_height="108dp"
         android:layout_marginStart="23dp"
         android:layout_marginEnd="12dp"
-        android:layout_marginBottom="128dp"
-        android:background="@color/Naranja"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="@color/Naranja"
+        android:onClick="irARedes"
         android:text="@string/Bsociales"
         android:textFontWeight="700"
         android:textSize="20sp"
@@ -45,13 +45,13 @@
 
     <Button
         android:id="@+id/bperfil"
-        android:onClick="irAPerfil"
         android:layout_width="168dp"
         android:layout_height="108dp"
         android:layout_marginStart="12dp"
         android:layout_marginEnd="23dp"
-        android:layout_marginBottom="128dp"
-        android:background="@color/Naranja"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="@color/Naranja"
+        android:onClick="irAPerfil"
         android:text="@string/Bperfil"
         android:textFontWeight="700"
         android:textSize="20sp"
@@ -61,22 +61,23 @@
 
     <ImageButton
         android:id="@+id/botonOpciones"
-        android:clickable="true"
-        android:onClick="irAOpciones"
         android:layout_width="55dp"
         android:layout_height="64dp"
         android:layout_marginStart="351dp"
         android:layout_marginTop="3dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="664dp"
+        android:backgroundTint="#00FFFFFF"
+        android:clickable="true"
+        android:contentDescription="@string/Iajustes"
+        android:focusable="true"
+        android:onClick="irAOpciones"
         android:padding="1dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/boton_ajustes"
-        android:contentDescription="@string/Iajustes"
-        android:focusable="true" />
+        app:srcCompat="@drawable/boton_opciones" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
