@@ -202,15 +202,15 @@
 
     <ImageView
         android:id="@+id/logo_Opciones"
-        android:layout_width="57dp"
-        android:contentDescription="@string/descripcion_logo_redes"
+        android:layout_width="74dp"
+        android:layout_height="176dp"
 
-        android:layout_height="126dp"
+        android:contentDescription="@string/descripcion_logo_redes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/marcoNaranjaOpciones"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/trivia_world_final" />
+        app:srcCompat="@drawable/opciones" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

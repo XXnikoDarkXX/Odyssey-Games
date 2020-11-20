@@ -124,14 +124,14 @@
     <ImageView
         android:id="@+id/logo_perfil"
         android:layout_width="286dp"
-        android:onClick="irAInicio"
-        android:contentDescription="@string/txtDescLogo"
         android:layout_height="75dp"
+        android:contentDescription="@string/txtDescLogo"
+        android:onClick="irAInicio"
         app:layout_constraintBottom_toTopOf="@+id/marcoNaranajaPerfil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/trivia_world_final" />
+        app:srcCompat="@drawable/perfil" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
