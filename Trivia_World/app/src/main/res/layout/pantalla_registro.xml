@@ -159,17 +159,17 @@
 
     <ImageView
         android:id="@+id/logo_world_final"
-        android:onClick="volverInicio"
         android:layout_width="405dp"
         android:layout_height="63dp"
         android:layout_marginStart="3dp"
         android:layout_marginEnd="3dp"
         android:contentDescription="@string/descripcion_logo_redes"
+        android:onClick="volverInicio"
         app:layout_constraintBottom_toTopOf="@+id/marcoAmarrillo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/trivia_world_final" />
+        app:srcCompat="@drawable/registro" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
