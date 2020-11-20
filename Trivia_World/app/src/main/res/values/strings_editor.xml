@@ -5,5 +5,9 @@
     <string name="Bborrar">BORRAR</string>
     <string name="Bañadir">AÑADIR</string>
     <string name="Tpreguntas">PREGUNTAS</string>
+    <string name="Ttitulo">¡NECESITO PERMISOS!</string>
+    <string name="Ttextp">Permisos necesarios para obtener imagenes</string>
+    <string name="bObay">OKAY</string>
+    <string name="bsubir">SUBIR</string>
 
 </resources>
