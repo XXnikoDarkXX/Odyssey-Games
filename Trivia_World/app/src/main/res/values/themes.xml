@@ -1,11 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.TriviaWorld" parent="Theme.AppCompat.DayNight.NoActionBar">
-<<<<<<< Updated upstream
+        <!--<<<<<<< Updated upstream-->
 
-        <!--<item name="materialButtonStyle">@color/Naranja</item> -->
-=======
->>>>>>> Stashed changes
+                <!--<item name="materialButtonStyle">@color/Naranja</item> -->
+
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -19,6 +18,6 @@
         <!-- Customize your theme here. -->
     </style>
     <style name="naranja" parent="Theme.AppCompat.DayNight.NoActionBar">
-        <item name="colorAccent">@color/naranja</item>
+        <item name="colorAccent">@color/naranjaa</item>
     </style>
 </resources>

@@ -80,7 +80,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="108dp"
         android:layout_marginTop="44dp"
-        android:background="@color/naranja"
+        android:background="@color/naranjaa"
         android:text="@string/enviarLogin"
         android:onClick="enviarFoto"
         app:layout_constraintEnd_toStartOf="@+id/btnIrLogin"

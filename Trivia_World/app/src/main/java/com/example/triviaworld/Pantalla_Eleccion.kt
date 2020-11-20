@@ -23,12 +23,12 @@ class Pantalla_Eleccion : AppCompatActivity() {
         val intent = Intent(this, Pantalla_Redes::class.java)
         startActivity(intent)
 
-    }
+    }*/
 
-    fun botonEditp(view: View) {
+    fun irEdit(view: View) {
 
-        val intent = Intent(this, Pantalla_Redes::class.java)
+        val intent = Intent(this, Editor_Preguntas::class.java)
         startActivity(intent)
 
-    }*/
+    }
 }

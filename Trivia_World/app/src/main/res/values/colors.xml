@@ -7,10 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-<<<<<<< Updated upstream
     <color name="Naranja">#ff9000</color>
     <color name="amarillo_degradado">#ffde00</color>
     <color name="borde_botones">#cc750f</color>
+    <color name="red">#ff0000</color>
 
 
 
@@ -26,7 +26,7 @@
 
 
     <color name="amarilooo">#ffde00</color>
-=======
-    <color name="naranja">#ff9000</color>
->>>>>>> Stashed changes
+
+    <!--<color name="naranjaa">#ff9000</color>-->
+
 </resources>
