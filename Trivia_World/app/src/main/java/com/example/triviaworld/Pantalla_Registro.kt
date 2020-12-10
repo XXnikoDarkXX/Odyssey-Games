@@ -1,5 +1,6 @@
 package com.example.triviaworld
 
+import Adapters.AdapterRegistro
 import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,11 +8,30 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class Pantalla_Registro : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.pantalla_registro)
+
+
+        val datos: ArrayList<String> = arrayListOf("Nombre","Apellidos","Fecha de nacimiento","Dirección","Ciudad","País","Teléfono","Usuario","Contraseña","Repetir contraseña")
+
+        //Refenciamos al recyclerView
+        val recyclerRegistro:RecyclerView = findViewById(R.id.recyclerRegistro)
+
+        //Creamos el adapter
+        val adapter:AdapterRegistro = AdapterRegistro(this,datos)
+
+        //A nuestro recyclerView le metemos el adapter creado
+        recyclerRegistro.adapter=adapter
+
+        //Establecemos el LayoutManager para que se ocupe de mostrar los datos de la lista
+        recyclerRegistro.layoutManager= LinearLayoutManager(this)
+
+
     }
 
 
@@ -25,10 +45,10 @@ class Pantalla_Registro : AppCompatActivity() {
     }
 
     /**
-     *Función para registrarse, comprueba que todos los datos estan rellenos
+     *Función para registrarse
      */
     fun enviarRegistro(view: View) {
-
+/*
         //Referencio las variables
         var nombreRegistro:EditText=findViewById(R.id.nombreRegistro)
         var apellidosRegistro:EditText=findViewById(R.id.apellidosRegistro)
@@ -53,8 +73,13 @@ class Pantalla_Registro : AppCompatActivity() {
         var usuarioRegi:String=usuarioRegistro.text.toString()
         var contraseñaRegi:String=contraseñaRegistro.text.toString()
         var contraseñaComprobacionRegi:String=contraseñaComprobacionRegistro.text.toString()
+*/
 
 
+
+
+
+/*
         //Verificación de datos completados
         if (nombreRegi == "") {
 
@@ -96,6 +121,9 @@ class Pantalla_Registro : AppCompatActivity() {
             val intent = Intent(this, Pantalla_Registro::class.java)//Guardo en una variable el Intent
             startActivity(intent)//Iniciamos la actividad
         }
+
+
+ */
 
     }
 

@@ -63,10 +63,8 @@
         android:id="@+id/botonOpciones"
         android:layout_width="55dp"
         android:layout_height="64dp"
-        android:layout_marginStart="351dp"
         android:layout_marginTop="3dp"
         android:layout_marginEnd="5dp"
-        android:layout_marginBottom="664dp"
         android:backgroundTint="#00FFFFFF"
         android:clickable="true"
         android:contentDescription="@string/Iajustes"
@@ -74,9 +72,7 @@
         android:onClick="irAOpciones"
         android:padding="1dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/boton_opciones" />
 
