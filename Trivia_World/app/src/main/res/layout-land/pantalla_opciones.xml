@@ -14,9 +14,9 @@
         android:id="@+id/marcoNaranjaOpciones"
         android:layout_width="579dp"
         android:layout_height="395dp"
-        android:contentDescription="@string/descripcion_gui_redes"
-
         android:layout_marginStart="8dp"
+
+        android:contentDescription="@string/descripcion_gui_redes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/logo_Opciones"
@@ -68,12 +68,11 @@
 
 
         android:layout_marginStart="36dp"
-        android:layout_marginBottom="32dp"
         android:text="@string/musica"
         android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/contenedorCambioContrasenia"
-        app:layout_constraintStart_toStartOf="@+id/marcoNaranjaOpciones" />
+        app:layout_constraintStart_toStartOf="@+id/marcoNaranjaOpciones"
+        tools:layout_editor_absoluteY="91dp" />
 
     <SeekBar
         android:id="@+id/nivelSonido"
@@ -109,96 +108,46 @@
         android:text="@string/atras"
         app:layout_constraintBottom_toTopOf="@+id/btnCambiar"
         app:layout_constraintEnd_toEndOf="@+id/marcoNaranjaOpciones"
-        app:layout_constraintStart_toEndOf="@+id/contenedorCambioContrasenia" />
+        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintStart_toStartOf="@+id/btnCambiar" />
 
-    <LinearLayout
-        android:id="@+id/contenedorCambioContrasenia"
-        android:layout_width="372dp"
-        android:layout_height="196dp"
+    <TextView
+        android:id="@+id/txtCambioPass"
+        android:layout_width="328dp"
+        android:layout_height="34dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:text="@string/cambioPass"
 
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="28dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/marcoNaranjaOpciones"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/recycleOpciones"
+        app:layout_constraintEnd_toStartOf="@+id/btnAtras"
         app:layout_constraintStart_toStartOf="@+id/marcoNaranjaOpciones"
-        app:layout_constraintTop_toBottomOf="@+id/txtNivelMusica"
-        app:layout_constraintVertical_bias="0.853">
+        app:layout_constraintTop_toBottomOf="@+id/txtNivelMusica" />
 
-        <TextView
-            android:id="@+id/txtCambioPass"
-            android:layout_width="315dp"
-            android:layout_height="13dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="9dp"
-            android:layout_weight="1"
-            android:text="@string/cambioPass"
-
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <EditText
-
-            android:id="@+id/cambioUsuario"
-            android:layout_width="314dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-
-
-            android:layout_marginEnd="9dp"
-
-            android:layout_weight="1"
-            android:autofillHints="usuario"
-            android:hint="@string/user"
-            android:inputType="text"
-            android:textSize="18sp" />
-
-        <EditText
-
-            android:id="@+id/passAntigua"
-            android:layout_width="314dp"
-            android:layout_height="wrap_content"
-
-            android:layout_gravity="center"
-            android:layout_marginEnd="9dp"
-
-            android:layout_weight="2"
-            android:autofillHints="antigua"
-            android:hint="@string/passAntigua"
-            android:inputType="textPassword"
-            android:textSize="18sp" />
-
-        <EditText
-
-            android:id="@+id/passNueva"
-            android:layout_width="314dp"
-            android:layout_height="wrap_content"
-
-
-            android:layout_gravity="center"
-            android:layout_marginEnd="9dp"
-            android:layout_weight="1"
-            android:autofillHints="nueva"
-            android:hint="@string/passNueva"
-            android:inputType="textPassword"
-            android:textSize="18sp" />
-
-
-    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleOpciones"
+        android:layout_width="336dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/marcoNaranjaOpciones"
+        app:layout_constraintEnd_toStartOf="@+id/btnAtras"
+        app:layout_constraintStart_toStartOf="@+id/marcoNaranjaOpciones" />
 
     <Button
         android:id="@+id/btnCambiar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="64dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="52dp"
         android:layout_weight="1"
         android:background="@color/Naranja"
-        android:text="@string/cambiar"
         android:onClick="cambiaPass"
+        android:text="@string/cambiar"
         app:layout_constraintBottom_toBottomOf="@+id/marcoNaranjaOpciones"
-        app:layout_constraintEnd_toEndOf="@+id/marcoNaranjaOpciones"
-        app:layout_constraintStart_toEndOf="@+id/contenedorCambioContrasenia" />
+        app:layout_constraintEnd_toEndOf="@+id/marcoNaranjaOpciones" />
 
     <ImageView
         android:id="@+id/logo_Opciones"
