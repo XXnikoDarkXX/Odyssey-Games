@@ -24,13 +24,11 @@ class Creador_Preguntas : AppCompatActivity() {
 
     fun subirImagen(view: View) {
 
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
-            == PackageManager.PERMISSION_GRANTED) {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
             Toast.makeText(this,"Me has concedido permiso", Toast.LENGTH_LONG).show()
         } else {
             //si le doy a permiso en negativo me dara este error
-            if (!ActivityCompat.shouldShowRequestPermissionRationale(
-                    this, Manifest.permission.READ_EXTERNAL_STORAGE)) {
+            if (!ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_EXTERNAL_STORAGE)) {
                 Toast.makeText(this, R.string.PermisoDenegadoAlmacenamiento, Toast.LENGTH_LONG).show()
             }
 
