@@ -32,7 +32,8 @@ class AdapterOpciones (val actividad: Activity, val datos: ArrayList<String>): R
      * @param position el atributo del de arriba nos indica que elemento de la lista se está enlazando empezando desde cero
      */
     override fun onBindViewHolder(holder: HolderOpciones, position: Int) {
-       holder.entradaOpciones.setText(datos.get(position))
+       holder.entradaOpciones.setHint(datos.get(position))
+
 
 
     }

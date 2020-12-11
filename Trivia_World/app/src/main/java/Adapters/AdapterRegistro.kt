@@ -30,6 +30,7 @@ class AdapterRegistro(val actividad:Activity, val datos: ArrayList<String>) : Re
      * @param position el atributo del de arriba nos indica que elemento de la lista se está enlazando empezando desde cero
      */
     override fun onBindViewHolder(holder: HolderRegistro, position: Int) {
-        holder.campoRegistro.setText(datos.get(position))
+        //holder.campoRegistro.setText(datos.get(position))
+        holder.campoRegistro.setHint(datos.get(position))
     }
 }
