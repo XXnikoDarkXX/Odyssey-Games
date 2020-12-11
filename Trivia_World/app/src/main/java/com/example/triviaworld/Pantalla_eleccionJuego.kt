@@ -1,5 +1,6 @@
 package com.example.triviaworld
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -12,31 +13,46 @@ class Pantalla_eleccionJuego : AppCompatActivity() {
 
     fun irAArte(view: View) {
 
-        setContentView(R.layout.pantalla_secundaria)
+        //var aux: String = "Arte"
+        //val trundle: bundle
+        val intent = Intent(this, Pantalla_Secundaria::class.java)
+        startActivity(intent)
 
     }
 
     fun irAHistoria(view: View) {
 
-        setContentView(R.layout.pantalla_secundaria)
+        //var aux: String = "Historia"
+        //val trundle: bundle
+        val intent = Intent(this, Pantalla_Secundaria::class.java)
+        startActivity(intent)
 
     }
 
     fun irAEntretenimiento(view: View) {
 
-        setContentView(R.layout.pantalla_secundaria)
+        //var aux: String = "Entretenimiento"
+        //val trundle: bundle
+        val intent = Intent(this, Pantalla_Secundaria::class.java)
+        startActivity(intent)
 
     }
 
     fun irACiencia(view: View) {
 
-        setContentView(R.layout.pantalla_secundaria)
+        //var aux: String = "Ciencia"
+        //val trundle: bundle
+        val intent = Intent(this, Pantalla_Secundaria::class.java)
+        startActivity(intent)
 
     }
 
     fun irAGeografia(view: View) {
 
-        setContentView(R.layout.pantalla_secundaria)
+        //var aux: String = "Geografia"
+        //val trundle: bundle
+        val intent = Intent(this, Pantalla_Secundaria::class.java)
+        startActivity(intent)
 
     }
 
