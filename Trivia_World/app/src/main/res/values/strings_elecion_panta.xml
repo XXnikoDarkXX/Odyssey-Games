@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="BtnIrNormal">JUEGO NORMAL</string>
+    <string name="BtnIrRandom">PREGUNTAS RANDOM</string>
+    <string name="BtnIrEditor">EDITOR PREGUNTAS</string>
+
+</resources>
