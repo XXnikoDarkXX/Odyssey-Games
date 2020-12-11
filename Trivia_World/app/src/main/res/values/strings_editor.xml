@@ -9,5 +9,7 @@
     <string name="Ttextp">Permisos necesarios para obtener imagenes</string>
     <string name="bObay">OKAY</string>
     <string name="bsubir">SUBIR</string>
+    <string name="textoTV">RESPUESTA</string>
+    <string name="textoTVP">PREGUNTA</string>
 
 </resources>

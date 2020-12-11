@@ -1,12 +1,14 @@
 package com.example.triviaworld
 
-import Adapters.ListaPreguntas
+import Adapters.AdapterPreguntas
 import Clases.Preguntas
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ListView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class Editor_Preguntas : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,10 +23,10 @@ class Editor_Preguntas : AppCompatActivity() {
                 "\n" +resources.getString(R.string.respuesta2_entretenimiento)+"\n" +resources.getString(R.string.respuesta3_entretenimiento)
                 +"\n" +resources.getString(R.string.respuesta4_entretenimiento)))
 
-        val adapter: ListaPreguntas = ListaPreguntas(this, preguntas)
-        val lista: ListView = findViewById(R.id.espacioLista)
-        //preguntas.get(0).imagen.l
-        lista.adapter=adapter
+        val contenedorRecycler: RecyclerView = findViewById<RecyclerView>(R.id.vistaRecycler)
+        val adapter: AdapterPreguntas = AdapterPreguntas(this, preguntas)
+        contenedorRecycler.adapter=adapter
+        contenedorRecycler.layoutManager= LinearLayoutManager(this)
 
 
     }
