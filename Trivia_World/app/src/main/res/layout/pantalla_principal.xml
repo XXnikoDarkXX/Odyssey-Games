@@ -11,10 +11,6 @@
         android:id="@+id/bJugar"
         android:layout_width="238dp"
         android:layout_height="141dp"
-        android:layout_marginStart="86dp"
-        android:layout_marginTop="280dp"
-        android:layout_marginEnd="87dp"
-        android:layout_marginBottom="50dp"
         android:backgroundTint="@color/Naranja"
         android:onClick="irAJugar"
         android:text="@string/Bjugar"
@@ -22,24 +18,21 @@
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/bredes"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.89" />
 
     <Button
         android:id="@+id/bredes"
         android:layout_width="168dp"
         android:layout_height="108dp"
-        android:layout_marginStart="23dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="100dp"
         android:backgroundTint="@color/Naranja"
         android:onClick="irARedes"
         android:text="@string/Bsociales"
         android:textFontWeight="700"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/bperfil"
         app:layout_constraintEnd_toStartOf="@+id/bperfil"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -47,9 +40,7 @@
         android:id="@+id/bperfil"
         android:layout_width="168dp"
         android:layout_height="108dp"
-        android:layout_marginStart="12dp"
         android:layout_marginEnd="23dp"
-        android:layout_marginBottom="100dp"
         android:backgroundTint="@color/Naranja"
         android:onClick="irAPerfil"
         android:text="@string/Bperfil"
@@ -57,7 +48,8 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/bredes" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.855" />
 
     <ImageButton
         android:id="@+id/botonOpciones"
