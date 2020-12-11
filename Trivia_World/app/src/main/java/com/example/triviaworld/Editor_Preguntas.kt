@@ -19,9 +19,15 @@ class Editor_Preguntas : AppCompatActivity() {
         preguntas.add(Preguntas(R.drawable.imagen_prueba,  resources.getString(R.string.pregunta1_historia) ,  resources.getString(R.string.respuesta1_historia)+"\n" +
                 resources.getString(R.string.respuesta2_historia)+"\n" +resources.getString(R.string.respuesta3_historia)
                 +"\n" +resources.getString(R.string.respuesta4_historia)))
-        preguntas.add(Preguntas(R.drawable.intelestari,  resources.getString(R.string.pregunta1_entretenimiento) ,  resources.getString(R.string.respuesta1_entretenimiento)+
+        preguntas.add(Preguntas(R.drawable.imagen1_entretenimiento,  resources.getString(R.string.pregunta1_entretenimiento) ,  resources.getString(R.string.respuesta1_entretenimiento)+
                 "\n" +resources.getString(R.string.respuesta2_entretenimiento)+"\n" +resources.getString(R.string.respuesta3_entretenimiento)
                 +"\n" +resources.getString(R.string.respuesta4_entretenimiento)))
+        preguntas.add(Preguntas(R.drawable.imagen1_geografia,  resources.getString(R.string.pregunta1_geografia) ,  resources.getString(R.string.respuesta1_geografia)+
+                "\n" +resources.getString(R.string.respuesta2_geografia)+"\n" +resources.getString(R.string.respuesta3_geografia)
+                +"\n" +resources.getString(R.string.respuesta4_geografia)))
+        preguntas.add(Preguntas(R.drawable.imagen1_ciencias,  resources.getString(R.string.pregunta1_ciencias) ,  resources.getString(R.string.respuesta1_ciencias)+
+                "\n" +resources.getString(R.string.respuesta2_ciencias)+"\n" +resources.getString(R.string.respuesta3_ciencias)
+                +"\n" +resources.getString(R.string.respuesta4_ciencias)))
 
         val contenedorRecycler: RecyclerView = findViewById<RecyclerView>(R.id.vistaRecycler)
         val adapter: AdapterPreguntas = AdapterPreguntas(this, preguntas)
