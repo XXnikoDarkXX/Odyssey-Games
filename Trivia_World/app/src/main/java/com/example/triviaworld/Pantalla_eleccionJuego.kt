@@ -13,45 +13,60 @@ class Pantalla_eleccionJuego : AppCompatActivity() {
 
     fun irAArte(view: View) {
 
-        //var aux: String = "Arte"
-        //val trundle: bundle
         val intent = Intent(this, Pantalla_Secundaria::class.java)
+        var bundle:Bundle=Bundle()
+        val seleccionado: ArrayList<String> = ArrayList<String>()
+        seleccionado.add("Arte")
+        bundle.putStringArrayList("tipo",seleccionado)
+        intent.putExtras(bundle)
         startActivity(intent)
 
     }
 
     fun irAHistoria(view: View) {
 
-        //var aux: String = "Historia"
-        //val trundle: bundle
         val intent = Intent(this, Pantalla_Secundaria::class.java)
+        var bundle:Bundle=Bundle()
+        val seleccionado: ArrayList<String> = ArrayList<String>()
+        seleccionado.add("Historia")
+        bundle.putStringArrayList("tipo",seleccionado)
+        intent.putExtras(bundle)
         startActivity(intent)
 
     }
 
     fun irAEntretenimiento(view: View) {
 
-        //var aux: String = "Entretenimiento"
-        //val trundle: bundle
         val intent = Intent(this, Pantalla_Secundaria::class.java)
+        var bundle:Bundle=Bundle()
+        val seleccionado: ArrayList<String> = ArrayList<String>()
+        seleccionado.add("Entretenimiento")
+        bundle.putStringArrayList("tipo",seleccionado)
+        intent.putExtras(bundle)
         startActivity(intent)
 
     }
 
     fun irACiencia(view: View) {
 
-        //var aux: String = "Ciencia"
-        //val trundle: bundle
         val intent = Intent(this, Pantalla_Secundaria::class.java)
+        var bundle:Bundle=Bundle()
+        val seleccionado: ArrayList<String> = ArrayList<String>()
+        seleccionado.add("Ciencia")
+        bundle.putStringArrayList("tipo",seleccionado)
+        intent.putExtras(bundle)
         startActivity(intent)
 
     }
 
     fun irAGeografia(view: View) {
 
-        //var aux: String = "Geografia"
-        //val trundle: bundle
         val intent = Intent(this, Pantalla_Secundaria::class.java)
+        var bundle:Bundle=Bundle()
+        val seleccionado: ArrayList<String> = ArrayList<String>()
+        seleccionado.add("Geografía")
+        bundle.putStringArrayList("tipo",seleccionado)
+        intent.putExtras(bundle)
         startActivity(intent)
 
     }
