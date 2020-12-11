@@ -28,7 +28,7 @@ class Pantalla_Eleccion : AppCompatActivity() {
 
     fun irEdit(view: View) {
 
-        val intent = Intent(this, Editor_Preguntas::class.java)
+        val intent = Intent(this, Pantalla_Opcione_Editor::class.java)
         startActivity(intent)
 
     }

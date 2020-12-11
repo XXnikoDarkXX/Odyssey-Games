@@ -44,6 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
+        android:onClick="AaEditar"
         android:backgroundTint="@color/Naranja"
         android:text="@string/Beditar"
         app:layout_constraintBottom_toBottomOf="@+id/borrar"

@@ -10,10 +10,10 @@ import android.widget.ListView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class Editor_Preguntas : AppCompatActivity() {
+class Pantalla_Opcione_Editor : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.editor__preguntas)
+        setContentView(R.layout.pantalla_opcione_editor)
 
         var preguntas:ArrayList<Preguntas> = ArrayList<Preguntas>()
         preguntas.add(Preguntas(R.drawable.imagen_prueba,  resources.getString(R.string.pregunta1_historia) ,  resources.getString(R.string.respuesta1_historia)+"\n" +
@@ -40,6 +40,13 @@ class Editor_Preguntas : AppCompatActivity() {
     fun Aañadir(view: View) {
 
         val intent = Intent(this, Creador_Preguntas::class.java)
+        startActivity(intent)
+
+    }
+
+    fun AaEditar(view: View) {
+
+        val intent = Intent(this, Pantalla_Edita_Preguntas::class.java)
         startActivity(intent)
 
     }
