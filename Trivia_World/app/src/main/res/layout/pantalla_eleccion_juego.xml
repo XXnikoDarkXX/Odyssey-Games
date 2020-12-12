@@ -8,9 +8,43 @@
     android:background="@drawable/fondo_naranja">
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/Tarte"
         android:layout_width="174dp"
         android:layout_height="213dp"
+        android:backgroundTint="#00FFFFFF"
+        android:clickable="true"
+        android:contentDescription="@string/Iajustes"
+        android:focusable="true"
+        android:onClick="irAArte"
+        android:padding="1dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/Tgeogra"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Tgeogra"
+        app:srcCompat="@drawable/imagen_arte" />
+
+    <ImageButton
+        android:id="@+id/Tgeogra"
+        android:layout_width="173dp"
+        android:layout_height="211dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#00FFFFFF"
+        android:clickable="true"
+        android:contentDescription="@string/Iajustes"
+        android:focusable="true"
+        android:onClick="irAGeografia"
+        android:padding="1dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.051"
+        app:srcCompat="@drawable/imagen_geografia" />
+
+    <ImageButton
+        android:id="@+id/TEntrete"
+        android:layout_width="173dp"
+        android:layout_height="211dp"
         android:backgroundTint="#00FFFFFF"
         android:clickable="true"
         android:contentDescription="@string/Iajustes"
@@ -18,16 +52,34 @@
         android:onClick="irAEntretenimiento"
         android:padding="1dp"
         android:scaleType="fitCenter"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+        app:layout_constraintBottom_toTopOf="@+id/TCienc"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageButton3"
-        app:srcCompat="@drawable/imagen1_entretenimiento" />
+        app:layout_constraintTop_toBottomOf="@+id/Tgeogra"
+        app:srcCompat="@drawable/imagen_entretenimiento" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="182dp"
-        android:layout_height="229dp"
-        android:layout_marginEnd="24dp"
+        android:id="@+id/TCienc"
+        android:layout_width="173dp"
+        android:layout_height="211dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="#00FFFFFF"
+        android:clickable="true"
+        android:contentDescription="@string/Iajustes"
+        android:focusable="true"
+        android:onClick="irACiencia"
+        android:padding="1dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95"
+        app:srcCompat="@drawable/imagen_ciencias" />
+
+    <ImageButton
+        android:id="@+id/THist"
+        android:layout_width="173dp"
+        android:layout_height="211dp"
         android:backgroundTint="#00FFFFFF"
         android:clickable="true"
         android:contentDescription="@string/Iajustes"
@@ -35,9 +87,8 @@
         android:onClick="irAHistoria"
         android:padding="1dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/TCienc"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.181"
-        app:srcCompat="@drawable/imagen_prueba" />
+        app:layout_constraintStart_toEndOf="@+id/TCienc"
+        app:srcCompat="@drawable/imagen_historia" />
 </androidx.constraintlayout.widget.ConstraintLayout>

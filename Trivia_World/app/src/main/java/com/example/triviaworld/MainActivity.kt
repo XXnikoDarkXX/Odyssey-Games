@@ -49,6 +49,10 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    fun irPausa(view: View){
+        Pantalla_Pausa().show(supportFragmentManager, "")
+    }
+
 
 
 

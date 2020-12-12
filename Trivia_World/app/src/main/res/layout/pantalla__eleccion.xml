@@ -7,44 +7,71 @@
     android:background="@drawable/sky">
 
     <LinearLayout
-        android:layout_width="383dp"
-        android:layout_height="567dp"
+        android:layout_width="351dp"
+        android:layout_height="662dp"
         android:orientation="vertical"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
+        <Button
             android:id="@+id/botonNormal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#00FFFFFF"
+            android:layout_height="100dp"
+            android:layout_marginBottom="80dp"
+            android:background="@drawable/botones_redondos"
+            android:backgroundTint="@color/corona2"
+            android:text="@string/BtnIrNormal"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="@color/purple_700"
+            android:shadowColor="@color/white"
+            android:shadowDx="8"
+            android:shadowDy="8"
+            android:shadowRadius="10"
             android:clickable="true"
             android:onClick="irNormalM"
             app:srcCompat="@drawable/boton_normalm" />
 
-        <ImageButton
+        <Button
             android:id="@+id/botonEditp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#00FFFFFF"
+            android:layout_height="100dp"
+            android:layout_marginBottom="80dp"
+            android:background="@drawable/botones_redondos"
+            android:backgroundTint="@color/corona2"
+            android:text="@string/BtnIrRandom"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="@color/purple_700"
+            android:shadowColor="@color/white"
+            android:shadowDx="8"
+            android:shadowDy="8"
+            android:shadowRadius="10"
             android:clickable="true"
-            android:onClick="irEdit"
-            app:srcCompat="@drawable/boton_editp"
-            android:focusable="true" />
+            android:focusable="true"
+            android:onClick="irRandom"
+            app:srcCompat="@drawable/boton_editp" />
 
-        <ImageButton
+        <Button
             android:id="@+id/botonRandomm"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#00FFFFFF"
+            android:layout_height="100dp"
+            android:background="@drawable/botones_redondos"
+            android:backgroundTint="@color/corona2"
+            android:text="@string/BtnIrEditor"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="@color/purple_700"
+            android:shadowColor="@color/white"
+            android:shadowDx="8"
+            android:shadowDy="8"
+            android:shadowRadius="10"
             android:clickable="true"
-            android:onClick="irRandomM"
+            android:onClick="irEdit"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:srcCompat="@drawable/boton_random"/>
+            app:srcCompat="@drawable/boton_random" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

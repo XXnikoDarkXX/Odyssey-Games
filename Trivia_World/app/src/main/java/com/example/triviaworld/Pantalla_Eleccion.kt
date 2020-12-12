@@ -14,21 +14,23 @@ class Pantalla_Eleccion : AppCompatActivity() {
 
     fun irNormalM(view: View) {
 
-        val intent = Intent(this,Pantalla_Secundaria::class.java)
+
+        val intent = Intent(this, Pantalla_eleccionJuego::class.java)
+
         startActivity(intent)
 
     }
 
-    /*fun botonRandomm(view: View) {
+    fun irRandom(view: View) {
 
-        val intent = Intent(this, Pantalla_Redes::class.java)
+        val intent = Intent(this, Pantalla_Secundaria::class.java)
         startActivity(intent)
 
-    }*/
+    }
 
     fun irEdit(view: View) {
 
-        val intent = Intent(this, Editor_Preguntas::class.java)
+        val intent = Intent(this, Pantalla_Opcione_Editor::class.java)
         startActivity(intent)
 
     }
