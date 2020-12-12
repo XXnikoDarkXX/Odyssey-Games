@@ -10,6 +10,7 @@
     <string name="usuarioRegistro">Usuario</string>
     <string name="contraseñaRegistro">Contraseña</string>
     <string name="enviarRegistro">Enviar</string>
-
+    <string name="usuarioInsertado">Usuario ingresado</string>
+    <string name="errorInsertandoUsuario">Error al ingresar usuario</string>
 
 </resources>

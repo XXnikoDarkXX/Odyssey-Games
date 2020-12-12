@@ -1,7 +1,11 @@
 package com.example.triviaworld
 
+import BBDD.BDPersona
+import Clases.Persona
 import android.content.DialogInterface
 import android.content.Intent
+import android.database.Cursor
+import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
@@ -10,6 +14,10 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 
 class Pantalla_Login: AppCompatActivity() {
+
+    val database: SQLiteDatabase by lazy{ BDPersona(this).writableDatabase }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.pantalla_login)
@@ -45,18 +53,18 @@ class Pantalla_Login: AppCompatActivity() {
     fun enviar(view: View) {
 
         //Referencio los campos que voy a utilizar
-        var entradaEmail: EditText = findViewById(R.id.mailLogin)
+        var entradaUsuarioLogin: EditText = findViewById(R.id.usuarioLoginIn)
         var entradaContraseña: EditText = findViewById(R.id.contraseñaLogin)
 
         //Guardo en una variable el email que introduzca el usuario
         //Guardo en una variable la contraseña que introduzca el usuario
-        var email: String = entradaEmail.text.toString()
+        var email: String = entradaUsuarioLogin.text.toString()
         var contraseña: String = entradaContraseña.text.toString()
 
 
         //Verificación de datos completados
         if (email == "") {
-            AlertDialog.Builder(this).setTitle("Datos incompletos").setMessage("Falta: email").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which -> }).show()
+            AlertDialog.Builder(this).setTitle("Datos incompletos").setMessage("Falta: usuario").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which -> }).show()
 
         }else if (contraseña == "") {
             AlertDialog.Builder(this).setTitle("Datos incompletos").setMessage("Falta: contraseña").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which -> }).show()
@@ -64,8 +72,11 @@ class Pantalla_Login: AppCompatActivity() {
         }else{
             AlertDialog.Builder(this).setTitle("Login").setMessage("Logeandose").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which ->}).show()
 
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, Pantalla_Perfil::class.java)
             startActivity(intent)
+
+
+            //enviarAPerfil()
         }
 
 
@@ -73,7 +84,50 @@ class Pantalla_Login: AppCompatActivity() {
 
     }
 
+    /**
+     *
+     */
+    fun enviarAPerfil(){//EQUIVALE A UN SELECT
 
+        val personas:ArrayList<Persona> = arrayListOf<Persona>()
+
+        /**
+         * query:es la q hace las consultas
+         * Constructor:
+         * Nombre de la tabla,
+         * Columnas - null       las columnas(Array<String> y la ponemos a null, para q las seleccione todas),
+         * Selection - null      Lo mismo q pondria en un where pero sin poner la palabra where(en este caso no vamos a poner nada, pues null),
+         * SelectionArgs - null  Por si queremos poner interrogaciones,
+         * Group by - null
+         * Having - null
+         * Order by - Tema5OpenHelper.idTablaUsuario+" desc", para ordernar en orden descendente
+         */
+        //Cuando se usa el order by, hay q guardarlo en una variable de tipo Cursor
+        var cursor: Cursor =database.query(BDPersona.tablaPersona,null,null,
+                null,null,null, BDPersona.usuario+" asc")
+
+        cursor.moveToFirst()//ponerlo en la primera
+        while(!cursor.isAfterLast){//mientras q no ocurra q curso este despues del ultimo
+            val idUsuario:Int=cursor.getInt(cursor.getColumnIndex(BDPersona.idPersona))//para no acordarnos del nombre de la columna,
+            val nombre:String=cursor.getString(cursor.getColumnIndex(BDPersona.nombre))//utilizamos esta forma,
+            val apellidos:String=cursor.getString(cursor.getColumnIndex(BDPersona.apellidos))//lo q hay entre los (...)
+            val fechaNacimiento:String=cursor.getString(cursor.getColumnIndex(BDPersona.fechaNacimiento))
+            val direccion:String=cursor.getString(cursor.getColumnIndex(BDPersona.direccion))
+            val ciudad:String=cursor.getString(cursor.getColumnIndex(BDPersona.ciudad))
+            val pais:String=cursor.getString(cursor.getColumnIndex(BDPersona.pais))
+            val telefono:String=cursor.getString(cursor.getColumnIndex(BDPersona.telefono))
+            val usuario:String=cursor.getString(cursor.getColumnIndex(BDPersona.usuario))
+            val contraseña:String=cursor.getString(cursor.getColumnIndex(BDPersona.contraseña))
+
+            //metemos en el ArrayList personas de tipo Persona, el objeto de tipo Persona con los valores obtenidos
+            personas.add(Persona(idUsuario, nombre, apellidos, fechaNacimiento, direccion, ciudad, pais, telefono, usuario, contraseña))
+
+            cursor.moveToNext()//para q vaya a la siguiente fila, hasta esta linea estaba iterando por las columnas
+        }
+
+
+
+    }
 
 }
 

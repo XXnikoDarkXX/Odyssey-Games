@@ -117,7 +117,7 @@
                 android:autofillHints="@string/usuarioRegistro"
                 android:ems="10"
                 android:hint="@string/usuarioRegistro"
-                android:inputType="phone" />
+                android:inputType="text" />
 
             <EditText
                 android:id="@+id/contraseñaRegistro"

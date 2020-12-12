@@ -1,7 +1,7 @@
 <resources>
 
-    <string name="emailLogin">Email</string>
-    <string name="correoElectronicoLogin">Su dirección de correo electrónico</string>
+    <string name="usuarioLogin">Escriba su nombre de usuario</string>
+    <string name="usuarioLoginIn">Usuario</string>
     <string name="contraseñaLogin">Escriba su contraseña</string>
     <string name="contraseñaInLogin">Contraseña</string>
     <string name="olvidoContraseñaLogin">Si ha olvidado su contraseña </string>
