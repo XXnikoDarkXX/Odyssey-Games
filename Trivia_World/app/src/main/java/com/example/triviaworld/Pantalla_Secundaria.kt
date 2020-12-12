@@ -1,7 +1,7 @@
 package com.example.triviaworld
 
 
-import Adapters.AdapterOpciones
+
 import Adapters.AdapterRespuestas
 import Adapters.AdapterPreguntas
 import android.os.Bundle
