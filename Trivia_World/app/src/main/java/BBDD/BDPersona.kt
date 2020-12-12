@@ -8,6 +8,7 @@ class BDPersona (val contexto:Context) : SQLiteOpenHelper(contexto,"BD Persona",
 
     companion object{
         val tablaPersona:String = "persona"
+        val idPersona:String= "id"
         val nombre:String = "nombre"
         val apellidos:String="apellidos"
         val fechaNacimiento:String="fechaNacimiento"
@@ -20,13 +21,13 @@ class BDPersona (val contexto:Context) : SQLiteOpenHelper(contexto,"BD Persona",
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
-        db?.execSQL("create table $tablaPersona("+usuario+" varchar(100) primary key, "+"$nombre varchar(100),"+
-                "$apellidos varchar(100),"+"$fechaNacimiento varchar(100),"+"$direccion varchar(100),"+"$ciudad varchar(100),+" +
-                "$pais varchar(100),"+"$telefono varchar(100),"+"$contraseña varchar(100))")
+        db?.execSQL("create table $tablaPersona("+idPersona+" integer primary key autoincrement, $nombre varchar(100),"+
+                "$apellidos varchar(100), $fechaNacimiento varchar(100), $direccion varchar(100), $ciudad varchar(100)," +
+                "$pais varchar(100),$telefono varchar(100),$usuario varchar(100),$contraseña varchar(100))")
 
-        db?.execSQL("insert into $tablaPersona($usuario,$nombre,$apellidos,$fechaNacimiento,$direccion," +
-                "$ciudad,$pais,$telefono,$contraseña) values('admin','OjoLoco','Pino','15/3/1980','calle sin salida'," +
-                "'Nerverland','12345678','0000')")
+        db?.execSQL("insert into $tablaPersona($idPersona,$nombre,$apellidos,$fechaNacimiento,$direccion," +
+                "$ciudad,$pais,$telefono,$usuario,$contraseña) values('1','OjoLoco','Pino','15/3/1980','calle sin salida'," +
+                "'Nerverland','españa','12345678','admin','0000')")
     }
 
 
