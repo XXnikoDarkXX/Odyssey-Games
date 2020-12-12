@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class Pantalla_Opciones : AppCompatActivity() {
     val database: SQLiteDatabase by lazy { BDPersona(this).writableDatabase }
+    val personas: ArrayList<Persona> = arrayListOf<Persona>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.pantalla_opciones)
@@ -38,15 +39,17 @@ class Pantalla_Opciones : AppCompatActivity() {
      */
     fun cambiaPass(view: View) {
 
+        refrecarUsuarios()
+
         var user: EditText = findViewById(R.id.cambioUsuario)
         var contraseñaAntigua: EditText = findViewById(R.id.passAntigua)
-        var contraseñaActual: EditText = findViewById(R.id.passNueva)
+        var contraseñaNueva :EditText = findViewById(R.id.passNueva)
 
-        var passActual: String = contraseñaActual.text.toString()
+        var passNueva: String = contraseñaNueva.text.toString()
         var passAntigua: String = contraseñaAntigua.text.toString()
         var usuarioCampo: String = user.text.toString()
 
-        if (user.text.toString().equals("") || contraseñaActual.text.toString().equals("") || contraseñaAntigua.text.toString().equals("")) {
+        if (user.text.toString().equals("") || contraseñaNueva.text.toString().equals("") || contraseñaAntigua.text.toString().equals("")) {
             android.app.AlertDialog.Builder(this)
                     .setTitle("Cambio de contraseña")
                     .setMessage("Hay un campo que no tienes rellenado")
@@ -68,46 +71,43 @@ class Pantalla_Opciones : AppCompatActivity() {
                             })
 
                     .show()
-            val datosAModificar: ContentValues = ContentValues()
-            /* datosAModificar.put(BDPersona.contraseña, campoUsuario.text.toString())
-             datosAModificar.put(BDPersona.contraseñaTablaUsuario, campoContraseña.text.toString())*/
+
 
             //update Persona set contraseña=X, contraseñaNuva=Y where Usuario=z
 
             //vamos a hacer un toast del usuario que se escriba en el editText
 
-            val personas: ArrayList<Persona> = arrayListOf<Persona>()
 
 
-            var cursor: Cursor = database.query(BDPersona.tablaPersona, null, null,
-                    null, null, null, BDPersona.usuario + " desc")
-            cursor.moveToFirst()//movemos el cursos al primer registro
 
-            while (!cursor.isAfterLast) {//iteramos el cursos hasta el ultimo registro
-                //iremos añadiendo las tablas a nuestro arrayList
-                val personaId:Int= cursor.getInt(cursor.getColumnIndex(BDPersona.idPersona))
-                val personaUsuario: String = cursor.getString(cursor.getColumnIndex(BDPersona.usuario))
-                val personaNombre: String = cursor.getString(cursor.getColumnIndex(BDPersona.nombre))
-                val personaApellidos: String = cursor.getString(cursor.getColumnIndex(BDPersona.apellidos))
-                val fechaDeNacimiento: String = cursor.getString(cursor.getColumnIndex(BDPersona.fechaNacimiento))
-                val personaDireccion: String = cursor.getString(cursor.getColumnIndex(BDPersona.direccion))
-                val personaCiudad: String = cursor.getString(cursor.getColumnIndex(BDPersona.ciudad))
-                val personaPais: String = cursor.getString(cursor.getColumnIndex(BDPersona.pais))
+            var contador=0
+            while(contador<personas.size){
 
-                val personaTelefono: String = cursor.getString(cursor.getColumnIndex(BDPersona.telefono))
-                val personaContraseña: String = cursor.getString(cursor.getColumnIndex(BDPersona.contraseña))
+              if (personas.get(contador).usuario.equals(usuarioCampo)){
 
-                personas.add(Persona(personaId,personaNombre, personaApellidos, fechaDeNacimiento, personaDireccion, personaCiudad, personaPais, personaTelefono,
-                        personaUsuario, personaContraseña))
 
-                cursor.moveToNext()
 
+               //comprobamos que la contraseña que ha puesto antigua sea la misma que la de la bbdd
+                  if (personas.get(contador).contraseña.equals(passAntigua)){
+                      val datosAModificar: ContentValues = ContentValues()
+                      datosAModificar.put(BDPersona.contraseña, "pepe")
+                      if(database.update(BDPersona.tablaPersona,datosAModificar,
+                                      "id='${this.personas.get(contador).id}'",null) >0){
+
+                      }
+                  }
+              }
+                  contador++;
             }
 
 
 
 
-                    Toast.makeText(this,"La contraseña del usuario es "+personas.get(0).contraseña,Toast.LENGTH_LONG).show()
+
+
+
+
+
 
 
 
@@ -118,5 +118,36 @@ class Pantalla_Opciones : AppCompatActivity() {
         }
 
 
+    }
+
+    fun refrecarUsuarios(){
+
+
+
+        var cursor: Cursor = database.query(BDPersona.tablaPersona, null, null,
+                null, null, null, BDPersona.usuario + " desc")
+        cursor.moveToFirst()//movemos el cursos al primer registro
+
+        while (!cursor.isAfterLast) {//iteramos el cursos hasta el ultimo registro
+            //iremos añadiendo las tablas a nuestro arrayList
+            val personaId:Int= cursor.getInt(cursor.getColumnIndex(BDPersona.idPersona))
+            val personaUsuario: String = cursor.getString(cursor.getColumnIndex(BDPersona.usuario))
+            val personaNombre: String = cursor.getString(cursor.getColumnIndex(BDPersona.nombre))
+            val personaApellidos: String = cursor.getString(cursor.getColumnIndex(BDPersona.apellidos))
+            val fechaDeNacimiento: String = cursor.getString(cursor.getColumnIndex(BDPersona.fechaNacimiento))
+            val personaDireccion: String = cursor.getString(cursor.getColumnIndex(BDPersona.direccion))
+            val personaCiudad: String = cursor.getString(cursor.getColumnIndex(BDPersona.ciudad))
+            val personaPais: String = cursor.getString(cursor.getColumnIndex(BDPersona.pais))
+
+            val personaTelefono: String = cursor.getString(cursor.getColumnIndex(BDPersona.telefono))
+            val personaContraseña: String = cursor.getString(cursor.getColumnIndex(BDPersona.contraseña))
+
+            personas.add(Persona(personaId,personaNombre, personaApellidos, fechaDeNacimiento, personaDireccion, personaCiudad, personaPais, personaTelefono,
+                    personaUsuario, personaContraseña))
+
+            cursor.moveToNext()
+
+        }
+        Toast.makeText(this,"contraeña es"+personas.get(1).contraseña,Toast.LENGTH_LONG).show()
     }
 }

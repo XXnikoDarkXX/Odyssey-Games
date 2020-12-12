@@ -171,7 +171,7 @@
         android:inputType="text"
         android:autofillHints="text"
         android:layout_height="wrap_content"
-        android:hint="@string/passNueva"
+        android:hint="@string/passAntigua"
         app:layout_constraintEnd_toEndOf="@+id/cambioUsuario"
         app:layout_constraintStart_toStartOf="@+id/cambioUsuario"
         app:layout_constraintTop_toBottomOf="@+id/cambioUsuario" />
