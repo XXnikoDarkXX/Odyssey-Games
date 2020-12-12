@@ -8,6 +8,16 @@
     android:background="@drawable/sky"
     >
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerSecundaria"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagen_secundaria" />
+
     <ImageView
         android:id="@+id/pregunta"
         android:layout_width="353dp"
@@ -20,77 +30,29 @@
         app:srcCompat="@drawable/bocadillo_pregunta" />
 
 
-    <TextView
-        android:id="@+id/textoPregunta"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_width="243dp"
-        android:layout_height="65dp"
-        android:text="@string/pregunta"
-        app:layout_constraintBottom_toBottomOf="@+id/pregunta"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.457"
-        app:layout_constraintStart_toStartOf="@+id/pregunta"
-        app:layout_constraintTop_toTopOf="@+id/pregunta" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <Button
-            android:id="@+id/boton1"
-            android:textStyle="bold"
-            android:layout_width="380dp"
-            android:layout_height="60dp"
-            android:layout_margin="5dp"
-            android:background="@drawable/color_degradado"
-            android:text="@string/boton1" />
-
-        <Button
-            android:id="@+id/boton2"
-
-            android:textStyle="bold"
-            android:layout_width="380dp"
-            android:layout_height="60dp"
-            android:layout_margin="5dp"
-            android:background="@drawable/color_degradado"
-            android:text="@string/boton2" />
-
-        <Button
-            android:id="@+id/boton3"
-            android:textStyle="bold"
-            android:layout_width="380dp"
-            android:layout_height="60dp"
-            android:layout_margin="5dp"
-            android:background="@drawable/color_degradado"
-            android:text="@string/boton3" />
-
-        <Button
-            android:id="@+id/boton4"
-            android:textStyle="bold"
-            android:layout_width="380dp"
-            android:layout_height="60dp"
-            android:layout_margin="5dp"
-            android:background="@drawable/color_degradado"
-            android:text="@string/boton4" />
-    </LinearLayout>
-
     <ImageView
         android:id="@+id/imagen_secundaria"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:contentDescription="@string/descripcion_foto"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerSecundaria"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pregunta"
         app:srcCompat="@drawable/imagen_prueba" />
+
+    <TextView
+        android:id="@+id/textoPregunta"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/pregunta"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/pregunta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pregunta" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

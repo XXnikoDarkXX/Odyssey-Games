@@ -22,30 +22,18 @@
 
     <ImageView
         android:id="@+id/gui_redes"
-        android:layout_width="275dp"
+        android:layout_width="0dp"
         android:layout_height="425dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginBottom="98dp"
         android:contentDescription="@string/descripcion_gui_redes"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo_redes"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/gui_redes" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
     <LinearLayout
-        android:layout_width="222dp"
-        android:layout_height="364dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@+id/gui_redes"
         app:layout_constraintEnd_toEndOf="parent"
@@ -91,18 +79,17 @@
 
 
         android:id="@+id/button"
-        android:onClick="volverInicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
         android:backgroundTint="@color/Naranja"
+        android:onClick="volverInicio"
+        android:layout_marginBottom="25dp"
         android:text="@string/boton_volver_redes"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gui_redes" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 

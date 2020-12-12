@@ -14,7 +14,8 @@ class Pantalla_Eleccion : AppCompatActivity() {
 
     fun irNormalM(view: View) {
 
-        setContentView(R.layout.pantalla_secundaria)
+        val intent = Intent(this,Pantalla_Secundaria::class.java)
+        startActivity(intent)
 
     }
 
