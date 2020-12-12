@@ -26,28 +26,12 @@
         android:layout_width="138dp"
         android:layout_height="30dp"
         android:layout_marginStart="144dp"
-        android:layout_marginTop="60dp"
         android:text="@string/txtNombre"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/avatar"
-        app:layout_constraintTop_toBottomOf="@+id/nick" />
-
-    <TextView
-        android:id="@+id/nick"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="@string/nickName"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toEndOf="@+id/avatar"
-        app:layout_constraintTop_toTopOf="@+id/marcoNaranajaPerfil">
-
-    </TextView>
+        tools:layout_editor_absoluteY="107dp" />
 
     <Button
         android:id="@+id/btnIrLogin"
