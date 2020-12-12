@@ -72,11 +72,21 @@ class Pantalla_Login: AppCompatActivity() {
         }else{
             AlertDialog.Builder(this).setTitle("Login").setMessage("Logeandose").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which ->}).show()
 
-            val intent = Intent(this, Pantalla_Perfil::class.java)
-            startActivity(intent)
+            //ENVIO DE DATOS A PANTALLA PERFIL
+            var intent:Intent=Intent(this,Pantalla_Perfil::class.java)
+            var bun:Bundle=Bundle()
+
+            var usuario:EditText=findViewById(R.id.usuarioLoginIn)
+            var contraseña:EditText=findViewById(R.id.contraseñaLogin)
+
+            bun.putString("usuario",usuario.text.toString())
+            bun.putShort("contraseña", contraseña.text.toString().toShort())
+
+            intent.putExtras(bun)
+            this.startActivity(intent)
 
 
-            //enviarAPerfil()
+
         }
 
 
