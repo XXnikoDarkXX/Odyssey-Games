@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class Pantalla_Opciones : AppCompatActivity() {
     val database: SQLiteDatabase by lazy { BDPersona(this).writableDatabase }
-    val personas: ArrayList<Persona> = arrayListOf<Persona>()
+    var personas: ArrayList<Persona> = ArrayList<Persona>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.pantalla_opciones)
@@ -90,14 +90,15 @@ class Pantalla_Opciones : AppCompatActivity() {
                //comprobamos que la contraseña que ha puesto antigua sea la misma que la de la bbdd
                   if (personas.get(contador).contraseña.equals(passAntigua)){
                       val datosAModificar: ContentValues = ContentValues()
-                      datosAModificar.put(BDPersona.contraseña, "pepe")
+                      datosAModificar.put(BDPersona.contraseña,contraseñaNueva.text.toString() )
                       if(database.update(BDPersona.tablaPersona,datosAModificar,
                                       "id='${this.personas.get(contador).id}'",null) >0){
-
+                          refrecarUsuarios()
                       }
                   }
               }
                   contador++;
+
             }
 
 
@@ -122,7 +123,7 @@ class Pantalla_Opciones : AppCompatActivity() {
 
     fun refrecarUsuarios(){
 
-
+    var todos :ArrayList<Persona> = ArrayList<Persona>()
 
         var cursor: Cursor = database.query(BDPersona.tablaPersona, null, null,
                 null, null, null, BDPersona.usuario + " desc")
@@ -142,12 +143,15 @@ class Pantalla_Opciones : AppCompatActivity() {
             val personaTelefono: String = cursor.getString(cursor.getColumnIndex(BDPersona.telefono))
             val personaContraseña: String = cursor.getString(cursor.getColumnIndex(BDPersona.contraseña))
 
-            personas.add(Persona(personaId,personaNombre, personaApellidos, fechaDeNacimiento, personaDireccion, personaCiudad, personaPais, personaTelefono,
+            todos.add(Persona(personaId,personaNombre, personaApellidos, fechaDeNacimiento, personaDireccion, personaCiudad, personaPais, personaTelefono,
                     personaUsuario, personaContraseña))
 
             cursor.moveToNext()
 
         }
-        Toast.makeText(this,"contraeña es"+personas.get(1).contraseña,Toast.LENGTH_LONG).show()
+
+        personas=todos
+        Toast.makeText(this,personas.get(1).contraseña,Toast.LENGTH_LONG).show()
+
     }
 }
