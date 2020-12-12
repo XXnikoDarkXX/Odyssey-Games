@@ -4,4 +4,6 @@
     <string name="subirFoto">Pulse el botón para subir una foto</string>
     <string name="txtDescLogo">Es un logo de Trivia World en perfil</string>
     <string name="txtLogin">Loguearse</string>
+    <string name="permisoDenegado">Me has denegado el permiso</string>
+    <string name="permisoAceptado">Me has aceptado el permiso</string>
 </resources>
