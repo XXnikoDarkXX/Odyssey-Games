@@ -17,7 +17,7 @@ class Pantalla_Secundaria: AppCompatActivity() {
         var valores:ArrayList<String>? = bundle?.getStringArrayList("tipo")
         setContentView(R.layout.pantalla_secundaria)
 
-        if(valores!=null) {
+        /*if(valores!=null) {
             var tipo: String = valores.get(0)
             val imagen: ImageView =findViewById<ImageView>(R.id.imagen_secundaria)
             val pregunta: TextView = findViewById<TextView>(R.id.textoPregunta)
@@ -68,7 +68,7 @@ class Pantalla_Secundaria: AppCompatActivity() {
                 }
 
             }
-        }
+        }*/
 
 
     }
