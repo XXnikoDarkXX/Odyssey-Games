@@ -57,12 +57,12 @@ class Pantalla_Secundaria: AppCompatActivity() {
             when(tipo){
                 "Arte"-> {
 
-                    cursor =database.query(BDPreguntasRespuestas.tablaRespuestas,null,null,
-                            null,null,null,BDPreguntasRespuestas.arteTablaRespuestas+" asc")
+                    cursor =database.query(BDPreguntasRespuestas.tablaRespuestas,null,"id='re'",
+                            null,null,null,BDPreguntasRespuestas.idTablaRespuestas+" asc")
                     cursor.moveToFirst()
                     while(!cursor.isAfterLast){
-                        val id:Int=cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.arteTablaRespuestas))
-                        val pregunta:String=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.arteTablaRespuestas))
+                        val id:Int=cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.idTablaRespuestas))
+                        val pregunta:String=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.respuesta))
 
                         datos.add(pregunta)
 
@@ -80,19 +80,19 @@ class Pantalla_Secundaria: AppCompatActivity() {
                 "Historia"-> {
 
 
-                    cursor =database.query(BDPreguntasRespuestas.tablaRespuestas,null,null,
-                            null,null,null,BDPreguntasRespuestas.historiaTablaRespuestas+" asc")
+                    cursor =database.query(BDPreguntasRespuestas.tablaRespuestas,null,"tipo='historia'",
+                            null,null,null,BDPreguntasRespuestas.tipo+" asc")
                     cursor.moveToFirst()
                     while(!cursor.isAfterLast){
-                        val id:Int=cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.historiaTablaRespuestas))
-                        val pregunta:String=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.historiaTablaRespuestas))
+                        val id:Int=cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.idTablaRespuestas))
+                        val respuesta:String=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.respuesta))
 
-                        datos.add(pregunta)
+                        datos.add(respuesta)
 
                         cursor.moveToNext()
                     }
 
-                    cursor =database.query(BDPreguntasRespuestas.tablaPreguntas,null,"id='1'",
+                    cursor =database.query(BDPreguntasRespuestas.tablaPreguntas,null,"tipo='historia'",
                             null,null,null,BDPreguntasRespuestas.idTablaPreguntas+" asc")
                     cursor.moveToFirst()
                     val imagen: ImageView =findViewById<ImageView>(R.id.imagen_secundaria)
@@ -103,11 +103,11 @@ class Pantalla_Secundaria: AppCompatActivity() {
                 "Entretenimiento"-> {
 
                     cursor =database.query(BDPreguntasRespuestas.tablaRespuestas,null,null,
-                            null,null,null,BDPreguntasRespuestas.entretenimientoTablaRespuestas+" asc")
+                            null,null,null,BDPreguntasRespuestas.idTablaRespuestas+" asc")
                     cursor.moveToFirst()
                     while(!cursor.isAfterLast){
-                        val id:Int=cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.entretenimientoTablaRespuestas))
-                        val pregunta:String=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.entretenimientoTablaRespuestas))
+                        val id:Int=cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.idTablaRespuestas))
+                        val pregunta:String=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.idTablaRespuestas))
 
                         datos.add(pregunta)
 
@@ -125,11 +125,11 @@ class Pantalla_Secundaria: AppCompatActivity() {
                 "Ciencia"-> {
 
                     cursor =database.query(BDPreguntasRespuestas.tablaRespuestas,null,null,
-                            null,null,null,BDPreguntasRespuestas.cienciasTablaRespuestas+" asc")
+                            null,null,null,BDPreguntasRespuestas.idTablaRespuestas+" asc")
                     cursor.moveToFirst()
                     while(!cursor.isAfterLast){
-                        val id:Int=cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.cienciasTablaRespuestas))
-                        val pregunta:String=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.cienciasTablaRespuestas))
+                        val id:Int=cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.idTablaRespuestas))
+                        val pregunta:String=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.idTablaRespuestas))
 
                         datos.add(pregunta)
 
@@ -147,11 +147,11 @@ class Pantalla_Secundaria: AppCompatActivity() {
                 "Geografía"-> {
 
                     cursor =database.query(BDPreguntasRespuestas.tablaRespuestas,null,null,
-                            null,null,null,BDPreguntasRespuestas.geografiaTablaRespuestas+" asc")
+                            null,null,null,BDPreguntasRespuestas.idTablaRespuestas+" asc")
                     cursor.moveToFirst()
                     while(!cursor.isAfterLast){
-                        val id:Int=cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.geografiaTablaRespuestas))
-                        val pregunta:String=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.geografiaTablaRespuestas))
+                        val id:Int=cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.idTablaRespuestas))
+                        val pregunta:String=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.idTablaRespuestas))
 
                         datos.add(pregunta)
 

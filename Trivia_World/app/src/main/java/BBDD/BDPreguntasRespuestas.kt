@@ -16,10 +16,11 @@ class BDPreguntasRespuestas (val contexto: Context):
 
         val Pregunta: String = "pregunta"
         val Imagen: String = "imagen"
-        val geografiaTablaPreguntas: String = "preguntaGeografia"
+        val tipo: String = "tipo"
+        /*val geografiaTablaPreguntas: String = "preguntaGeografia"
         val cienciasTablaPreguntas: String = "preguntaCiencias"
         val arteTablaPreguntas: String = "preguntaArte"
-        val entretenimientoTablaPreguntas: String = "preguntaEntretenimiento"
+        val entretenimientoTablaPreguntas: String = "preguntaEntretenimiento"*/
 
 
         //respuestas
@@ -27,11 +28,11 @@ class BDPreguntasRespuestas (val contexto: Context):
         val tablaRespuestas: String = "respuestas"
         val idTablaRespuestas: String = "id"
 
-        val historiaTablaRespuestas: String = "respuestaHistoria"
-        val geografiaTablaRespuestas: String = "respuestaGeografia"
+        val respuesta: String = "respuesta"
+        /*val geografiaTablaRespuestas: String = "respuestaGeografia"
         val cienciasTablaRespuestas: String = "respuestaCiencias"
         val arteTablaRespuestas: String = "respuestaArte"
-        val entretenimientoTablaRespuestas: String = "respuestaEntretenimiento"
+        val entretenimientoTablaRespuestas: String = "respuestaEntretenimiento"*/
     }
 
     override fun onCreate(p0: SQLiteDatabase?) {
@@ -39,9 +40,8 @@ class BDPreguntasRespuestas (val contexto: Context):
 
         //creación de la tabla preguntas.
 
-        p0?.execSQL("create table $tablaPreguntas("+ idTablaPreguntas+" integer primary key " +
-                "autoincrement," +
-                "$Pregunta varchar(100), $Imagen integer)")
+        p0?.execSQL("create table $tablaPreguntas("+ idTablaPreguntas+" integer primary key " +"autoincrement," +
+                "$Pregunta varchar(100), $Imagen integer, $tipo varchar(100))")
 
         //primera pregunta de cada categoría
 
@@ -51,39 +51,46 @@ class BDPreguntasRespuestas (val contexto: Context):
         var rutaa: Int = R.drawable.imagen1_arte
         var rutae: Int = R.drawable.imagen1_entretenimiento
 
-        p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen) values('¿Qué año fueron las cruzadas?','$ruta')")
+        p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen, $tipo) values('¿Qué año fueron las cruzadas?','$ruta','historia')")
+        p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen, $tipo) values('¿Quien es mayor?','$rutac','historia')")
 
-        p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen) values('¿Cuál es la isla más grande del mundo?','$rutag')")
-        p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen) values('La velocidad a la que viaja la luz es:','$rutac')")
-        p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen) values('¿Quién pintó el Guernica?','$rutaa')")
-        p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen) values('¿En qué año se estrenó Interestellar?','$rutae')")
+        p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen, $tipo) values('¿Cuál es la isla más grande del mundo?','$rutag', 'geografia')")
+        p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen, $tipo) values('La velocidad a la que viaja la luz es:','$rutac', 'geografia')")
+        p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen, $tipo) values('¿Quién pintó el Guernica?','$rutaa', 'geografia')")
+        p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen, $tipo) values('¿En qué año se estrenó Interestellar?','$rutae', 'geografia')")
 
 
         //creación de la tabla respuestas
 
         p0?.execSQL("create table $tablaRespuestas("+ idTablaRespuestas+" integer primary key,"  +
-                "$historiaTablaRespuestas varchar(100), $geografiaTablaRespuestas varchar(100), $cienciasTablaRespuestas varchar(100), $arteTablaRespuestas varchar(100), $entretenimientoTablaRespuestas varchar(100))")
+                "$respuesta varchar(100), $tipo varchar(100))")
 
         //posibles respuestas de cada primera pregunta
 
 
-        p0?.execSQL("insert into $tablaRespuestas($idTablaRespuestas,$historiaTablaRespuestas,$geografiaTablaRespuestas,$cienciasTablaRespuestas,$arteTablaRespuestas,$entretenimientoTablaRespuestas)" +
-                " values('101','1189','Groenlandia','300.000m/s','Vincent van Gogh','2014')")
+        p0?.execSQL("insert into $tablaRespuestas($idTablaRespuestas, $respuesta, $tipo)" +
+                " values('101','1189','historia')")
 
-        p0?.execSQL("insert into $tablaRespuestas($idTablaRespuestas,$historiaTablaRespuestas,$geografiaTablaRespuestas,$cienciasTablaRespuestas,$arteTablaRespuestas,$entretenimientoTablaRespuestas)" +
-                " values('102','1095','Australia','300 km/s','Pablo Picasso','2013')")
+        p0?.execSQL("insert into $tablaRespuestas($idTablaRespuestas,$respuesta, $tipo)" +
+                " values('102','1095','historia')")
 
-        p0?.execSQL("insert into $tablaRespuestas($idTablaRespuestas,$historiaTablaRespuestas,$geografiaTablaRespuestas,$cienciasTablaRespuestas,$arteTablaRespuestas,$entretenimientoTablaRespuestas)" +
-                " values('103','1075','Madagascar','30.000 km/s','Salvador Dalí','2011')")
+        p0?.execSQL("insert into $tablaRespuestas($idTablaRespuestas, $respuesta, $tipo)" +
+                " values('103','1075','historia')")
 
-        p0?.execSQL("insert into $tablaRespuestas($idTablaRespuestas,$historiaTablaRespuestas,$geografiaTablaRespuestas,$cienciasTablaRespuestas,$arteTablaRespuestas,$entretenimientoTablaRespuestas)" +
-                " values('104','1187','Gran Bretaña','300.000 km/s','Leonardo da Vinci','2012')")
+        p0?.execSQL("insert into $tablaRespuestas($idTablaRespuestas,$respuesta, $tipo)" +
+                " values('104','1187','historia')")
 
+        p0?.execSQL("insert into $tablaRespuestas($idTablaRespuestas, $respuesta, $tipo)" +
+                " values('201','tu pae','historia')")
 
+        p0?.execSQL("insert into $tablaRespuestas($idTablaRespuestas,$respuesta, $tipo)" +
+                " values('202','el mio','historia')")
 
+        p0?.execSQL("insert into $tablaRespuestas($idTablaRespuestas, $respuesta, $tipo)" +
+                " values('203','el de Juanlu','historia')")
 
-
-
+        p0?.execSQL("insert into $tablaRespuestas($idTablaRespuestas,$respuesta, $tipo)" +
+                " values('204','El del revolvero','historia')")
 
 
     }
