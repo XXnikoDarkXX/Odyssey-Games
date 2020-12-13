@@ -40,9 +40,10 @@ class Pantalla_Perfil : AppCompatActivity() {
 
         if (personas.size>0&&usuario!=null) {
             while (contador < personas.size) {
-                campoUsuario.setText(personas.get(contador).usuario)
-                campoNombre.setText(personas.get(contador).nombre)
-
+                if (personas.get(contador).usuario.equals(usuario)) {
+                    campoUsuario.setText(personas.get(contador).usuario)
+                    campoNombre.setText(personas.get(contador).nombre)
+                }
                 contador++
 
             }
