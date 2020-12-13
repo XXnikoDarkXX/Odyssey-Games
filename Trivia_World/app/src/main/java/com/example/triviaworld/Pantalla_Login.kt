@@ -76,8 +76,9 @@ class Pantalla_Login: AppCompatActivity() {
 
             actualizarPersona()//llamo a la funcion para q la variable personas este actualizada y hacer las comprobaciones
 
+            //Verificacion para q el usuario y su contraseña coincidan con el de la base de datos
             var contador=0
-            var comprobacion:Boolean=false
+            var comprobacion:Boolean=false//se utiliza para en caso de no haber coincidencia en usuario y contraseña, salta un alertDialog
             while(contador<personas.size) {
                 if (personas.get(contador).usuario.equals(usuario) && personas.get(contador).contraseña.equals(contraseña)) {
 
@@ -106,12 +107,7 @@ class Pantalla_Login: AppCompatActivity() {
                 AlertDialog.Builder(this).setTitle("Login").setMessage("Error usuario o contraseña").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which ->}).show()
             }
 
-
-
         }
-
-
-
 
     }
 
@@ -135,7 +131,7 @@ class Pantalla_Login: AppCompatActivity() {
          */
         //Cuando se usa el order by, hay q guardarlo en una variable de tipo Cursor
         var cursor: Cursor =database.query(BDPersona.tablaPersona,null,null,
-                null,null,null, BDPersona.usuario+" asc")
+                null,null,null, BDPersona.usuario+" des")
 
         cursor.moveToFirst()//movemos el cursos al primer registro
         while(!cursor.isAfterLast){//mientras q no ocurra q curso este despues del ultimo
@@ -165,31 +161,6 @@ class Pantalla_Login: AppCompatActivity() {
 
 
 
-/*
-        //Guardo la Pantalla ?  o en su caso se enviara a una base de datos, en una variable como tipo Intent, para poder realizar la accion de enviar datos
-        //var enviarEmailyContraseña:Intent= Intent(this,Pantalla ? ::class.java)
-
-        //Creacion de bundle y variables referenciadas correspondiente a los campos a introducir en el bundle
-        var bundleEmailyContraseña:Bundle= Bundle()//Iniciamos la variable
-        var bundleEmail:EditText=findViewById(R.id.mailLogin)//Referenciamos
-        var bundleContraseña:EditText=findViewById(R.id.contraseñaLogin)//Referenciamos
-
-        try {
-            //Introducimos en el bundle la clave y valor correspondiente al campo email y al campo contraseña
-            bundleEmailyContraseña.putString("email", bundleEmail.text.toString())
-            bundleEmailyContraseña.putString("contraseña", bundleContraseña.text.toString())
-
-        }catch(e:Exception){
-            bundleEmailyContraseña.putString("email","invalido")
-            bundleEmailyContraseña.putString("contraseña","invalida")
-        }
-
-        //Mediante este metodo metemos a enviarEmailyContraseña que es un Intent el budle: bundleEmailyContraseña
-        //enviarEmailyContraseña.putExtras(bundleEmailyContraseña)
-
-        //this.startActivity(enviarEmailyContraseña)//Iniciamos el envio
-
-*/
 
 
 
