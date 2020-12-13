@@ -18,7 +18,7 @@ import androidx.recyclerview.widget.RecyclerView
 class Pantalla_Opciones : AppCompatActivity() {
     val database: SQLiteDatabase by lazy { BDPersona(this).writableDatabase }//poder usar nuestra base de datos
     //en esta actividad
-    var personas: ArrayList<Persona> = ArrayList<Persona>()
+    var personas: ArrayList<Persona> = ArrayList<Persona>()//Todas las personas
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.pantalla_opciones)
@@ -27,6 +27,9 @@ class Pantalla_Opciones : AppCompatActivity() {
 
     }
 
+    /**
+     * Funcion para ir a inicio
+     */
     fun irAInicio(view: View) {
         var intent: Intent = Intent(this, MainActivity::class.java)
         this.startActivity(intent)
@@ -34,7 +37,7 @@ class Pantalla_Opciones : AppCompatActivity() {
     }
 
     /**
-     * Funcion para cambiar contraseña
+     * Funcion para cambiar contraseña de los usuarios
      * En caso de que no se rellene algun campo se validará y dará una alerta
      */
     fun cambiaPass(view: View) {
@@ -121,6 +124,9 @@ class Pantalla_Opciones : AppCompatActivity() {
 
     }
 
+    /**
+     *Funcion para ir actualizando el arrayList de persona de la bbdd
+     */
     fun refrescarPersonas(){
 
     var todos :ArrayList<Persona> = ArrayList<Persona>()

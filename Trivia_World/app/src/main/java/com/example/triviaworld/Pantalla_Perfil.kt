@@ -110,7 +110,10 @@ class Pantalla_Perfil : AppCompatActivity() {
 
     }
 
-
+    /**
+     * Funcion para pedir permisos de alamacenamiento y camara
+     * Devuelve true si lso dos permisos se aceptan
+     */
     fun pedirPermisos():Boolean{
 
         //pedimos permiso para poder ejecutar la subida de foto
@@ -156,6 +159,9 @@ class Pantalla_Perfil : AppCompatActivity() {
         return false
     }
 
+    /**
+     * Funcion para empezar la actividad de captura una foto
+     */
     fun capturePhoto() {
 
         val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
