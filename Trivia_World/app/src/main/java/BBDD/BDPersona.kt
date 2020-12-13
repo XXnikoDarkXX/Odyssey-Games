@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper
 
 class BDPersona (val contexto:Context) : SQLiteOpenHelper(contexto,"BD Persona",null,1){
 
-    companion object{
+    companion object{//variables estaticas
         val tablaPersona:String = "persona"
         val idPersona:String= "id"
         val nombre:String = "nombre"
@@ -20,6 +20,11 @@ class BDPersona (val contexto:Context) : SQLiteOpenHelper(contexto,"BD Persona",
         val contraseña:String="contraseña"
     }
 
+    /**
+     * Como se crea la base de datos
+     * No tenemos q llamarla, se ejecuta automaticamente cuando vas a usar por primera vez la base de datos
+     * Solo una vez
+     */
     override fun onCreate(db: SQLiteDatabase?) {
         db?.execSQL("create table $tablaPersona("+idPersona+" integer primary key autoincrement, $nombre varchar(100),"+
                 "$apellidos varchar(100), $fechaNacimiento varchar(100), $direccion varchar(100), $ciudad varchar(100)," +
@@ -30,8 +35,10 @@ class BDPersona (val contexto:Context) : SQLiteOpenHelper(contexto,"BD Persona",
                 "'Nerverland','españa','12345678','admin','0000')")
     }
 
-
-
+    /**
+     * Como se actualiza la base de datos
+     * Hay que meter los cambios respecto a la version anterior (se ejecuta cuando detecta cambio en el numero de la version)
+     */
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         TODO("Not yet implemented")
     }

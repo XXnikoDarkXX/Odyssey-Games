@@ -1,12 +1,9 @@
 package com.example.triviaworld
 
-import Adapters.AdapterRegistro
 import BBDD.BDPersona
-import Clases.Persona
 import android.content.ContentValues
 import android.content.DialogInterface
 import android.content.Intent
-import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,11 +11,10 @@ import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 
 class Pantalla_Registro : AppCompatActivity() {
 
+    //Nos permite escribir en la base de datos desde esta actividad, llamando al constructor a traves de contexto
     val database: SQLiteDatabase by lazy{ BDPersona(this).writableDatabase }
 
 
@@ -106,7 +102,7 @@ class Pantalla_Registro : AppCompatActivity() {
 
         } else {
 
-            if (contraseñaRegi.equals(contraseñaComprobacionRegi)) {
+            if (contraseñaRegi.equals(contraseñaComprobacionRegi)) {//Asegura q las dos contraseña son iguales, sino manda una alerta de error
 
                 //Dialogo de alerta que avisa de la acción
                 AlertDialog.Builder(this).setTitle("Registrarse").setMessage("Registrado").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which -> }).show()
@@ -129,7 +125,7 @@ class Pantalla_Registro : AppCompatActivity() {
                 //tipo ContentValues: donde se van a meter datos de tipo clave-valor (clave=nombre columna,valor=lo ingresa el usuario)
                 val datosAInsertar: ContentValues = ContentValues()
 
-                //clave=nombre columna y valor viene de campoUsuario
+                //clave=nombre columna y valor viene de campo correspondiente
                 datosAInsertar.put(BDPersona.nombre, nombreRegistro.text.toString())
                 datosAInsertar.put(BDPersona.apellidos, apellidosRegistro.text.toString())
                 datosAInsertar.put(BDPersona.fechaNacimiento, fechaNacimientoRegistro.text.toString())
