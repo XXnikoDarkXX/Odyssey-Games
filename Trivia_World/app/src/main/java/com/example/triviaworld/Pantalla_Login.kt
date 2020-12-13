@@ -15,8 +15,11 @@ import androidx.appcompat.app.AppCompatActivity
 
 class Pantalla_Login: AppCompatActivity() {
 
+    //Permite usar la base de datos en la actividad actual, tipo, lazy, la clase creada con accseso al constructor mediante el contexto y escribir en ella
     val database: SQLiteDatabase by lazy{ BDPersona(this).writableDatabase }
 
+    //variable en la q se guarda toda la base de datos q se actualizara cada vez q se llama a actualizarPersona
+    var personas: ArrayList<Persona> = ArrayList<Persona>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,34 +59,52 @@ class Pantalla_Login: AppCompatActivity() {
         var entradaUsuarioLogin: EditText = findViewById(R.id.usuarioLoginIn)
         var entradaContraseña: EditText = findViewById(R.id.contraseñaLogin)
 
-        //Guardo en una variable el email que introduzca el usuario
-        //Guardo en una variable la contraseña que introduzca el usuario
-        var email: String = entradaUsuarioLogin.text.toString()
+        //Guardo en una variable el usuario que introduze el usuario
+        //Guardo en una variable la contraseña que introduze el usuario
+        var usuario: String = entradaUsuarioLogin.text.toString()
         var contraseña: String = entradaContraseña.text.toString()
 
 
         //Verificación de datos completados
-        if (email == "") {
+        if (usuario == "") {
             AlertDialog.Builder(this).setTitle("Datos incompletos").setMessage("Falta: usuario").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which -> }).show()
 
         }else if (contraseña == "") {
             AlertDialog.Builder(this).setTitle("Datos incompletos").setMessage("Falta: contraseña").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which -> }).show()
 
         }else{
-            AlertDialog.Builder(this).setTitle("Login").setMessage("Logeandose").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which ->}).show()
 
-            //ENVIO DE DATOS A PANTALLA PERFIL
-            var intent:Intent=Intent(this,Pantalla_Perfil::class.java)
-            var bun:Bundle=Bundle()
+            actualizarPersona()//llamo a la funcion para q la variable personas este actualizada y hacer las comprobaciones
 
-            var usuario:EditText=findViewById(R.id.usuarioLoginIn)
-            var contraseña:EditText=findViewById(R.id.contraseñaLogin)
+            var contador=0
+            var comprobacion:Boolean=false
+            while(contador<personas.size) {
+                if (personas.get(contador).usuario.equals(usuario) && personas.get(contador).contraseña.equals(contraseña)) {
 
-            bun.putString("usuario",usuario.text.toString())
-            bun.putShort("contraseña", contraseña.text.toString().toShort())
+                    //ENVIO DE DATOS A PANTALLA PERFIL
+                    var intent:Intent=Intent(this,Pantalla_Perfil::class.java)
+                    var bun:Bundle=Bundle()
 
-            intent.putExtras(bun)
-            this.startActivity(intent)
+                    var usuario:EditText=findViewById(R.id.usuarioLoginIn)
+                    //var contraseña:EditText=findViewById(R.id.contraseñaLogin)
+
+                    bun.putString("usuario",usuario.text.toString())
+                    //bun.putShort("contraseña", contraseña.text.toString().toShort())
+
+                    AlertDialog.Builder(this).setTitle("Login").setMessage("Logeandose").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which ->}).show()
+
+                    comprobacion=true
+
+                    intent.putExtras(bun)
+                    this.startActivity(intent)
+
+                }
+                contador++
+            }
+
+            if (comprobacion==false){
+                AlertDialog.Builder(this).setTitle("Login").setMessage("Error usuario o contraseña").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which ->}).show()
+            }
 
 
 
@@ -97,9 +118,9 @@ class Pantalla_Login: AppCompatActivity() {
     /**
      *
      */
-    fun enviarAPerfil(){//EQUIVALE A UN SELECT
+    fun actualizarPersona(){//EQUIVALE A UN SELECT
 
-        val personas:ArrayList<Persona> = arrayListOf<Persona>()
+        var todos :ArrayList<Persona> = ArrayList<Persona>()
 
         /**
          * query:es la q hace las consultas
@@ -116,9 +137,9 @@ class Pantalla_Login: AppCompatActivity() {
         var cursor: Cursor =database.query(BDPersona.tablaPersona,null,null,
                 null,null,null, BDPersona.usuario+" asc")
 
-        cursor.moveToFirst()//ponerlo en la primera
+        cursor.moveToFirst()//movemos el cursos al primer registro
         while(!cursor.isAfterLast){//mientras q no ocurra q curso este despues del ultimo
-            val idUsuario:Int=cursor.getInt(cursor.getColumnIndex(BDPersona.idPersona))//para no acordarnos del nombre de la columna,
+            val personaId:Int=cursor.getInt(cursor.getColumnIndex(BDPersona.idPersona))//para no acordarnos del nombre de la columna,
             val nombre:String=cursor.getString(cursor.getColumnIndex(BDPersona.nombre))//utilizamos esta forma,
             val apellidos:String=cursor.getString(cursor.getColumnIndex(BDPersona.apellidos))//lo q hay entre los (...)
             val fechaNacimiento:String=cursor.getString(cursor.getColumnIndex(BDPersona.fechaNacimiento))
@@ -130,12 +151,13 @@ class Pantalla_Login: AppCompatActivity() {
             val contraseña:String=cursor.getString(cursor.getColumnIndex(BDPersona.contraseña))
 
             //metemos en el ArrayList personas de tipo Persona, el objeto de tipo Persona con los valores obtenidos
-            personas.add(Persona(idUsuario, nombre, apellidos, fechaNacimiento, direccion, ciudad, pais, telefono, usuario, contraseña))
+            todos.add(Persona(personaId, nombre, apellidos, fechaNacimiento, direccion, ciudad, pais, telefono, usuario, contraseña))
 
             cursor.moveToNext()//para q vaya a la siguiente fila, hasta esta linea estaba iterando por las columnas
         }
 
-
+        //cada vez q se ejecute esta funcion actualizara a -personas- con los datos obtenidos en -todos-
+        personas=todos
 
     }
 
