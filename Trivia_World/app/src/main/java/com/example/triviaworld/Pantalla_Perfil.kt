@@ -20,8 +20,12 @@ import androidx.core.app.ActivityCompat
 import org.w3c.dom.Text
 
 class Pantalla_Perfil : AppCompatActivity() {
-    companion object val PERMISO_ALMACENAMIENTO=1000; //valor constante que nosotros usamos para identificar esa pedida de permiso
+
     val REQUEST_CODE = 200
+    companion object{
+        val PERMISO_ALMACENAMIENTO=1000;     //valor constante que nosotros usamos para identificar esa pedida de permiso
+         var comprobacionNombreUsuario:String=""
+    }
     val database: SQLiteDatabase by lazy { BDPersona(this).writableDatabase }
     var personas: ArrayList<Persona> = ArrayList<Persona>()//ArrayList de todos las personas
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,11 +40,13 @@ class Pantalla_Perfil : AppCompatActivity() {
 
         refrecarUsuarios()
         var contador:Int=0
+        if (usuario!=null){
+            comprobacionNombreUsuario=usuario
+        }
 
-
-        if (personas.size>0&&usuario!=null) {
+        if (personas.size>0&&!(comprobacionNombreUsuario.equals(""))) {
             while (contador < personas.size) {
-                if (personas.get(contador).usuario.equals(usuario)) {
+                if (personas.get(contador).usuario.equals(comprobacionNombreUsuario)) {
                     campoUsuario.setText(personas.get(contador).usuario)
                     campoNombre.setText(personas.get(contador).nombre)
                 }
