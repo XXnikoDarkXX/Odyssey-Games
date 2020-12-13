@@ -1,12 +1,9 @@
 package com.example.triviaworld
 
-import Adapters.AdapterRegistro
 import BBDD.BDPersona
-import Clases.Persona
 import android.content.ContentValues
 import android.content.DialogInterface
 import android.content.Intent
-import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,8 +11,6 @@ import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 
 class Pantalla_Registro : AppCompatActivity() {
 
