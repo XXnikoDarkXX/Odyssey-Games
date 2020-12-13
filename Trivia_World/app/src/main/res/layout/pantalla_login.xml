@@ -18,7 +18,6 @@
         android:layout_marginEnd="3dp"
         android:contentDescription="@string/descripcion_logo_redes"
         android:onClick="volverInicio"
-        app:layout_constraintBottom_toTopOf="@+id/contenedor1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -26,10 +25,8 @@
 
     <ImageView
         android:id="@+id/marcoAmarrillo"
-        android:layout_width="361dp"
+        android:layout_width="400dp"
         android:layout_height="500dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="50dp"
         android:contentDescription="@string/descripcion_gui_redes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,127 +35,66 @@
         app:srcCompat="@drawable/gui_redes" />
 
     <LinearLayout
-        android:id="@+id/contenedor1"
-        android:layout_width="413dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="100dp"
-        app:layout_constraintBottom_toTopOf="@+id/contenedor2"
+        android:id="@+id/linearLayout"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/marcoAmarrillo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="@+id/marcoAmarrillo"
+        app:layout_constraintVertical_bias="0.18">
 
         <TextView
             android:id="@+id/usuarioLogin"
-            android:layout_width="0dp"
-            android:layout_height="50sp"
-            android:layout_marginStart="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="bottom"
             android:text="@string/usuarioLogin" />
 
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/contenedor2"
-        android:layout_width="410dp"
-        android:layout_height="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/contenedor3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contenedor1">
-
         <EditText
             android:id="@+id/usuarioLoginIn"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="100dp"
-            android:layout_marginEnd="170sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:autofillHints="@string/usuarioLoginIn"
             android:ems="10"
             android:hint="@string/usuarioLoginIn"
             android:inputType="textEmailAddress" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/contenedor4"
-        android:layout_width="410dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/contenedor5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contenedor3">
-
-        <EditText
-            android:id="@+id/contraseñaLogin"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="100dp"
-            android:layout_marginEnd="170sp"
-            android:layout_weight="1"
-            android:autofillHints="@string/contraseñaInLogin"
-            android:ems="10"
-            android:hint="@string/contraseñaInLogin"
-            android:inputType="textPassword"
-            />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/contenedor3"
-        android:layout_width="413dp"
-        android:layout_height="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/contenedor4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contenedor2">
 
         <TextView
             android:id="@+id/contraseñaIn"
-            android:layout_width="0dp"
-            android:layout_height="50sp"
-            android:layout_marginStart="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="bottom"
             android:text="@string/contraseñaLogin" />
 
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/contenedor5"
-        android:layout_width="416dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/contenedor6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contenedor4">
-
+        <EditText
+            android:id="@+id/contraseñaLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autofillHints="@string/contraseñaInLogin"
+            android:ems="10"
+            android:hint="@string/contraseñaInLogin"
+            android:inputType="textPassword" />
 
         <TextView
             android:id="@+id/olvidoContraseña"
-            android:layout_width="0dp"
-            android:layout_height="50sp"
-            android:layout_marginStart="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:gravity="bottom"
             android:text="@string/olvidoContraseñaLogin"
             android:textSize="12sp" />
 
         <TextView
             android:id="@+id/enlaceOlvidoContraseñaLogin"
-            android:layout_width="10sp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15sp"
-            android:layout_marginEnd="150dp"
             android:layout_weight="1"
             android:text="@string/enlaceOlvidoContraseñaLogin"
             android:textColor="@color/azulEnlace" />
@@ -167,26 +103,22 @@
 
     <LinearLayout
         android:id="@+id/contenedor6"
-        android:layout_width="413dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="100dp"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
         android:layout_weight="1"
+        android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/marcoAmarrillo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contenedor5"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
 
         <Button
             android:id="@+id/btnRegistrarseLogin"
-            android:layout_width="70dp"
+            android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginStart="70dp"
-            android:layout_marginEnd="20dp"
+            android:layout_margin="10dp"
             android:layout_weight="1"
             android:background="#ff9000"
             android:onClick="irARegistrase"
@@ -195,10 +127,9 @@
 
         <Button
             android:id="@+id/btnEnviarLogin"
-            android:layout_width="40dp"
+            android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="80dp"
+            android:layout_margin="10dp"
             android:layout_weight="1"
             android:background="#ff9000"
             android:onClick="enviar"
