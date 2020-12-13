@@ -13,61 +13,21 @@
         android:layout_height="141dp"
         android:background="@drawable/botones_redondos"
         android:onClick="irAJugar"
-        android:text="@string/Bjugar"
-        android:textFontWeight="700"
-        android:textSize="50sp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
         android:shadowColor="@color/azulEnlace"
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="8"
-        app:layout_constraintBottom_toTopOf="@+id/bredes"
+        android:text="@string/Bjugar"
+        android:textColor="@color/white"
+        android:textFontWeight="700"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.89" />
-
-    <Button
-        android:id="@+id/bredes"
-        android:layout_width="168dp"
-        android:layout_height="108dp"
-        android:background="@drawable/botones_redondos"
-        android:onClick="irARedes"
-        android:text="@string/Bsociales"
-        android:textFontWeight="700"
-        android:textSize="25sp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:shadowColor="@color/azulEnlace"
-        android:shadowDx="5"
-        android:shadowDy="5"
-        android:shadowRadius="8"
-        app:layout_constraintBottom_toBottomOf="@+id/bperfil"
-        app:layout_constraintEnd_toStartOf="@+id/bperfil"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/bperfil"
-        android:layout_width="168dp"
-        android:layout_height="108dp"
-        android:layout_marginEnd="23dp"
-        android:background="@drawable/botones_redondos"
-        android:onClick="irAPerfil"
-        android:text="@string/Bperfil"
-        android:textFontWeight="700"
-        android:textSize="25sp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:shadowColor="@color/azulEnlace"
-        android:shadowDx="5"
-        android:shadowDy="5"
-        android:shadowRadius="8"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.855" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.115" />
 
     <ImageButton
         android:id="@+id/botonOpciones"
@@ -90,10 +50,56 @@
         android:id="@+id/imageView"
         android:layout_width="372dp"
         android:layout_height="321dp"
-        app:layout_constraintBottom_toTopOf="@+id/bJugar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/trivia_world_final" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bJugar">
+
+        <Button
+            android:id="@+id/bperfil"
+            android:layout_width="168dp"
+            android:layout_height="108dp"
+            android:background="@drawable/botones_redondos"
+            android:onClick="irAPerfil"
+            android:shadowColor="@color/azulEnlace"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:layout_marginRight="5dp"
+            android:shadowRadius="8"
+            android:text="@string/Bperfil"
+            android:textColor="@color/white"
+            android:textFontWeight="700"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/bredes"
+            android:layout_width="168dp"
+            android:layout_height="108dp"
+            android:background="@drawable/botones_redondos"
+            android:onClick="irARedes"
+            android:shadowColor="@color/azulEnlace"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:layout_marginLeft="5dp"
+            android:shadowRadius="8"
+            android:text="@string/bredes"
+            android:textColor="@color/white"
+            android:textFontWeight="700"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
