@@ -16,7 +16,7 @@ class Pantalla_Opcione_Editor : AppCompatActivity() {
         setContentView(R.layout.pantalla_opcione_editor)
 
         var preguntas:ArrayList<Preguntas> = ArrayList<Preguntas>()
-        preguntas.add(Preguntas(R.drawable.imagen_prueba,  resources.getString(R.string.pregunta1_historia) ,  resources.getString(R.string.respuesta1_historia)+"\n" +
+        /*preguntas.add(Preguntas(R.drawable.imagen_prueba,  resources.getString(R.string.pregunta1_historia) ,  resources.getString(R.string.respuesta1_historia)+"\n" +
                 resources.getString(R.string.respuesta2_historia)+"\n" +resources.getString(R.string.respuesta3_historia)
                 +"\n" +resources.getString(R.string.respuesta4_historia)))
         preguntas.add(Preguntas(R.drawable.imagen1_entretenimiento,  resources.getString(R.string.pregunta1_entretenimiento) ,  resources.getString(R.string.respuesta1_entretenimiento)+
@@ -27,7 +27,7 @@ class Pantalla_Opcione_Editor : AppCompatActivity() {
                 +"\n" +resources.getString(R.string.respuesta4_geografia)))
         preguntas.add(Preguntas(R.drawable.imagen1_ciencias,  resources.getString(R.string.pregunta1_ciencias) ,  resources.getString(R.string.respuesta1_ciencias)+
                 "\n" +resources.getString(R.string.respuesta2_ciencias)+"\n" +resources.getString(R.string.respuesta3_ciencias)
-                +"\n" +resources.getString(R.string.respuesta4_ciencias)))
+                +"\n" +resources.getString(R.string.respuesta4_ciencias)))*/
 
         val contenedorRecycler: RecyclerView = findViewById<RecyclerView>(R.id.vistaRecycler)
         val adapter: AdapterPreguntas = AdapterPreguntas(this, preguntas)
