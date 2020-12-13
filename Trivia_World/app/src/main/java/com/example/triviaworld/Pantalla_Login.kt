@@ -131,7 +131,7 @@ class Pantalla_Login: AppCompatActivity() {
          */
         //Cuando se usa el order by, hay q guardarlo en una variable de tipo Cursor
         var cursor: Cursor =database.query(BDPersona.tablaPersona,null,null,
-                null,null,null, BDPersona.usuario+" des")
+                null,null,null, BDPersona.usuario+" asc")
 
         cursor.moveToFirst()//movemos el cursos al primer registro
         while(!cursor.isAfterLast){//mientras q no ocurra q curso este despues del ultimo
