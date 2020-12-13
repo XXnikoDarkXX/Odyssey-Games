@@ -12,8 +12,8 @@
 
     <ImageView
         android:id="@+id/logo_world_final"
-        android:layout_width="405dp"
-        android:layout_height="63dp"
+        android:layout_width="400dp"
+        android:layout_height="100dp"
         android:layout_marginStart="3dp"
         android:layout_marginEnd="3dp"
         android:contentDescription="@string/descripcion_logo_redes"
@@ -25,8 +25,11 @@
 
     <ImageView
         android:id="@+id/marcoAmarrillo"
-        android:layout_width="400dp"
-        android:layout_height="500dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:contentDescription="@string/descripcion_gui_redes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,7 +51,7 @@
 
         <TextView
             android:id="@+id/usuarioLogin"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="bottom"
