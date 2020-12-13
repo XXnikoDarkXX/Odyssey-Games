@@ -88,30 +88,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginBottom="30dp"
                 android:autofillHints="@string/contraseñaInLogin"
                 android:ems="10"
                 android:hint="@string/contraseñaInLogin"
                 android:inputType="textPassword" />
-
-
-            <TextView
-                android:id="@+id/olvidoContraseña"
-                android:layout_marginTop="30dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/olvidoContraseñaLogin"
-                android:textSize="12sp" />
-
-
-            <TextView
-                android:id="@+id/enlaceOlvidoContraseñaLogin"
-                android:layout_marginBottom="30dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/enlaceOlvidoContraseñaLogin"
-                android:textColor="@color/azulEnlace" />
 
 
             <Button
