@@ -25,7 +25,7 @@
 
     <TextView
         android:id="@+id/txtNivelSonido"
-        android:layout_width="160dp"
+        android:layout_width="wrap_content"
         android:layout_height="33dp"
 
         android:layout_marginStart="28dp"
@@ -49,7 +49,7 @@
 
     <TextView
         android:id="@+id/txtNivelMusica"
-        android:layout_width="157dp"
+        android:layout_width="wrap_content"
 
         android:layout_height="30dp"
         android:layout_marginStart="28dp"
@@ -63,16 +63,18 @@
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/switch2"
-        android:layout_width="131dp"
+        android:layout_width="wrap_content"
         android:layout_height="48dp"
 
 
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="28dp"
         android:text="@string/musica"
         android:textAlignment="center"
         android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/switch1"
         app:layout_constraintStart_toStartOf="@+id/marcoNaranjaOpciones"
-        tools:layout_editor_absoluteY="91dp" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="90dp" />
 
     <SeekBar
         android:id="@+id/nivelSonido"
@@ -86,7 +88,7 @@
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/switch1"
-        android:layout_width="131dp"
+        android:layout_width="wrap_content"
         android:layout_height="48dp"
 
         android:layout_marginStart="36dp"
@@ -107,8 +109,6 @@
         android:onClick="volverInicio"
         android:text="@string/atras"
         app:layout_constraintBottom_toTopOf="@+id/btnCambiar"
-        app:layout_constraintEnd_toEndOf="@+id/marcoNaranjaOpciones"
-        app:layout_constraintHorizontal_bias="0.134"
         app:layout_constraintStart_toStartOf="@+id/btnCambiar" />
 
     <TextView
@@ -116,32 +116,24 @@
         android:layout_width="328dp"
         android:layout_height="34dp"
         android:layout_gravity="center"
+        android:layout_marginTop="44dp"
         android:layout_weight="1"
-        android:text="@string/cambioPass"
 
+        android:text="@string/cambioPass"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/recycleOpciones"
         app:layout_constraintEnd_toStartOf="@+id/btnAtras"
+        app:layout_constraintHorizontal_bias="0.757"
         app:layout_constraintStart_toStartOf="@+id/marcoNaranjaOpciones"
         app:layout_constraintTop_toBottomOf="@+id/txtNivelMusica" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycleOpciones"
-        android:layout_width="336dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/marcoNaranjaOpciones"
-        app:layout_constraintEnd_toStartOf="@+id/btnAtras"
-        app:layout_constraintStart_toStartOf="@+id/marcoNaranjaOpciones" />
 
     <Button
         android:id="@+id/btnCambiar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="56dp"
         android:layout_weight="1"
         android:background="@color/Naranja"
         android:onClick="cambiaPass"
@@ -161,5 +153,37 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/opciones" />
 
+    <EditText
+        android:id="@+id/cambioUsuario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="hola"
+        android:hint="@string/usuarioRegistro"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/txtCambioPass"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtCambioPass"
+        app:layout_constraintTop_toBottomOf="@+id/txtCambioPass" />
 
+    <EditText
+        android:id="@+id/passAntigua"
+        android:layout_width="0dp"
+        android:inputType="text"
+        android:autofillHints="text"
+        android:layout_height="wrap_content"
+        android:hint="@string/passNueva"
+        app:layout_constraintEnd_toEndOf="@+id/cambioUsuario"
+        app:layout_constraintStart_toStartOf="@+id/cambioUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/cambioUsuario" />
+
+    <EditText
+        android:id="@+id/passNueva"
+        android:layout_width="0dp"
+        android:inputType="text"
+        android:autofillHints="hola"
+        android:layout_height="wrap_content"
+        android:hint="@string/passNueva"
+        app:layout_constraintEnd_toEndOf="@+id/passAntigua"
+        app:layout_constraintStart_toStartOf="@+id/passAntigua"
+        app:layout_constraintTop_toBottomOf="@+id/passAntigua" />
 </androidx.constraintlayout.widget.ConstraintLayout>

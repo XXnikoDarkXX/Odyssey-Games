@@ -3,9 +3,10 @@ package Adapters
 import android.app.Activity
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.triviaworld.Pantalla_Registro
 import com.example.triviaworld.R
 
-class AdapterRegistro(val actividad:Activity, val datos: ArrayList<String>) : RecyclerView.Adapter<HolderRegistro>() {
+class AdapterRegistro(val actividad:Pantalla_Registro, val datos: ArrayList<String>) : RecyclerView.Adapter<HolderRegistro>() {
 
     /**
      * Metodo que infla cada uno de los elementos en el Layout, a traves del ViewHolder que creamos
@@ -32,5 +33,6 @@ class AdapterRegistro(val actividad:Activity, val datos: ArrayList<String>) : Re
     override fun onBindViewHolder(holder: HolderRegistro, position: Int) {
         //holder.campoRegistro.setText(datos.get(position))
         holder.campoRegistro.setHint(datos.get(position))
+
     }
 }

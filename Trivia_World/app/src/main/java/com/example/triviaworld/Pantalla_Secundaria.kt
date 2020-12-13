@@ -1,9 +1,12 @@
 package com.example.triviaworld
 
 
-import Adapters.AdapterOpciones
+
 import Adapters.AdapterRespuestas
 import Adapters.AdapterPreguntas
+import BBDD.BDPreguntasRespuestas
+import android.database.Cursor
+import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
@@ -14,6 +17,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class Pantalla_Secundaria: AppCompatActivity() {
+
+    val database: SQLiteDatabase by lazy{ BDPreguntasRespuestas(this).writableDatabase }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         var bundle: Bundle? = intent.extras
@@ -23,9 +29,20 @@ class Pantalla_Secundaria: AppCompatActivity() {
 
         val datos: ArrayList<String> = ArrayList<String>()
 
+        var cursor: Cursor =database.query(BDPreguntasRespuestas.tablaRespuestas,null,null,
+                null,null,null,BDPreguntasRespuestas.historiaTablaRespuestas+" asc")
+        cursor.moveToFirst()
+        while(!cursor.isAfterLast){
+            val id:Int=cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.historiaTablaRespuestas))
+            val pregunta:String=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.historiaTablaRespuestas))
+
+            datos.add(pregunta)
+
+            cursor.moveToNext()
+        }
 
 
-        /*datos.add(resources.getString(R.string.boton1))
+       /* datos.add(resources.getString(R.string.boton1))
         datos.add(resources.getString(R.string.boton2))
         datos.add(resources.getString(R.string.boton3))
         datos.add(resources.getString(R.string.boton4))*/
