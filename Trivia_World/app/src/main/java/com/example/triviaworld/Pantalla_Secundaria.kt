@@ -80,25 +80,30 @@ class Pantalla_Secundaria: AppCompatActivity() {
                 "Historia"-> {
 
 
-                    cursor =database.query(BDPreguntasRespuestas.tablaRespuestas,null,"tipo='historia'",
-                            null,null,null,BDPreguntasRespuestas.tipo+" asc")
-                    cursor.moveToFirst()
-                    while(!cursor.isAfterLast){
-                        val id:Int=cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.idTablaRespuestas))
-                        val respuesta:String=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.respuesta))
-
-                        datos.add(respuesta)
-
-                        cursor.moveToNext()
-                    }
-
-                    cursor =database.query(BDPreguntasRespuestas.tablaPreguntas,null,"tipo='historia'",
+                    cursor =database.query(BDPreguntasRespuestas.tablaPreguntas,null,"tipo='historia' and id='1'",
                             null,null,null,BDPreguntasRespuestas.idTablaPreguntas+" asc")
                     cursor.moveToFirst()
                     val imagen: ImageView =findViewById<ImageView>(R.id.imagen_secundaria)
                     val pregunta: TextView = findViewById<TextView>(R.id.textoPregunta)
                     imagen.setImageResource(cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.Imagen)))
                     pregunta.text=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.Pregunta))
+
+                    var respuestaI:String=""
+
+                    for (i in 1..4){
+
+                        var idU: String = cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.idTablaPreguntas)) + "0$i"
+                        var cursor2: Cursor =database.query(BDPreguntasRespuestas.tablaRespuestas,null,"tipo='historia' and id='$idU'",
+                                null,null,null,BDPreguntasRespuestas.tipo+" asc")
+                        cursor2.moveToFirst()
+
+                        datos.add(cursor2.getString(cursor2.getColumnIndex(BDPreguntasRespuestas.respuesta)))
+
+                    }
+
+                    //datos.add(respuestaI)
+
+
                 }
                 "Entretenimiento"-> {
 
