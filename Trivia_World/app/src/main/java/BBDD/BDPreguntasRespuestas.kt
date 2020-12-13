@@ -3,6 +3,7 @@ package BBDD
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import com.example.triviaworld.R
 
 class BDPreguntasRespuestas (val contexto: Context):
         SQLiteOpenHelper(contexto,"BD Preguntas Respuestas ",null,1) {
@@ -13,7 +14,8 @@ class BDPreguntasRespuestas (val contexto: Context):
         val tablaPreguntas: String = "preguntas"
         val idTablaPreguntas: String = "id"
 
-        val historiaTablaPreguntas: String = "preguntaHistoria"
+        val Pregunta: String = "pregunta"
+        val Imagen: String = "imagen"
         val geografiaTablaPreguntas: String = "preguntaGeografia"
         val cienciasTablaPreguntas: String = "preguntaCiencias"
         val arteTablaPreguntas: String = "preguntaArte"
@@ -39,15 +41,17 @@ class BDPreguntasRespuestas (val contexto: Context):
 
         p0?.execSQL("create table $tablaPreguntas("+ idTablaPreguntas+" integer primary key " +
                 "autoincrement," +
-                "$historiaTablaPreguntas varchar(100), $geografiaTablaPreguntas varchar(100), $cienciasTablaPreguntas varchar(100), $arteTablaPreguntas varchar(100), $entretenimientoTablaPreguntas varchar(100))")
+                "$Pregunta varchar(100), $Imagen integer)")
 
         //primera pregunta de cada categoría
 
-        p0?.execSQL("insert into $tablaPreguntas($historiaTablaPreguntas) values('¿Qué año fueron las cruzadas?')")
-        p0?.execSQL("insert into $tablaPreguntas($geografiaTablaPreguntas) values('¿Cuál es la isla más grande del mundo?')")
-        p0?.execSQL("insert into $tablaPreguntas($cienciasTablaPreguntas) values('La velocidad a la que viaja la luz es:')")
-        p0?.execSQL("insert into $tablaPreguntas($arteTablaPreguntas) values('¿Quién pintó el Guernica?')")
-        p0?.execSQL("insert into $tablaPreguntas($entretenimientoTablaPreguntas) values('¿En qué año se estrenó Interestellar?')")
+        var ruta: Int = R.drawable.imagen_prueba
+        p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen) values('¿Qué año fueron las cruzadas?','$ruta')")
+        var rutag: Int = R.drawable.imagen1_geografia
+        p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen) values('¿Cuál es la isla más grande del mundo?','$rutag')")
+        p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen) values('La velocidad a la que viaja la luz es:','2')")
+        p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen) values('¿Quién pintó el Guernica?','2')")
+        p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen) values('¿En qué año se estrenó Interestellar?','2')")
 
 
         //creación de la tabla respuestas
@@ -75,7 +79,7 @@ class BDPreguntasRespuestas (val contexto: Context):
         p0?.execSQL("insert into $tablaRespuestas($arteTablaRespuestas) values('Vincent van Gogh','Pablo Picasso','Salvador Dalí','Leonardo da Vinci')")
 
         p0?.execSQL("insert into $tablaRespuestas($entretenimientoTablaRespuestas) values('2014','2013','2011','2012')")
-*/
+        */
 
 
 

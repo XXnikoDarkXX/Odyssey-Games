@@ -112,6 +112,19 @@ class Pantalla_Secundaria: AppCompatActivity() {
             adapter = AdapterRespuestas(this,datos)
             recyclerRespuestas.adapter=adapter
             recyclerRespuestas.layoutManager= LinearLayoutManager(this)
+        }else{
+            var lil: Cursor =database.query(BDPreguntasRespuestas.tablaPreguntas,null,null,
+                    null,null,null,BDPreguntasRespuestas.idTablaPreguntas+" asc")
+            lil.moveToFirst()
+            val imagen: ImageView =findViewById<ImageView>(R.id.imagen_secundaria)
+            val pregunta: TextView = findViewById<TextView>(R.id.textoPregunta)
+            imagen.setImageResource(lil.getInt(lil.getColumnIndex(BDPreguntasRespuestas.Imagen)))
+            pregunta.text=lil.getString(lil.getColumnIndex(BDPreguntasRespuestas.Pregunta))
+
+            adapter = AdapterRespuestas(this,datos)
+            recyclerRespuestas.adapter=adapter
+            recyclerRespuestas.layoutManager= LinearLayoutManager(this)
+
         }
 
     }
