@@ -22,21 +22,17 @@ class BDPreguntasRespuestas (val contexto: Context):
 
         //respuestas
 
-        val tablaRespuestas1: String = "respuestas1"
+        val tablaRespuestas: String = "respuestas"
         val idTablaRespuestas: String = "id"
 
         val historiaTablaRespuestas: String = "respuestaHistoria"
-        val geografiaTablaRespuestas: String = "respuestaHistoria"
-        val cienciasTablaRespuestas: String = "respuestaHistoria"
-        val arteTablaRespuestas: String = "respuestaHistoria"
-        val entretenimientoTablaRespuestas: String = "respuestaHistoria"
+        val geografiaTablaRespuestas: String = "respuestaGeografia"
+        val cienciasTablaRespuestas: String = "respuestaCiencias"
+        val arteTablaRespuestas: String = "respuestaArte"
+        val entretenimientoTablaRespuestas: String = "respuestaEntretenimiento"
     }
 
     override fun onCreate(p0: SQLiteDatabase?) {
-
-
-        /*
-
 
 
         //creación de la tabla preguntas.
@@ -56,26 +52,34 @@ class BDPreguntasRespuestas (val contexto: Context):
 
         //creación de la tabla respuestas
 
-        p0?.execSQL("create table $tablaRespuestas1("+ idTablaRespuestas+" integer primary key " +
-                "autoincrement," +
+        p0?.execSQL("create table $tablaRespuestas("+ idTablaRespuestas+" integer primary key,"  +
                 "$historiaTablaRespuestas varchar(100), $geografiaTablaRespuestas varchar(100), $cienciasTablaRespuestas varchar(100), $arteTablaRespuestas varchar(100), $entretenimientoTablaRespuestas varchar(100))")
 
         //posibles respuestas de cada primera pregunta
 
-        p0?.execSQL("insert into $tablaRespuestas1($historiaTablaRespuestas) values('1189','1095','1075','1187')")
 
-        p0?.execSQL("insert into $tablaRespuestas1($geografiaTablaRespuestas) values('Groenlandia','Australia','Madagascar','Gran Bretaña')")
+        p0?.execSQL("insert into $tablaRespuestas($idTablaRespuestas,$historiaTablaRespuestas) values('101','1189')")
 
-        p0?.execSQL("insert into $tablaRespuestas1($cienciasTablaRespuestas) values('300.000 m/s','300km/s','30.000km/s','300.000km/s')")
+        p0?.execSQL("insert into $tablaRespuestas($idTablaRespuestas,$historiaTablaRespuestas) values('102','1095')")
 
-        p0?.execSQL("insert into $tablaRespuestas1($arteTablaRespuestas) values('Vincent van Gogh','Pablo Picasso','Salvador Dalí','Leonardo da Vinci')")
+        p0?.execSQL("insert into $tablaRespuestas($idTablaRespuestas,$historiaTablaRespuestas) values('103','1075')")
 
-        p0?.execSQL("insert into $tablaRespuestas1($entretenimientoTablaRespuestas) values('2014','2013','2011','2012')")
-
+        p0?.execSQL("insert into $tablaRespuestas($idTablaRespuestas,$historiaTablaRespuestas) values('104','1187')")
 
 
+        /*
+        p0?.execSQL("insert into $tablaRespuestas($geografiaTablaRespuestas) values('Groenlandia','Australia','Madagascar','Gran Bretaña')")
 
-         */
+        p0?.execSQL("insert into $tablaRespuestas($cienciasTablaRespuestas) values('300.000 m/s','300km/s','30.000km/s','300.000km/s')")
+
+        p0?.execSQL("insert into $tablaRespuestas($arteTablaRespuestas) values('Vincent van Gogh','Pablo Picasso','Salvador Dalí','Leonardo da Vinci')")
+
+        p0?.execSQL("insert into $tablaRespuestas($entretenimientoTablaRespuestas) values('2014','2013','2011','2012')")
+*/
+
+
+
+
     }
 
     override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
