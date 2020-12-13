@@ -106,55 +106,56 @@ class Pantalla_Registro : AppCompatActivity() {
 
         } else {
 
-            //Dialogo de alerta que avisa de la acción
-            AlertDialog.Builder(this).setTitle("Registrarse").setMessage("Registrado").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which -> }).show()
+            if (contraseñaRegi.equals(contraseñaComprobacionRegi)) {
+
+                //Dialogo de alerta que avisa de la acción
+                AlertDialog.Builder(this).setTitle("Registrarse").setMessage("Registrado").setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which -> }).show()
 
 
+                //INSERCCION EN LA BASE DE DATOS DE USUSARIOS//
 
-            //INSERCCION EN LA BASE DE DATOS DE USUSARIOS//
-
-            //referenciamos los campos q van a intervenir en la funcionalidad
-            val nombreRegistro:EditText=findViewById<EditText>(R.id.nombreRegistro)
-            val apellidosRegistro:EditText=findViewById<EditText>(R.id.apellidosRegistro)
-            val fechaNacimientoRegistro:EditText=findViewById<EditText>(R.id.fechaNacimientoRegistro)
-            val direccionRegistro:EditText=findViewById<EditText>(R.id.direccionRegistro)
-            val ciudadRegistro:EditText=findViewById<EditText>(R.id.ciudadRegistro)
-            val paisRegistro:EditText=findViewById<EditText>(R.id.paisRegistro)
-            val telefonoRegistro:EditText=findViewById<EditText>(R.id.telefonoRegistro)
-            val usuarioRegistro:EditText=findViewById<EditText>(R.id.usuarioRegistro)
-            val contraseñaRegistro:EditText=findViewById<EditText>(R.id.contraseñaRegistro)
-
-
-            //tipo ContentValues: donde se van a meter datos de tipo clave-valor (clave=nombre columna,valor=lo ingresa el usuario)
-            val datosAInsertar: ContentValues = ContentValues()
-
-            //clave=nombre columna y valor viene de campoUsuario
-            datosAInsertar.put(BDPersona.nombre, nombreRegistro.text.toString())
-            datosAInsertar.put(BDPersona.apellidos,apellidosRegistro.text.toString())
-            datosAInsertar.put(BDPersona.fechaNacimiento,fechaNacimientoRegistro.text.toString())
-            datosAInsertar.put(BDPersona.direccion,direccionRegistro.text.toString())
-            datosAInsertar.put(BDPersona.ciudad,ciudadRegistro.text.toString())
-            datosAInsertar.put(BDPersona.pais,paisRegistro.text.toString())
-            datosAInsertar.put(BDPersona.telefono,telefonoRegistro.text.toString())
-            datosAInsertar.put(BDPersona.usuario,usuarioRegistro.text.toString())
-            datosAInsertar.put(BDPersona.contraseña,contraseñaRegistro.text.toString())
+                //referenciamos los campos q van a intervenir en la funcionalidad
+                val nombreRegistro: EditText = findViewById<EditText>(R.id.nombreRegistro)
+                val apellidosRegistro: EditText = findViewById<EditText>(R.id.apellidosRegistro)
+                val fechaNacimientoRegistro: EditText = findViewById<EditText>(R.id.fechaNacimientoRegistro)
+                val direccionRegistro: EditText = findViewById<EditText>(R.id.direccionRegistro)
+                val ciudadRegistro: EditText = findViewById<EditText>(R.id.ciudadRegistro)
+                val paisRegistro: EditText = findViewById<EditText>(R.id.paisRegistro)
+                val telefonoRegistro: EditText = findViewById<EditText>(R.id.telefonoRegistro)
+                val usuarioRegistro: EditText = findViewById<EditText>(R.id.usuarioRegistro)
+                val contraseñaRegistro: EditText = findViewById<EditText>(R.id.contraseñaRegistro)
 
 
-            //database.insert:inserta en la base de datos ; (nombre de la tabla, null, datosAInsertar)
-            if(database.insert(BDPersona.tablaPersona,null,datosAInsertar)>0){
-                Toast.makeText(this,R.string.usuarioInsertado,Toast.LENGTH_LONG).show()
+                //tipo ContentValues: donde se van a meter datos de tipo clave-valor (clave=nombre columna,valor=lo ingresa el usuario)
+                val datosAInsertar: ContentValues = ContentValues()
 
-                val intent = Intent(this, Pantalla_Login::class.java)
-                startActivity(intent)
+                //clave=nombre columna y valor viene de campoUsuario
+                datosAInsertar.put(BDPersona.nombre, nombreRegistro.text.toString())
+                datosAInsertar.put(BDPersona.apellidos, apellidosRegistro.text.toString())
+                datosAInsertar.put(BDPersona.fechaNacimiento, fechaNacimientoRegistro.text.toString())
+                datosAInsertar.put(BDPersona.direccion, direccionRegistro.text.toString())
+                datosAInsertar.put(BDPersona.ciudad, ciudadRegistro.text.toString())
+                datosAInsertar.put(BDPersona.pais, paisRegistro.text.toString())
+                datosAInsertar.put(BDPersona.telefono, telefonoRegistro.text.toString())
+                datosAInsertar.put(BDPersona.usuario, usuarioRegistro.text.toString())
+                datosAInsertar.put(BDPersona.contraseña, contraseñaRegistro.text.toString())
+
+
+                //database.insert:inserta en la base de datos ; (nombre de la tabla, null, datosAInsertar)
+                if (database.insert(BDPersona.tablaPersona, null, datosAInsertar) > 0) {
+                    Toast.makeText(this, R.string.usuarioInsertado, Toast.LENGTH_LONG).show()
+
+                    val intent = Intent(this, Pantalla_Login::class.java)
+                    startActivity(intent)
+
+                } else {
+                    Toast.makeText(this, R.string.errorInsertandoUsuario, Toast.LENGTH_LONG).show()
+                }
+
 
             }else{
-                Toast.makeText(this,R.string.errorInsertandoUsuario,Toast.LENGTH_LONG).show()
+                Toast.makeText(this, R.string.errorContraseñaDistintas, Toast.LENGTH_LONG).show()
             }
-
-
-
-
-
         }
     }
 
