@@ -46,12 +46,17 @@ class BDPreguntasRespuestas (val contexto: Context):
         //primera pregunta de cada categoría
 
         var ruta: Int = R.drawable.imagen_prueba
-        p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen) values('¿Qué año fueron las cruzadas?','$ruta')")
         var rutag: Int = R.drawable.imagen1_geografia
+        var rutac: Int = R.drawable.imagen1_ciencias
+        var rutaa: Int = R.drawable.imagen1_arte
+        var rutae: Int = R.drawable.imagen1_entretenimiento
+
+        p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen) values('¿Qué año fueron las cruzadas?','$ruta')")
+
         p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen) values('¿Cuál es la isla más grande del mundo?','$rutag')")
-        p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen) values('La velocidad a la que viaja la luz es:','2')")
-        p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen) values('¿Quién pintó el Guernica?','2')")
-        p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen) values('¿En qué año se estrenó Interestellar?','2')")
+        p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen) values('La velocidad a la que viaja la luz es:','$rutac')")
+        p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen) values('¿Quién pintó el Guernica?','$rutaa')")
+        p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen) values('¿En qué año se estrenó Interestellar?','$rutae')")
 
 
         //creación de la tabla respuestas
@@ -62,24 +67,21 @@ class BDPreguntasRespuestas (val contexto: Context):
         //posibles respuestas de cada primera pregunta
 
 
-        p0?.execSQL("insert into $tablaRespuestas($idTablaRespuestas,$historiaTablaRespuestas) values('101','1189')")
+        p0?.execSQL("insert into $tablaRespuestas($idTablaRespuestas,$historiaTablaRespuestas,$geografiaTablaRespuestas,$cienciasTablaRespuestas,$arteTablaRespuestas,$entretenimientoTablaRespuestas)" +
+                " values('101','1189','Groenlandia','300.000m/s','Vincent van Gogh','2014')")
 
-        p0?.execSQL("insert into $tablaRespuestas($idTablaRespuestas,$historiaTablaRespuestas) values('102','1095')")
+        p0?.execSQL("insert into $tablaRespuestas($idTablaRespuestas,$historiaTablaRespuestas,$geografiaTablaRespuestas,$cienciasTablaRespuestas,$arteTablaRespuestas,$entretenimientoTablaRespuestas)" +
+                " values('102','1095','Australia','300 km/s','Pablo Picasso','2013')")
 
-        p0?.execSQL("insert into $tablaRespuestas($idTablaRespuestas,$historiaTablaRespuestas) values('103','1075')")
+        p0?.execSQL("insert into $tablaRespuestas($idTablaRespuestas,$historiaTablaRespuestas,$geografiaTablaRespuestas,$cienciasTablaRespuestas,$arteTablaRespuestas,$entretenimientoTablaRespuestas)" +
+                " values('103','1075','Madagascar','30.000 km/s','Salvador Dalí','2011')")
 
-        p0?.execSQL("insert into $tablaRespuestas($idTablaRespuestas,$historiaTablaRespuestas) values('104','1187')")
+        p0?.execSQL("insert into $tablaRespuestas($idTablaRespuestas,$historiaTablaRespuestas,$geografiaTablaRespuestas,$cienciasTablaRespuestas,$arteTablaRespuestas,$entretenimientoTablaRespuestas)" +
+                " values('104','1187','Gran Bretaña','300.000 km/s','Leonardo da Vinci','2012')")
 
 
-        /*
-        p0?.execSQL("insert into $tablaRespuestas($geografiaTablaRespuestas) values('Groenlandia','Australia','Madagascar','Gran Bretaña')")
 
-        p0?.execSQL("insert into $tablaRespuestas($cienciasTablaRespuestas) values('300.000 m/s','300km/s','30.000km/s','300.000km/s')")
 
-        p0?.execSQL("insert into $tablaRespuestas($arteTablaRespuestas) values('Vincent van Gogh','Pablo Picasso','Salvador Dalí','Leonardo da Vinci')")
-
-        p0?.execSQL("insert into $tablaRespuestas($entretenimientoTablaRespuestas) values('2014','2013','2011','2012')")
-        */
 
 
 

@@ -29,17 +29,7 @@ class Pantalla_Secundaria: AppCompatActivity() {
 
         val datos: ArrayList<String> = ArrayList<String>()
 
-        var cursor: Cursor =database.query(BDPreguntasRespuestas.tablaRespuestas,null,null,
-                null,null,null,BDPreguntasRespuestas.historiaTablaRespuestas+" asc")
-        cursor.moveToFirst()
-        while(!cursor.isAfterLast){
-            val id:Int=cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.historiaTablaRespuestas))
-            val pregunta:String=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.historiaTablaRespuestas))
-
-            datos.add(pregunta)
-
-            cursor.moveToNext()
-        }
+        var cursor: Cursor
 
 
        /* datos.add(resources.getString(R.string.boton1))
@@ -66,44 +56,115 @@ class Pantalla_Secundaria: AppCompatActivity() {
             val pregunta: TextView = findViewById<TextView>(R.id.textoPregunta)
             when(tipo){
                 "Arte"-> {
-                    imagen.setImageResource(R.drawable.imagen1_arte)
-                    pregunta.text=resources.getString(R.string.pregunta1_arte)
-                    datos.add(resources.getString(R.string.respuesta1_arte))
-                    datos.add(resources.getString(R.string.respuesta2_arte))
-                    datos.add(resources.getString(R.string.respuesta3_arte))
-                    datos.add(resources.getString(R.string.respuesta4_arte))
+
+                    cursor =database.query(BDPreguntasRespuestas.tablaRespuestas,null,null,
+                            null,null,null,BDPreguntasRespuestas.arteTablaRespuestas+" asc")
+                    cursor.moveToFirst()
+                    while(!cursor.isAfterLast){
+                        val id:Int=cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.arteTablaRespuestas))
+                        val pregunta:String=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.arteTablaRespuestas))
+
+                        datos.add(pregunta)
+
+                        cursor.moveToNext()
+                    }
+
+                    cursor =database.query(BDPreguntasRespuestas.tablaPreguntas,null,"id='4'",
+                            null,null,null,BDPreguntasRespuestas.idTablaPreguntas+" asc")
+                    cursor.moveToFirst()
+                    val imagen: ImageView =findViewById<ImageView>(R.id.imagen_secundaria)
+                    val pregunta: TextView = findViewById<TextView>(R.id.textoPregunta)
+                    imagen.setImageResource(cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.Imagen)))
+                    pregunta.text=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.Pregunta))
                 }
                 "Historia"-> {
-                    imagen.setImageResource(R.drawable.imagen_prueba)
-                    pregunta.text=resources.getString(R.string.pregunta1_historia)
-                    datos.add(resources.getString(R.string.respuesta1_historia))
-                    datos.add(resources.getString(R.string.respuesta2_historia))
-                    datos.add(resources.getString(R.string.respuesta3_historia))
-                    datos.add(resources.getString(R.string.respuesta4_historia))
+
+
+                    cursor =database.query(BDPreguntasRespuestas.tablaRespuestas,null,null,
+                            null,null,null,BDPreguntasRespuestas.historiaTablaRespuestas+" asc")
+                    cursor.moveToFirst()
+                    while(!cursor.isAfterLast){
+                        val id:Int=cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.historiaTablaRespuestas))
+                        val pregunta:String=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.historiaTablaRespuestas))
+
+                        datos.add(pregunta)
+
+                        cursor.moveToNext()
+                    }
+
+                    cursor =database.query(BDPreguntasRespuestas.tablaPreguntas,null,"id='1'",
+                            null,null,null,BDPreguntasRespuestas.idTablaPreguntas+" asc")
+                    cursor.moveToFirst()
+                    val imagen: ImageView =findViewById<ImageView>(R.id.imagen_secundaria)
+                    val pregunta: TextView = findViewById<TextView>(R.id.textoPregunta)
+                    imagen.setImageResource(cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.Imagen)))
+                    pregunta.text=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.Pregunta))
                 }
                 "Entretenimiento"-> {
-                    imagen.setImageResource(R.drawable.imagen1_entretenimiento)
-                    pregunta.text=resources.getString(R.string.pregunta1_entretenimiento)
-                    datos.add(resources.getString(R.string.respuesta1_entretenimiento))
-                    datos.add(resources.getString(R.string.respuesta2_entretenimiento))
-                    datos.add(resources.getString(R.string.respuesta3_entretenimiento))
-                    datos.add(resources.getString(R.string.respuesta4_entretenimiento))
+
+                    cursor =database.query(BDPreguntasRespuestas.tablaRespuestas,null,null,
+                            null,null,null,BDPreguntasRespuestas.entretenimientoTablaRespuestas+" asc")
+                    cursor.moveToFirst()
+                    while(!cursor.isAfterLast){
+                        val id:Int=cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.entretenimientoTablaRespuestas))
+                        val pregunta:String=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.entretenimientoTablaRespuestas))
+
+                        datos.add(pregunta)
+
+                        cursor.moveToNext()
+                    }
+
+                    cursor =database.query(BDPreguntasRespuestas.tablaPreguntas,null,"id='5'",
+                            null,null,null,BDPreguntasRespuestas.idTablaPreguntas+" asc")
+                    cursor.moveToFirst()
+                    val imagen: ImageView =findViewById<ImageView>(R.id.imagen_secundaria)
+                    val pregunta: TextView = findViewById<TextView>(R.id.textoPregunta)
+                    imagen.setImageResource(cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.Imagen)))
+                    pregunta.text=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.Pregunta))
                 }
                 "Ciencia"-> {
-                    imagen.setImageResource(R.drawable.imagen1_ciencias)
-                    pregunta.text=resources.getString(R.string.pregunta1_ciencias)
-                    datos.add(resources.getString(R.string.respuesta1_ciencias))
-                    datos.add(resources.getString(R.string.respuesta2_ciencias))
-                    datos.add(resources.getString(R.string.respuesta3_ciencias))
-                    datos.add(resources.getString(R.string.respuesta4_ciencias))
+
+                    cursor =database.query(BDPreguntasRespuestas.tablaRespuestas,null,null,
+                            null,null,null,BDPreguntasRespuestas.cienciasTablaRespuestas+" asc")
+                    cursor.moveToFirst()
+                    while(!cursor.isAfterLast){
+                        val id:Int=cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.cienciasTablaRespuestas))
+                        val pregunta:String=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.cienciasTablaRespuestas))
+
+                        datos.add(pregunta)
+
+                        cursor.moveToNext()
+                    }
+
+                    cursor =database.query(BDPreguntasRespuestas.tablaPreguntas,null,"id='3'",
+                            null,null,null,BDPreguntasRespuestas.idTablaPreguntas+" asc")
+                    cursor.moveToFirst()
+                    val imagen: ImageView =findViewById<ImageView>(R.id.imagen_secundaria)
+                    val pregunta: TextView = findViewById<TextView>(R.id.textoPregunta)
+                    imagen.setImageResource(cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.Imagen)))
+                    pregunta.text=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.Pregunta))
                 }
                 "Geografía"-> {
-                    imagen.setImageResource(R.drawable.imagen1_geografia)
-                    pregunta.text=resources.getString(R.string.pregunta1_geografia)
-                    datos.add(resources.getString(R.string.respuesta1_geografia))
-                    datos.add(resources.getString(R.string.respuesta2_geografia))
-                    datos.add(resources.getString(R.string.respuesta3_geografia))
-                    datos.add(resources.getString(R.string.respuesta4_geografia))
+
+                    cursor =database.query(BDPreguntasRespuestas.tablaRespuestas,null,null,
+                            null,null,null,BDPreguntasRespuestas.geografiaTablaRespuestas+" asc")
+                    cursor.moveToFirst()
+                    while(!cursor.isAfterLast){
+                        val id:Int=cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.geografiaTablaRespuestas))
+                        val pregunta:String=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.geografiaTablaRespuestas))
+
+                        datos.add(pregunta)
+
+                        cursor.moveToNext()
+                    }
+
+                    cursor =database.query(BDPreguntasRespuestas.tablaPreguntas,null,"id='2'",
+                            null,null,null,BDPreguntasRespuestas.idTablaPreguntas+" asc")
+                    cursor.moveToFirst()
+                    val imagen: ImageView =findViewById<ImageView>(R.id.imagen_secundaria)
+                    val pregunta: TextView = findViewById<TextView>(R.id.textoPregunta)
+                    imagen.setImageResource(cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.Imagen)))
+                    pregunta.text=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.Pregunta))
                 }
 
 
