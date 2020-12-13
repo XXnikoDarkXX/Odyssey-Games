@@ -11,10 +11,10 @@
         android:id="@+id/vistaRecycler"
         android:layout_width="393dp"
         android:layout_height="447dp"
-        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/añadir"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textoP"/>
+        app:layout_constraintTop_toBottomOf="@+id/textoP" />
 
     <Button
         android:id="@+id/añadir"
@@ -32,10 +32,10 @@
         android:id="@+id/borrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
         android:backgroundTint="@color/Naranja"
         android:text="@string/Bborrar"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/añadir"
         app:layout_constraintStart_toEndOf="@+id/editar"
         app:layout_constraintTop_toBottomOf="@+id/vistaRecycler" />
 
@@ -43,18 +43,17 @@
         android:id="@+id/editar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:onClick="AaEditar"
         android:backgroundTint="@color/Naranja"
+        android:onClick="AaEditar"
         android:text="@string/Beditar"
         app:layout_constraintBottom_toBottomOf="@+id/borrar"
+        app:layout_constraintEnd_toStartOf="@+id/borrar"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textoP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:shadowColor="@color/red"
         android:shadowDx="2"
         android:shadowDy="2"
@@ -63,6 +62,7 @@
         android:textColor="@color/Naranja"
         android:textSize="45sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/vistaRecycler"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
