@@ -16,13 +16,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class Pantalla_Opciones : AppCompatActivity() {
-    val database: SQLiteDatabase by lazy { BDPersona(this).writableDatabase }
+    val database: SQLiteDatabase by lazy { BDPersona(this).writableDatabase }//poder usar nuestra base de datos
+    //en esta actividad
     var personas: ArrayList<Persona> = ArrayList<Persona>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.pantalla_opciones)
 
-        val datos: ArrayList<String> = arrayListOf("Usuario", "Contraseña Antigua", "Contraseña Nueva")
 
 
     }
@@ -39,7 +39,7 @@ class Pantalla_Opciones : AppCompatActivity() {
      */
     fun cambiaPass(view: View) {
 
-        refrecarUsuarios()
+        refrescarPersonas()
 
         var user: EditText = findViewById(R.id.cambioUsuario)
         var contraseñaAntigua: EditText = findViewById(R.id.passAntigua)
@@ -80,7 +80,7 @@ class Pantalla_Opciones : AppCompatActivity() {
 
 
 
-            var contador=0
+            var contador:Int=0
             while(contador<personas.size){
 
               if (personas.get(contador).usuario.equals(usuarioCampo)){
@@ -93,7 +93,7 @@ class Pantalla_Opciones : AppCompatActivity() {
                       datosAModificar.put(BDPersona.contraseña,contraseñaNueva.text.toString() )
                       if(database.update(BDPersona.tablaPersona,datosAModificar,
                                       "id='${this.personas.get(contador).id}'",null) >0){
-                          refrecarUsuarios()
+                          refrescarPersonas()
                       }
                   }
               }
@@ -121,7 +121,7 @@ class Pantalla_Opciones : AppCompatActivity() {
 
     }
 
-    fun refrecarUsuarios(){
+    fun refrescarPersonas(){
 
     var todos :ArrayList<Persona> = ArrayList<Persona>()
 

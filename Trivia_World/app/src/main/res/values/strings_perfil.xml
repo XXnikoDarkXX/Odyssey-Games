@@ -6,4 +6,5 @@
     <string name="txtLogin">Loguearse</string>
     <string name="permisoDenegado">Me has denegado el permiso</string>
     <string name="permisoAceptado">Me has aceptado el permiso</string>
+    <string name="nombreUsuario">Usuario</string>
 </resources>

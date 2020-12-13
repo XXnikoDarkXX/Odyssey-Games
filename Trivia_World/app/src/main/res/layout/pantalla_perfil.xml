@@ -16,7 +16,7 @@
         android:contentDescription="@string/descripcion_gui_redes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo_perfil"
         app:srcCompat="@drawable/gui_redes" />
@@ -45,8 +45,8 @@
         android:background="@color/Naranja"
         android:onClick="irALogin"
         android:text="@string/txtLogin"
-        app:layout_constraintTop_toTopOf="@+id/marcoNaranajaPerfil"
-        tools:layout_editor_absoluteX="260dp" />
+        app:layout_constraintEnd_toEndOf="@+id/logo_perfil"
+        app:layout_constraintTop_toTopOf="@+id/marcoNaranajaPerfil" />
 
     <TextView
         android:id="@+id/txtPuntuacion"
@@ -113,5 +113,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/perfil" />
+
+    <TextView
+        android:id="@+id/txtUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nombreUsuario"
+        android:textSize="27sp"
+        app:layout_constraintBottom_toTopOf="@+id/nombre"
+        app:layout_constraintEnd_toStartOf="@+id/btnIrLogin"
+        app:layout_constraintStart_toStartOf="@+id/marcoNaranajaPerfil"
+        app:layout_constraintTop_toTopOf="@+id/marcoNaranajaPerfil" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
