@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/sky"
-    >
+    android:background="@drawable/sky">
 
 
     <ImageView
         android:id="@+id/marcoNaranajaPerfil"
-        android:layout_width="374dp"
-        android:layout_height="553dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         android:contentDescription="@string/descripcion_gui_redes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,86 +21,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo_perfil"
         app:srcCompat="@drawable/gui_redes" />
-
-    <TextView
-        android:id="@+id/nombre"
-        android:layout_width="138dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="161dp"
-        android:text="@string/txtNombre"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnIrLogin" />
-
-    <Button
-        android:id="@+id/btnIrLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:background="@color/Naranja"
-        android:onClick="irALogin"
-        android:text="@string/txtLogin"
-        app:layout_constraintEnd_toEndOf="@+id/logo_perfil"
-        app:layout_constraintTop_toTopOf="@+id/marcoNaranajaPerfil" />
-
-    <TextView
-        android:id="@+id/txtPuntuacion"
-        android:layout_width="239dp"
-        android:layout_height="42dp"
-        android:text="@string/puntuacion"
-        android:textAlignment="textStart"
-        android:textSize="24sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="@+id/marcoNaranajaPerfil"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnEnviarFoto"
-        app:layout_constraintVertical_bias="0.354" />
-
-    <Button
-        android:id="@+id/btnEnviarFoto"
-        android:layout_width="wrap_content"
-        android:onClick="enviarFoto"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@color/naranjaa"
-        android:text="@string/enviarLogin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/subirFoto" />
-
-    <TextView
-        android:id="@+id/subirFoto"
-        android:layout_width="221dp"
-        android:layout_height="21dp"
-        android:layout_marginTop="28dp"
-        android:text="@string/subirFoto"
-        android:textAlignment="center"
-        android:textSize="13sp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="@+id/marcoNaranajaPerfil"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintStart_toStartOf="@+id/marcoNaranajaPerfil"
-        app:layout_constraintTop_toBottomOf="@+id/avatar" />
-
-    <ImageView
-        android:id="@+id/avatar"
-        android:layout_width="184dp"
-        android:layout_height="162dp"
-        android:layout_marginTop="40dp"
-        android:contentDescription="@string/avatarDescripcion"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombre"
-        app:srcCompat="@drawable/avatar_perfil" />
 
     <ImageView
         android:id="@+id/logo_perfil"
@@ -114,15 +35,105 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/perfil" />
 
-    <TextView
-        android:id="@+id/txtUsuario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="nombreUsuario"
-        android:textSize="27sp"
-        app:layout_constraintBottom_toTopOf="@+id/nombre"
-        app:layout_constraintEnd_toStartOf="@+id/btnIrLogin"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="60dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/marcoNaranajaPerfil"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="@+id/marcoNaranajaPerfil"
-        app:layout_constraintTop_toTopOf="@+id/marcoNaranajaPerfil" />
+        app:layout_constraintTop_toTopOf="@+id/marcoNaranajaPerfil"
+        app:layout_constraintVertical_bias="0.203">
+
+        <Button
+            android:id="@+id/btnIrLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="30dp"
+
+            android:background="@color/Naranja"
+            android:onClick="irALogin"
+            android:text="@string/txtLogin" />
+
+        <TextView
+            android:id="@+id/txtUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_weight="1"
+            android:text="@string/nombreUsuario"
+            android:textAlignment="center"
+            android:textSize="27sp" />
+
+        <TextView
+            android:id="@+id/nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_weight="1"
+            android:text="@string/txtNombre"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="30dp"
+        android:layout_gravity="center"
+            android:contentDescription="@string/avatarDescripcion"
+            app:srcCompat="@drawable/avatar_perfil" />
+
+        <TextView
+            android:id="@+id/subirFoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_weight="1"
+
+            android:text="@string/subirFoto"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="italic"
+
+            />
+
+        <Button
+            android:id="@+id/btnEnviarFoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="30dp"
+
+            android:background="@color/naranjaa"
+            android:onClick="enviarFoto"
+            android:text="@string/enviarLogin" />
+
+        <TextView
+            android:id="@+id/txtPuntuacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_weight="1"
+            android:text="@string/puntuacion"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

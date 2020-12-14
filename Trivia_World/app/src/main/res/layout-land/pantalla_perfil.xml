@@ -11,85 +11,19 @@
 
     <ImageView
         android:id="@+id/marcoNaranajaPerfil"
-        android:layout_width="619dp"
-        android:layout_height="385dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+
         android:contentDescription="@string/descripcion_gui_redes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/logo_perfil"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/marco_narana_horizontal" />
-
-    <TextView
-        android:id="@+id/nombre"
-        android:layout_width="138dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="52dp"
-        android:text="@string/txtNombre"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/txtPuntuacion"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toEndOf="@+id/avatar"
-        app:layout_constraintTop_toTopOf="@+id/avatar" />
-
-    <Button
-        android:id="@+id/btnIrLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_marginEnd="164dp"
-        android:layout_marginBottom="52dp"
-        android:background="@color/Naranja"
-        android:onClick="irALogin"
-        android:text="@string/txtLogin"
-        app:layout_constraintBottom_toBottomOf="@+id/marcoNaranajaPerfil"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPuntuacion"
-        app:layout_constraintVertical_bias="0.958" />
-
-    <TextView
-        android:id="@+id/txtPuntuacion"
-        android:layout_width="239dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="64dp"
-        android:text="@string/puntuacion"
-        android:textAlignment="textStart"
-        android:textSize="24sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombre" />
-
-    <Button
-        android:id="@+id/btnEnviarFoto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="44dp"
-        android:background="@color/naranjaa"
-        android:text="@string/enviarLogin"
-        android:onClick="enviarFoto"
-        app:layout_constraintEnd_toStartOf="@+id/btnIrLogin"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/marcoNaranajaPerfil"
-        app:layout_constraintTop_toBottomOf="@+id/subirFoto" />
-
-    <TextView
-        android:id="@+id/subirFoto"
-        android:layout_width="221dp"
-        android:layout_height="21dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="44dp"
-        android:text="@string/subirFoto"
-        android:textAlignment="center"
-        android:textSize="13sp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toStartOf="@+id/txtPuntuacion"
-        app:layout_constraintTop_toBottomOf="@+id/avatar" />
 
     <ImageView
         android:id="@+id/logo_perfil"
@@ -102,29 +36,90 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/perfil" />
 
-    <ImageView
-        android:layout_width="156dp"
-        android:id="@+id/avatar"
-        android:layout_height="137dp"
-        android:contentDescription="@string/avatarDescripcion"
-
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="60dp"
+    <ScrollView
+        android:layout_width="531dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="7dp"
+        app:layout_constraintBottom_toBottomOf="@+id/marcoNaranajaPerfil"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/marcoNaranajaPerfil"
-        app:layout_constraintTop_toTopOf="@+id/marcoNaranajaPerfil"
-        app:srcCompat="@drawable/avatar_perfil" />
+        app:layout_constraintTop_toTopOf="@+id/marcoNaranajaPerfil">
 
-    <TextView
-        android:id="@+id/txtUsuario"
-        android:layout_width="wrap_content"
-        android:layout_height="36dp"
-        android:layout_marginEnd="83dp"
-        android:layout_marginBottom="24dp"
-        android:text="nombreUsuario"
-        android:textSize="27sp"
-        app:layout_constraintBottom_toTopOf="@+id/nombre"
-        app:layout_constraintEnd_toEndOf="@+id/marcoNaranajaPerfil"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/avatar" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnIrLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:background="@color/Naranja"
+                android:onClick="irALogin"
+                android:text="@string/txtLogin" />
+
+            <TextView
+                android:id="@+id/txtUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+
+                android:layout_marginBottom="24dp"
+                android:text="@string/nombreUsuario"
+                android:textAlignment="center"
+                android:textSize="27sp" />
+
+            <TextView
+                android:id="@+id/nombre"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+
+
+                android:text="@string/txtNombre"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/avatar"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:contentDescription="@string/avatarDescripcion"
+
+
+                app:srcCompat="@drawable/avatar_perfil" />
+
+            <TextView
+                android:id="@+id/subirFoto"
+                android:layout_width="match_parent"
+                android:layout_height="21dp"
+                android:text="@string/subirFoto"
+
+
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/btnEnviarFoto"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/naranjaa"
+                android:onClick="enviarFoto"
+                android:text="@string/enviarLogin" />
+
+            <TextView
+                android:id="@+id/txtPuntuacion"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:text="@string/puntuacion"
+                android:textAlignment="textStart"
+                android:textSize="24sp"
+                android:textStyle="bold|italic" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

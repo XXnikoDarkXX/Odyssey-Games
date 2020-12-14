@@ -65,7 +65,7 @@
             android:autofillHints="@string/usuarioLoginIn"
             android:ems="10"
             android:hint="@string/usuarioLoginIn"
-            android:inputType="textEmailAddress" />
+            android:inputType="text" />
 
         <TextView
             android:id="@+id/contraseñaIn"
