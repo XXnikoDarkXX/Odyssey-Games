@@ -30,10 +30,6 @@ class BDPreguntasRespuestas (val contexto: Context):
         val idTablaRespuestas: String = "id"
 
         val respuesta: String = "respuesta"
-        /*val geografiaTablaRespuestas: String = "respuestaGeografia"
-        val cienciasTablaRespuestas: String = "respuestaCiencias"
-        val arteTablaRespuestas: String = "respuestaArte"
-        val entretenimientoTablaRespuestas: String = "respuestaEntretenimiento"*/
     }
 
     override fun onCreate(p0: SQLiteDatabase?) {
