@@ -5,16 +5,23 @@ package com.example.triviaworld
 import Adapters.AdapterRespuestas
 import Adapters.AdapterPreguntas
 import BBDD.BDPreguntasRespuestas
+import Clases.RespuestaIntroducida
+import android.content.Intent
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import java.util.*
+import kotlin.collections.ArrayList
+import kotlin.collections.HashMap
 import kotlin.random.Random
 import kotlin.random.nextInt
 
@@ -29,7 +36,7 @@ class Pantalla_Secundaria: AppCompatActivity() {
         setContentView(R.layout.pantalla_secundaria)
 
 
-        val datos: ArrayList<String> = ArrayList<String>()
+        val datos: ArrayList<RespuestaIntroducida> = ArrayList<RespuestaIntroducida>()
 
         var cursor: Cursor
 
@@ -76,7 +83,8 @@ class Pantalla_Secundaria: AppCompatActivity() {
                                 null,null,null,BDPreguntasRespuestas.tipo+" asc")
                         cursor2.moveToFirst()
 
-                        datos.add(cursor2.getString(cursor2.getColumnIndex(BDPreguntasRespuestas.respuesta)))
+                        datos.add(RespuestaIntroducida(cursor2.getString(cursor2.getColumnIndex(BDPreguntasRespuestas.preguntaCorrecta)), cursor2.getString(cursor2.getColumnIndex(BDPreguntasRespuestas.respuesta))))
+
 
                     }
 
@@ -101,11 +109,9 @@ class Pantalla_Secundaria: AppCompatActivity() {
                                 null,null,null,BDPreguntasRespuestas.tipo+" asc")
                         cursor2.moveToFirst()
 
-                        datos.add(cursor2.getString(cursor2.getColumnIndex(BDPreguntasRespuestas.respuesta)))
+                        datos.add(RespuestaIntroducida(cursor2.getString(cursor2.getColumnIndex(BDPreguntasRespuestas.preguntaCorrecta)), cursor2.getString(cursor2.getColumnIndex(BDPreguntasRespuestas.respuesta))))
 
                     }
-
-                    //datos.add(respuestaI)
 
 
                 }
@@ -128,7 +134,7 @@ class Pantalla_Secundaria: AppCompatActivity() {
                                 null,null,null,BDPreguntasRespuestas.tipo+" asc")
                         cursor2.moveToFirst()
 
-                        datos.add(cursor2.getString(cursor2.getColumnIndex(BDPreguntasRespuestas.respuesta)))
+                        datos.add(RespuestaIntroducida(cursor2.getString(cursor2.getColumnIndex(BDPreguntasRespuestas.preguntaCorrecta)), cursor2.getString(cursor2.getColumnIndex(BDPreguntasRespuestas.respuesta))))
 
                     }
                 }
@@ -151,7 +157,8 @@ class Pantalla_Secundaria: AppCompatActivity() {
                                 null,null,null,BDPreguntasRespuestas.tipo+" asc")
                         cursor2.moveToFirst()
 
-                        datos.add(cursor2.getString(cursor2.getColumnIndex(BDPreguntasRespuestas.respuesta)))
+                       // datos.add(cursor2.getString(cursor2.getColumnIndex(BDPreguntasRespuestas.respuesta)))
+                        datos.add(RespuestaIntroducida(cursor2.getString(cursor2.getColumnIndex(BDPreguntasRespuestas.preguntaCorrecta)), cursor2.getString(cursor2.getColumnIndex(BDPreguntasRespuestas.respuesta))))
 
                     }
                 }
@@ -174,7 +181,7 @@ class Pantalla_Secundaria: AppCompatActivity() {
                                 null,null,null,BDPreguntasRespuestas.tipo+" asc")
                         cursor2.moveToFirst()
 
-                        datos.add(cursor2.getString(cursor2.getColumnIndex(BDPreguntasRespuestas.respuesta)))
+                        datos.add(RespuestaIntroducida(cursor2.getString(cursor2.getColumnIndex(BDPreguntasRespuestas.preguntaCorrecta)), cursor2.getString(cursor2.getColumnIndex(BDPreguntasRespuestas.respuesta))))
 
                     }
                 }
@@ -220,7 +227,7 @@ class Pantalla_Secundaria: AppCompatActivity() {
                         null,null,null,BDPreguntasRespuestas.tipo+" asc")
 
                 cursor2.moveToFirst()
-                datos.add(cursor2.getString(cursor2.getColumnIndex(BDPreguntasRespuestas.respuesta)))
+                datos.add(RespuestaIntroducida(cursor2.getString(cursor2.getColumnIndex(BDPreguntasRespuestas.preguntaCorrecta)), cursor2.getString(cursor2.getColumnIndex(BDPreguntasRespuestas.respuesta))))
 
             }
 
@@ -232,9 +239,14 @@ class Pantalla_Secundaria: AppCompatActivity() {
 
     }
 
-    fun rand(start: Int, end: Int): Int {
-        require(start <= end) { "Número no correcto" }
-        return (start..end).random()
+
+    fun volverSeleccion(view: View) {
+
+
+        val intent = Intent(this, Pantalla_eleccionJuego::class.java)
+        startActivity(intent)
+
+
     }
 
 }

@@ -11,10 +11,12 @@
     <color name="amarillo_degradado">#ffde00</color>
     <color name="borde_botones">#cc750f</color>
     <color name="red">#ff0000</color>
+    <color name="red_dark">#7D0101</color>
     <color name="corona1">#ffc92b</color>
     <color name="corona2">#fcab17</color>
     <color name="corona3">#b67411</color>
-
+    <color name="green">#01FA01</color>
+    <color name="green_dark">#017B01</color>
 
 
 
