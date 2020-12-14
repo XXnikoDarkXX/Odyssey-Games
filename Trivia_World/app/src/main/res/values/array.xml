@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="choose">
+        <item>historia</item>
+        <item>geografia</item>
+        <item>arte</item>
+        <item>entretenimiento</item>
+        <item>ciencias</item>
+    </string-array>
+</resources>

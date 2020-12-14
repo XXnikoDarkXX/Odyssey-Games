@@ -17,10 +17,6 @@ class BDPreguntasRespuestas (val contexto: Context):
         val Pregunta: String = "pregunta"
         val Imagen: String = "imagen"
         val tipo: String = "tipo"
-        /*val geografiaTablaPreguntas: String = "preguntaGeografia"
-        val cienciasTablaPreguntas: String = "preguntaCiencias"
-        val arteTablaPreguntas: String = "preguntaArte"
-        val entretenimientoTablaPreguntas: String = "preguntaEntretenimiento"*/
 
 
         //respuestas
@@ -29,10 +25,6 @@ class BDPreguntasRespuestas (val contexto: Context):
         val idTablaRespuestas: String = "id"
 
         val respuesta: String = "respuesta"
-        /*val geografiaTablaRespuestas: String = "respuestaGeografia"
-        val cienciasTablaRespuestas: String = "respuestaCiencias"
-        val arteTablaRespuestas: String = "respuestaArte"
-        val entretenimientoTablaRespuestas: String = "respuestaEntretenimiento"*/
     }
 
     override fun onCreate(p0: SQLiteDatabase?) {
@@ -54,10 +46,10 @@ class BDPreguntasRespuestas (val contexto: Context):
         p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen, $tipo) values('¿Qué año fueron las cruzadas?','$ruta','historia')")
         p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen, $tipo) values('¿Quien es mayor?','$rutac','historia')")
 
-        p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen, $tipo) values('¿Cuál es la isla más grande del mundo?','$rutag', 'geografia')")
+        /*p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen, $tipo) values('¿Cuál es la isla más grande del mundo?','$rutag', 'geografia')")
         p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen, $tipo) values('La velocidad a la que viaja la luz es:','$rutac', 'geografia')")
         p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen, $tipo) values('¿Quién pintó el Guernica?','$rutaa', 'geografia')")
-        p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen, $tipo) values('¿En qué año se estrenó Interestellar?','$rutae', 'geografia')")
+        p0?.execSQL("insert into $tablaPreguntas($Pregunta, $Imagen, $tipo) values('¿En qué año se estrenó Interestellar?','$rutae', 'geografia')")*/
 
 
         //creación de la tabla respuestas
