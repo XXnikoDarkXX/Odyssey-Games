@@ -48,12 +48,12 @@ class AdapterRespuestas(val actividad: Activity, val datos: ArrayList<RespuestaI
 
                 var categoria:String = cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.tipo))
 
-                val intent = Intent(actividad.baseContext, Pantalla_Secundaria::class.java)
+                val intent = Intent(actividad, Pantalla_Secundaria::class.java)
                 var bundle: Bundle = Bundle()
                 bundle.putString("categoria",categoria)
                 bundle.putString("Id", identificador)
                 intent.putExtras(bundle)
-                startActivity(intent)*/
+                startActivity()*/
 
 
 
