@@ -4,10 +4,13 @@
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
-    <uses-feature android:name="android.hardware.camera" android:required="true" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
-
 
     <application
         android:allowBackup="true"
@@ -17,7 +20,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TriviaWorld">
-        <activity android:name=".Pantalla_Edita_Preguntas"></activity>
+        <activity android:name=".Pantalla_BorrarE"></activity>
+        <activity android:name=".Pantalla_Edita_Preguntas" />
         <activity android:name=".Pantalla_eleccionJuego" />
         <activity android:name=".Creador_Preguntas" />
         <activity android:name=".Pantalla_Opcione_Editor" />

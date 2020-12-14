@@ -64,6 +64,7 @@ class Creador_Preguntas : AppCompatActivity() {
             var cursor: Cursor =database.query(BDPreguntasRespuestas.tablaPreguntas,null,"Pregunta='$Putili'",
                     null,null,null,BDPreguntasRespuestas.idTablaPreguntas+" asc")
             cursor.moveToFirst()
+            var correcta: String = "incorrecta"
             var laP: String = cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.idTablaRespuestas)).toString() + "0$i"
             val registro2 = ContentValues()
             registro2.put("id", laP)
@@ -71,12 +72,14 @@ class Creador_Preguntas : AppCompatActivity() {
                 registro2.put("respuesta", res1)
             }else if (i==2){
                 registro2.put("respuesta", res2)
+                correcta= "correcta"
             }else if (i==3){
                 registro2.put("respuesta", res3)
             }else if (i==4){
                 registro2.put("respuesta", res4)
             }
             registro2.put("tipo", spin.selectedItemId.toString())
+            registro2.put("preguntaCorrecta", correcta)
             if (database.insert(BDPreguntasRespuestas.tablaRespuestas, null, registro2) > 0) {
                 Toast.makeText(this, "Respuesta Ingresada", Toast.LENGTH_LONG).show()
             } else {
