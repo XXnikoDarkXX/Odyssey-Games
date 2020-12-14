@@ -15,6 +15,8 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlin.random.Random
+import kotlin.random.nextInt
 
 class Pantalla_Secundaria: AppCompatActivity() {
 
@@ -57,114 +59,124 @@ class Pantalla_Secundaria: AppCompatActivity() {
             when(tipo){
                 "Arte"-> {
 
-                    cursor =database.query(BDPreguntasRespuestas.tablaRespuestas,null,"id='re'",
-                            null,null,null,BDPreguntasRespuestas.idTablaRespuestas+" asc")
-                    cursor.moveToFirst()
-                    while(!cursor.isAfterLast){
-                        val id:Int=cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.idTablaRespuestas))
-                        val pregunta:String=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.respuesta))
-
-                        datos.add(pregunta)
-
-                        cursor.moveToNext()
-                    }
-
-                    cursor =database.query(BDPreguntasRespuestas.tablaPreguntas,null,"id='4'",
+                    cursor =database.query(BDPreguntasRespuestas.tablaPreguntas,null,"tipo='arte' and id='16'",
                             null,null,null,BDPreguntasRespuestas.idTablaPreguntas+" asc")
                     cursor.moveToFirst()
                     val imagen: ImageView =findViewById<ImageView>(R.id.imagen_secundaria)
                     val pregunta: TextView = findViewById<TextView>(R.id.textoPregunta)
                     imagen.setImageResource(cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.Imagen)))
                     pregunta.text=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.Pregunta))
+
+                    var respuestaI:String=""
+
+                    for (i in 1..4){
+
+                        var idU: String = cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.idTablaPreguntas)) + "0$i"
+                        var cursor2: Cursor =database.query(BDPreguntasRespuestas.tablaRespuestas,null,"tipo='arte' and id='$idU'",
+                                null,null,null,BDPreguntasRespuestas.tipo+" asc")
+                        cursor2.moveToFirst()
+
+                        datos.add(cursor2.getString(cursor2.getColumnIndex(BDPreguntasRespuestas.respuesta)))
+
+                    }
+
                 }
                 "Historia"-> {
 
 
-                    cursor =database.query(BDPreguntasRespuestas.tablaRespuestas,null,"tipo='historia'",
-                            null,null,null,BDPreguntasRespuestas.tipo+" asc")
-                    cursor.moveToFirst()
-                    while(!cursor.isAfterLast){
-                        val id:Int=cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.idTablaRespuestas))
-                        val respuesta:String=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.respuesta))
-
-                        datos.add(respuesta)
-
-                        cursor.moveToNext()
-                    }
-
-                    cursor =database.query(BDPreguntasRespuestas.tablaPreguntas,null,"tipo='historia'",
+                    cursor =database.query(BDPreguntasRespuestas.tablaPreguntas,null,"tipo='historia' and id='1'",
                             null,null,null,BDPreguntasRespuestas.idTablaPreguntas+" asc")
                     cursor.moveToFirst()
                     val imagen: ImageView =findViewById<ImageView>(R.id.imagen_secundaria)
                     val pregunta: TextView = findViewById<TextView>(R.id.textoPregunta)
                     imagen.setImageResource(cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.Imagen)))
                     pregunta.text=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.Pregunta))
+
+                    var respuestaI:String=""
+
+                    for (i in 1..4){
+
+                        var idU: String = cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.idTablaPreguntas)) + "0$i"
+                        var cursor2: Cursor =database.query(BDPreguntasRespuestas.tablaRespuestas,null,"tipo='historia' and id='$idU'",
+                                null,null,null,BDPreguntasRespuestas.tipo+" asc")
+                        cursor2.moveToFirst()
+
+                        datos.add(cursor2.getString(cursor2.getColumnIndex(BDPreguntasRespuestas.respuesta)))
+
+                    }
+
+                    //datos.add(respuestaI)
+
+
                 }
                 "Entretenimiento"-> {
 
-                    cursor =database.query(BDPreguntasRespuestas.tablaRespuestas,null,null,
-                            null,null,null,BDPreguntasRespuestas.idTablaRespuestas+" asc")
-                    cursor.moveToFirst()
-                    while(!cursor.isAfterLast){
-                        val id:Int=cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.idTablaRespuestas))
-                        val pregunta:String=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.idTablaRespuestas))
-
-                        datos.add(pregunta)
-
-                        cursor.moveToNext()
-                    }
-
-                    cursor =database.query(BDPreguntasRespuestas.tablaPreguntas,null,"id='5'",
+                    cursor =database.query(BDPreguntasRespuestas.tablaPreguntas,null,"tipo='entretenimiento' and id='21'",
                             null,null,null,BDPreguntasRespuestas.idTablaPreguntas+" asc")
                     cursor.moveToFirst()
                     val imagen: ImageView =findViewById<ImageView>(R.id.imagen_secundaria)
                     val pregunta: TextView = findViewById<TextView>(R.id.textoPregunta)
                     imagen.setImageResource(cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.Imagen)))
                     pregunta.text=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.Pregunta))
+
+                    var respuestaI:String=""
+
+                    for (i in 1..4){
+
+                        var idU: String = cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.idTablaPreguntas)) + "0$i"
+                        var cursor2: Cursor =database.query(BDPreguntasRespuestas.tablaRespuestas,null,"tipo='entretenimiento' and id='$idU'",
+                                null,null,null,BDPreguntasRespuestas.tipo+" asc")
+                        cursor2.moveToFirst()
+
+                        datos.add(cursor2.getString(cursor2.getColumnIndex(BDPreguntasRespuestas.respuesta)))
+
+                    }
                 }
                 "Ciencia"-> {
 
-                    cursor =database.query(BDPreguntasRespuestas.tablaRespuestas,null,null,
-                            null,null,null,BDPreguntasRespuestas.idTablaRespuestas+" asc")
-                    cursor.moveToFirst()
-                    while(!cursor.isAfterLast){
-                        val id:Int=cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.idTablaRespuestas))
-                        val pregunta:String=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.idTablaRespuestas))
-
-                        datos.add(pregunta)
-
-                        cursor.moveToNext()
-                    }
-
-                    cursor =database.query(BDPreguntasRespuestas.tablaPreguntas,null,"id='3'",
+                    cursor =database.query(BDPreguntasRespuestas.tablaPreguntas,null,"tipo='ciencias' and id='11'",
                             null,null,null,BDPreguntasRespuestas.idTablaPreguntas+" asc")
                     cursor.moveToFirst()
                     val imagen: ImageView =findViewById<ImageView>(R.id.imagen_secundaria)
                     val pregunta: TextView = findViewById<TextView>(R.id.textoPregunta)
                     imagen.setImageResource(cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.Imagen)))
                     pregunta.text=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.Pregunta))
+
+                    var respuestaI:String=""
+
+                    for (i in 1..4){
+
+                        var idU: String = cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.idTablaPreguntas)) + "0$i"
+                        var cursor2: Cursor =database.query(BDPreguntasRespuestas.tablaRespuestas,null,"tipo='ciencias' and id='$idU'",
+                                null,null,null,BDPreguntasRespuestas.tipo+" asc")
+                        cursor2.moveToFirst()
+
+                        datos.add(cursor2.getString(cursor2.getColumnIndex(BDPreguntasRespuestas.respuesta)))
+
+                    }
                 }
                 "Geografía"-> {
 
-                    cursor =database.query(BDPreguntasRespuestas.tablaRespuestas,null,null,
-                            null,null,null,BDPreguntasRespuestas.idTablaRespuestas+" asc")
-                    cursor.moveToFirst()
-                    while(!cursor.isAfterLast){
-                        val id:Int=cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.idTablaRespuestas))
-                        val pregunta:String=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.idTablaRespuestas))
-
-                        datos.add(pregunta)
-
-                        cursor.moveToNext()
-                    }
-
-                    cursor =database.query(BDPreguntasRespuestas.tablaPreguntas,null,"id='2'",
+                    cursor =database.query(BDPreguntasRespuestas.tablaPreguntas,null,"tipo='geografia' and id='6'",
                             null,null,null,BDPreguntasRespuestas.idTablaPreguntas+" asc")
                     cursor.moveToFirst()
                     val imagen: ImageView =findViewById<ImageView>(R.id.imagen_secundaria)
                     val pregunta: TextView = findViewById<TextView>(R.id.textoPregunta)
                     imagen.setImageResource(cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.Imagen)))
                     pregunta.text=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.Pregunta))
+
+                    var respuestaI:String=""
+
+                    for (i in 1..4){
+
+                        var idU: String = cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.idTablaPreguntas)) + "0$i"
+                        var cursor2: Cursor =database.query(BDPreguntasRespuestas.tablaRespuestas,null,"tipo='geografia' and id='$idU'",
+                                null,null,null,BDPreguntasRespuestas.tipo+" asc")
+                        cursor2.moveToFirst()
+
+                        datos.add(cursor2.getString(cursor2.getColumnIndex(BDPreguntasRespuestas.respuesta)))
+
+                    }
                 }
 
 
@@ -174,13 +186,43 @@ class Pantalla_Secundaria: AppCompatActivity() {
             recyclerRespuestas.adapter=adapter
             recyclerRespuestas.layoutManager= LinearLayoutManager(this)
         }else{
-            var lil: Cursor =database.query(BDPreguntasRespuestas.tablaPreguntas,null,null,
+
+           var nAleatorio= Random.nextInt(1..25)
+
+           /* var nAleatorio = 1
+
+            var aux:Int =0
+
+            var numRandom: Int
+
+            while (nAleatorio!=aux){
+
+                nAleatorio= Random.nextInt(1..25)
+
+            }
+
+            aux=nAleatorio*/
+
+            cursor =database.query(BDPreguntasRespuestas.tablaPreguntas,null,"id='$nAleatorio'",
                     null,null,null,BDPreguntasRespuestas.idTablaPreguntas+" asc")
-            lil.moveToFirst()
+            cursor.moveToFirst()
             val imagen: ImageView =findViewById<ImageView>(R.id.imagen_secundaria)
             val pregunta: TextView = findViewById<TextView>(R.id.textoPregunta)
-            imagen.setImageResource(lil.getInt(lil.getColumnIndex(BDPreguntasRespuestas.Imagen)))
-            pregunta.text=lil.getString(lil.getColumnIndex(BDPreguntasRespuestas.Pregunta))
+            imagen.setImageResource(cursor.getInt(cursor.getColumnIndex(BDPreguntasRespuestas.Imagen)))
+            pregunta.text=cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.Pregunta))
+
+            var respuestaI:String=""
+
+            for (i in 1..4){
+
+                var idU: String = cursor.getString(cursor.getColumnIndex(BDPreguntasRespuestas.idTablaPreguntas)) + "0$i"
+                var cursor2: Cursor =database.query(BDPreguntasRespuestas.tablaRespuestas,null,"id='$idU'",
+                        null,null,null,BDPreguntasRespuestas.tipo+" asc")
+
+                cursor2.moveToFirst()
+                datos.add(cursor2.getString(cursor2.getColumnIndex(BDPreguntasRespuestas.respuesta)))
+
+            }
 
             adapter = AdapterRespuestas(this,datos)
             recyclerRespuestas.adapter=adapter
@@ -189,4 +231,10 @@ class Pantalla_Secundaria: AppCompatActivity() {
         }
 
     }
+
+    fun rand(start: Int, end: Int): Int {
+        require(start <= end) { "Número no correcto" }
+        return (start..end).random()
+    }
+
 }

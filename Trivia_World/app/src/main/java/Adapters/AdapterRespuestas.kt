@@ -26,7 +26,12 @@ class AdapterRespuestas(val actividad: Activity, val datos: ArrayList<String>) :
 
         holder.botonRespuestas.setText(datos.get(position))
 
+        holder.botonRespuestas.setOnClickListener(){
 
+
+
+
+        }
     }
 
 

@@ -22,11 +22,12 @@ import org.w3c.dom.Text
 class Pantalla_Perfil : AppCompatActivity() {
 
     val REQUEST_CODE = 200
-    companion object{
+   companion object{
         val PERMISO_ALMACENAMIENTO=1000;     //valor constante que nosotros usamos para identificar esa pedida de permiso
          var comprobacionNombreUsuario:String=""
-    }
-    val database: SQLiteDatabase by lazy { BDPersona(this).writableDatabase }
+
+   }
+   val database: SQLiteDatabase by lazy { BDPersona(this).writableDatabase }
     var personas: ArrayList<Persona> = ArrayList<Persona>()//ArrayList de todos las personas
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,7 +63,7 @@ class Pantalla_Perfil : AppCompatActivity() {
 
 
 
-    /**
+   /*
      * Funcion para subir una foto
      * Pedimos los permisos de almacenamiento en caso de no nos dara un error
      */
@@ -109,7 +110,10 @@ class Pantalla_Perfil : AppCompatActivity() {
 
     }
 
-
+    /**
+     * Funcion para pedir permisos de alamacenamiento y camara
+     * Devuelve true si lso dos permisos se aceptan
+     */
     fun pedirPermisos():Boolean{
 
         //pedimos permiso para poder ejecutar la subida de foto
@@ -155,6 +159,9 @@ class Pantalla_Perfil : AppCompatActivity() {
         return false
     }
 
+    /**
+     * Funcion para empezar la actividad de captura una foto
+     */
     fun capturePhoto() {
 
         val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
@@ -162,6 +169,7 @@ class Pantalla_Perfil : AppCompatActivity() {
     }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         var foto: ImageView = findViewById(R.id.avatar)
+
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == Activity.RESULT_OK && requestCode == REQUEST_CODE && data != null){
             foto.setImageBitmap(data.extras?.get("data") as Bitmap)
@@ -205,7 +213,6 @@ class Pantalla_Perfil : AppCompatActivity() {
 
 
     }
-
 
 
 

@@ -10,192 +10,116 @@
 
 
     <ImageView
-        android:id="@+id/marcoAmarrillo"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="90dp"
-        android:layout_marginEnd="90dp"
-        android:layout_marginBottom="60dp"
-        android:contentDescription="@string/descripcion_gui_redes"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contenedor1"
-        app:srcCompat="@drawable/marco_narana_horizontal" />
-
-    <ImageView
         android:id="@+id/logo_world_final"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="1dp"
+        android:layout_width="123dp"
+        android:layout_height="102dp"
         android:contentDescription="@string/descripcion_logo_redes"
         android:onClick="volverInicio"
-        app:layout_constraintBottom_toTopOf="@+id/contenedor1"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/marcoAmarrillo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/login" />
 
-    <LinearLayout
-        android:id="@+id/contenedor1"
+    <ImageView
+        android:id="@+id/marcoAmarrillo"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/contenedor2"
-        app:layout_constraintEnd_toEndOf="@+id/marcoAmarrillo"
-        app:layout_constraintStart_toStartOf="@+id/marcoAmarrillo"
-        app:layout_constraintTop_toBottomOf="@+id/logo_world_final">
-
-        <TextView
-            android:id="@+id/usuarioLogin"
-            android:layout_width="0dp"
-            android:layout_height="50sp"
-            android:layout_marginStart="100dp"
-            android:layout_weight="1"
-            android:gravity="bottom"
-            android:text="@string/usuarioLogin" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/contenedor2"
-        android:layout_width="410dp"
-        android:layout_height="50dp"
-
-        app:layout_constraintBottom_toTopOf="@+id/contenedor3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contenedor1">
-
-        <EditText
-            android:id="@+id/usuarioLoginIn"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="100dp"
-            android:layout_marginEnd="170sp"
-            android:layout_weight="1"
-            android:autofillHints="@string/usuarioLoginIn"
-            android:ems="10"
-            android:hint="@string/usuarioLoginIn"
-            android:inputType="textEmailAddress" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/contenedor4"
-        android:layout_width="410dp"
-        android:layout_height="50dp"
-
-        app:layout_constraintBottom_toTopOf="@+id/contenedor5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contenedor3">
-
-        <EditText
-            android:id="@+id/contraseñaLogin"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="100dp"
-            android:layout_marginEnd="170sp"
-            android:layout_weight="1"
-            android:autofillHints="@string/contraseñaInLogin"
-            android:ems="10"
-            android:hint="@string/contraseñaInLogin"
-            android:inputType="textPassword" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/contenedor3"
-        android:layout_width="413dp"
-        android:layout_height="50dp"
-
-        app:layout_constraintBottom_toTopOf="@+id/contenedor4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contenedor2">
-
-        <TextView
-            android:id="@+id/contraseñaIn"
-            android:layout_width="0dp"
-            android:layout_height="50sp"
-            android:layout_marginStart="100dp"
-            android:layout_weight="1"
-            android:gravity="bottom"
-            android:text="@string/contraseñaLogin" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/contenedor5"
-        android:layout_width="416dp"
-        android:layout_height="50dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/contenedor6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contenedor4">
-
-
-        <TextView
-            android:id="@+id/olvidoContraseña"
-            android:layout_marginTop="15dp"
-            android:layout_width="10dp"
-            android:layout_height="50sp"
-            android:layout_marginStart="100dp"
-            android:layout_weight="1"
-            android:text="@string/olvidoContraseñaLogin"
-            android:textSize="12sp" />
-
-        <TextView
-            android:id="@+id/enlaceOlvidoContraseñaLogin"
-            android:textColor="@color/azulEnlace"
-            android:layout_marginTop="15dp"
-            android:layout_width="10sp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/enlaceOlvidoContraseñaLogin"
-            />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/contenedor6"
-        android:layout_width="413dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="50dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@string/descripcion_gui_redes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contenedor5">
+        app:layout_constraintStart_toEndOf="@+id/logo_world_final"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.567"
+        app:srcCompat="@drawable/marco_narana_horizontal" />
 
-        <Button
-            android:id="@+id/btnRegistrarseLogin"
-            android:layout_marginStart="70dp"
-            android:layout_marginEnd="40dp"
-            android:layout_width="100dp"
-            android:layout_height="35dp"
-            android:layout_weight="1"
-            android:text="@string/registrarse"
-            android:onClick="irARegistrase"
-            android:background="#ff9000"
-            tools:ignore="ButtonStyle" />
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/marcoAmarrillo"
+        app:layout_constraintEnd_toEndOf="@+id/marcoAmarrillo"
+        app:layout_constraintStart_toStartOf="@+id/marcoAmarrillo"
+        app:layout_constraintTop_toTopOf="@+id/marcoAmarrillo">
 
-        <Button
-            android:id="@+id/btnEnviarLogin"
-            android:layout_width="70dp"
-            android:layout_height="35dp"
-            android:layout_marginEnd="60dp"
-            android:layout_weight="1"
-            android:background="#ff9000"
-            android:onClick="enviar"
-            android:text="@string/enviarLogin"
-            tools:ignore="ButtonStyle" />
-    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/usuarioLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/usuarioLogin" />
+
+            <EditText
+                android:id="@+id/usuarioLoginIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints="@string/usuarioLoginIn"
+                android:ems="10"
+                android:hint="@string/usuarioLoginIn"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                android:id="@+id/contraseñaIn"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:text="@string/contraseñaLogin" />
+
+
+            <EditText
+                android:id="@+id/contraseñaLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginBottom="30dp"
+                android:autofillHints="@string/contraseñaInLogin"
+                android:ems="10"
+                android:hint="@string/contraseñaInLogin"
+                android:inputType="textPassword" />
+
+
+            <Button
+                android:id="@+id/btnRegistrarseLogin"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="50dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="#ff9000"
+                android:onClick="irARegistrase"
+                android:text="@string/registrarse"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/btnEnviarLogin"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="#ff9000"
+                android:onClick="enviar"
+                android:text="@string/enviarLogin"
+                tools:ignore="ButtonStyle" />
+
+        </LinearLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
