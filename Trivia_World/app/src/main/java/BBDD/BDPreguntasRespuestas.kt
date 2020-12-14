@@ -241,16 +241,16 @@ class BDPreguntasRespuestas (val contexto: Context):
 
 
         p0?.execSQL("insert into $tablaRespuestas($idTablaRespuestas, $respuesta, $tipo, $preguntaCorrecta)" +
-                " values('1001','5','geografia','correcta','correcta')")
+                " values('1001','5','geografia','correcta')")
 
         p0?.execSQL("insert into $tablaRespuestas($idTablaRespuestas,$respuesta, $tipo, $preguntaCorrecta)" +
-                " values('1002','6','geografia','incorrecta','incorrecta')")
+                " values('1002','6','geografia','incorrecta')")
 
         p0?.execSQL("insert into $tablaRespuestas($idTablaRespuestas, $respuesta, $tipo, $preguntaCorrecta)" +
-                " values('1003','11','geografia','incorrecta','incorrecta')")
+                " values('1003','11','geografia','incorrecta')")
 
         p0?.execSQL("insert into $tablaRespuestas($idTablaRespuestas,$respuesta, $tipo, $preguntaCorrecta)" +
-                " values('1004','7','geografia','incorrecta','incorrecta')")
+                " values('1004','7','geografia','incorrecta')")
 
         //primera pregunta ciencias
 
