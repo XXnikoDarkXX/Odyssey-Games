@@ -74,4 +74,11 @@ class Pantalla_Opcione_Editor : AppCompatActivity() {
 
     }
 
+    fun IraBorrar(view: View) {
+
+        val intent = Intent(this, Pantalla_BorrarE::class.java)
+        startActivity(intent)
+
+    }
+
 }

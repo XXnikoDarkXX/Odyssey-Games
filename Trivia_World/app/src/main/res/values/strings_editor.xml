@@ -10,6 +10,7 @@
     <string name="bObay">OKAY</string>
     <string name="bsubir">SUBIR</string>
     <string name="textoTV">RESPUESTA</string>
+    <string name="textoTVC">RESPUESTA CORRECTA</string>
     <string name="textoTVP">PREGUNTA</string>
 
 </resources>
